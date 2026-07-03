@@ -15,6 +15,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 ---
 
 ## Base 1 · South Coast & Glacier Realm — Kirkjubæjarklaustur
+**Cadence: Σ ~67 km hiking · ~2,900 m gain (≈12 km/day — biggest block, freshest legs).**
 **Sept 10–15 · 5 nights.** Airbnb in Klaustur or a rural cabin just east — deliberately east of the tour-bus bubble, pivoting between the waterfall coast (west) and Vatnajökull's glacier tongues (east).
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
@@ -43,6 +44,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 ---
 
 ## Base 2 · The Eastfjords — Egilsstaðir
+**Cadence: Σ ~52 km · ~2,250 m (≈10 km/day — steady rhythm, no monster days).**
 **Sept 15–20 · 5 nights.** The least-visited quarter of the Ring Road: alpine boulder fields, basalt canyons, fjord hikes with reindeer footprints. (Seyðisfjörður as base is prettier but adds a 27 km pass each way.)
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
@@ -67,6 +69,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 ---
 
 ## Base 3 · Eyjafjörður & the North — near Akureyri
+**Cadence: Σ ~34 km · ~1,900 m (recovery block — one huge summit day, easy otherwise).**
 **Sept 20–25 · 5 nights.** Airbnb/cabin in the Eyjafjörður valley: 30 min to Kerling, 1 h 15 to Aldeyjarfoss, 30 min to Goðafoss; Siglufjörður as a day trip.
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
@@ -92,6 +95,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 ---
 
 ## Base 4 (Recommended) · Snæfellsnes — Grundarfjörður
+**Cadence: Σ ~34 km · ~1,550 m (taper — short coastal walks + one challenge, fresh for the flight). Trip total: ~185 km / ~8,600 m.**
 **Sept 25–29 · 4 nights.** Kirkjufell 2 km from the door; the whole national park within 50 min; **KEF a safe 2.5 h on flight day**. Chosen over the Westfjords to trade ~6 h of transfer driving for trail time — full Westfjords version below.
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
