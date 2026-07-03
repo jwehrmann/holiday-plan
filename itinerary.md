@@ -29,12 +29,14 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 | **Gullfoss + Geysir** | Day 1 en route | 1 km paths | min. | Easy | 1 h | Midday (accept it) | — |
 
 **Day by day**
-- **Sept 10 (Wed):** Land 9:25 → groceries **Krónan Selfoss** → Geysir & Gullfoss midday → **Seljalandsfoss golden hour** → Klaustur ~21:00. [Day-1 route](https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Gullfoss/Seljalandsfoss/Kirkjub%C3%A6jarklaustur)
+- **Sept 10 (Wed):** Land 9:25 → groceries **Krónan Selfoss** → **Þingvellir + Öxarárfoss** (30 min, [AllTrails](https://www.alltrails.com/trail/iceland/southern/oxararfoss-waterfall-trail)) → Geysir & Gullfoss midday → **Brúarfoss** electric-blue cascade (3.5 km RT, [AllTrails](https://www.alltrails.com/trail/iceland/southern/hlauptungufoss-midfoss-and-bruarfoss-waterfalls)) if energy allows → **Seljalandsfoss golden hour** → Klaustur ~21:00. (Reykjadalur hot-river soak near Hveragerði is a Day-1 option too if the red-eye spares you.) [Day-1 route](https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Gullfoss/Seljalandsfoss/Kirkjub%C3%A6jarklaustur)
 - **Sept 11 (Thu):** **Múlagljúfur at dawn** → Fjallsárlón + Jökulsárlón → Diamond Beach blue hour. **New moon — aurora at the lagoon if clear.**
 - **Sept 12 (Fri):** **Kristínartindar** full-day loop (start 8:00).
-- **Sept 13 (Sat):** **Skógafoss sunrise** → Waterfall Way climb → Reynisfjara ~18:00 (post-bus; beware sneaker waves) → Dyrhólaey sunset.
+- **Sept 13 (Sat):** **Skógafoss sunrise** → Waterfall Way climb → **Sólheimajökull glacier snout** (20 min away) → Reynisfjara ~18:00 (post-bus; beware sneaker waves) → Dyrhólaey sunset.
 - **Sept 14 (Sun):** **Þakgil loop** (or weather-swap) → Fjaðrárgljúfur golden hour.
 - **Sept 15 (Mon):** Transfer east.
+
+**Highland wildcard (Landmannalaugar cluster from the AllTrails list):** Bláhnjúkur, Laugavegur segments and Þórsmörk are Fjallabak highland territory. From Base 1 it's one huge day: ~2.5 h each way on F208 to Landmannalaugar, then the **Bláhnjúkur–Brennisteinsalda loop** (~8.5 km / 550 m) through the rhyolite rainbow mountains ([AllTrails](https://www.alltrails.com/trail/iceland/southern/blahnjukur)). Mid-Sept is the last reliable week for huts/F-roads — check road.is; take F208-north (no serious fords); never ford toward Þórsmörk (F249) in a rental. If a bonus stable-weather day appears, trade the Þakgil day for this.
 
 **Transfer Sept 15 · Klaustur → Egilsstaðir (~420 km, 5 h + stops):** leave 7:30 → **Vestrahorn/Stokksnes** ([Yellow Path 6.1 km loop, easy](https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path), 900 ISK gate) → Höfn lunch + fuel → Eastfjords coast road → groceries/fuel Egilsstaðir. [Route](https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Stokksnes/H%C3%B6fn/Egilssta%C3%B0ir)
 
@@ -112,6 +114,8 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 ---
 
 ## Alternative Base 4 · The Westfjords — Ísafjörður
+**Hornstrandir warning:** the Hornvík–Hornbjarg and Hesteyri routes on the AllTrails list are boat-access only, and scheduled ferries from Ísafjörður essentially stop by early September — they're a summer trip of their own, not a late-Sept add-on.
+
 **The honest trade:** Iceland's emptiest corner and deeper solitude, at the cost of a 5.5–6 h Sept 25 transfer (no Glymur), slower part-gravel roads, harder weather cancellations, and a **~6 h airport haul on flight day**.
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | Link |
