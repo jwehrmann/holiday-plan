@@ -19,13 +19,13 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
 |---|---|---|---|---|---|---|---|
-| **Múlagljúfur Canyon** (off-beat) | 55 km · 45 min | 7.1 km RT | 386 m | Moderate | 2.5–3 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon) |
+| ★ MUST · **Múlagljúfur Canyon** (off-beat) | 55 km · 45 min | 7.1 km RT | 386 m | Moderate | 2.5–3 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon) |
 | **Kristínartindar via Svartifoss** (Skaftafell) | 40 km · 35 min | 18.7 km loop | 1,065 m | **Hard** | 7.5–8 h | Dawn start | [link](https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi) |
 | **Jökulsárlón + Diamond Beach** | 70 km · 55 min | 1–3 km flat | — | Easy | flexible | Blue hour + **aurora** | — |
 | **Skógafoss + Fimmvörðuháls "Waterfall Way"** | 105 km · 1 h 20 | up to 16 km RT | ~500 m | Hard | 4–6 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls) |
 | **Seljalandsfoss + Gljúfrabúi** | en route Day 1 | 1.9 km | ~30 m | Easy | 40 min | Sunset (west-facing) | [link](https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls) |
 | **Þakgil · Remundargil loop** (off-beat) | ~85 km · 1 h 20 (14 km gravel) | 10.9 km loop | 752 m | Hard | 4.5–5.5 h | Midday | [link](https://www.alltrails.com/trail/iceland/southern/thakgil-remundargil-vatnsrasarhofud) |
-| **Fjaðrárgljúfur Canyon** | 8 km · 10 min | 2.4 km | 86 m | Easy | 45 min | Golden hour | [link](https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon) |
+| ★ MUST · **Fjaðrárgljúfur Canyon** | 8 km · 10 min | 2.4 km | 86 m | Easy | 45 min | Golden hour | [link](https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon) |
 | **Gullfoss + Geysir** | Day 1 en route | 1 km paths | min. | Easy | 1 h | Midday (accept it) | — |
 
 **Day by day**
@@ -96,7 +96,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
 |---|---|---|---|---|---|---|---|
-| **Kirkjufell & Kirkjufellsfoss** | 2 km · 5 min | 3.5 km | 16 m | Easy | 1 h | Sunrise / aurora | [link](https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss) |
+| ★ MUST · **Kirkjufell & Kirkjufellsfoss** | 2 km · 5 min | 3.5 km | 16 m | Easy | 1 h | Sunrise / aurora | [link](https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss) |
 | **Helgrindur ridge** (unmarked — the challenge) | ~25 km · 25 min | ~9 km RT | ~900 m | **Very hard** | 5–6 h | Calm clear day | none — Wikiloc GPS track |
 | **Arnarstapi → Hellnar coast** | 45 km · 40 min | 6.8 km RT | ~30 m | Easy | 2–2.5 h | Golden hour | [link](https://www.alltrails.com/trail/iceland/western/arnarstapi-gatklettur-hellnar) |
 | **Rauðfeldsgjá Gorge** | 40 km · 35 min | 1.1 km | 83 m | Easy + scramble | 45 min | Midday | [link](https://www.alltrails.com/trail/iceland/western/raudfeldsgja-gorge) |
