@@ -139,6 +139,34 @@
   table.light .moonbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),#e2e8f0)}
   table.light .best{color:var(--accent);font-weight:600}
   @media(max-width:640px){.dayrow{grid-template-columns:1fr}.hero-inner{padding:60px 18px 44px}}
+
+  /* trail detail modal */
+  .card{cursor:pointer}
+  .card .hint{font-size:.72rem;color:var(--faint);margin-top:2px}
+  .modal-ov{position:fixed;inset:0;background:rgba(4,8,12,.88);backdrop-filter:blur(7px);z-index:100;
+    display:none;overflow-y:auto;padding:40px 16px}
+  .modal-ov.open{display:block}
+  .modal{background:var(--card);border:1px solid #33485e;border-radius:20px;max-width:880px;width:100%;
+    padding:30px 34px 34px;position:relative;margin:0 auto}
+  .modal h3{font-family:var(--serif);font-size:1.55rem;padding-right:40px}
+  .modal .msub{color:var(--muted);font-size:.95rem;margin-top:10px}
+  .modal .close{position:absolute;top:14px;right:16px;background:var(--card2);border:1px solid var(--line);
+    color:var(--muted);border-radius:10px;width:36px;height:36px;font-size:1.1rem;cursor:pointer}
+  .modal .close:hover{color:var(--ink);border-color:var(--accent)}
+  .spots{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+  .spot{background:rgba(94,234,212,.08);border:1px solid rgba(94,234,212,.3);color:#a7f3d0;
+    border-radius:999px;padding:5px 13px;font-size:.8rem}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:18px}
+  .gal figure{margin:0}
+  .gal img{width:100%;height:185px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+  .gal figcaption{font-size:.74rem;color:var(--faint);margin-top:5px}
+  .modal .links{margin-top:20px}
+  /* weather table */
+  table.wx{width:100%;border-collapse:collapse;margin-top:26px;font-size:.88rem;background:var(--card);
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  table.wx th,table.wx td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);color:var(--muted)}
+  table.wx th{color:var(--faint);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+  table.wx td:first-child{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -167,6 +195,7 @@
   <a class="b4" href="#base4">4 · Snæfellsnes</a>
   <a href="#alt">Alt: Westfjords</a>
   <a href="#logistics">Logistics</a>
+  <a href="#weather">Weather</a>
   <a href="#photo">Light &amp; Sky</a>
 </div></nav>
 
@@ -175,7 +204,7 @@
 <!-- ================= OVERVIEW ================= -->
 <section id="overview">
   <h2>The Shape of the Trip</h2>
-  <p class="base-sub">You land at KEF on <b>Sept 10, 9:25 AM</b> (YVR red-eye) and fly out <b>Sept 29</b>. The route runs clockwise: south coast glaciers → Eastfjords → the North → Snæfellsnes, finishing 2.5 h from the airport instead of 6. Two changes from your draft, both to cut dead driving: <b>Egilsstaðir replaces Seyðisfjörður</b> as the East base (it's the hub every East hike radiates from — Seyðisfjörður becomes a day trip over the pass), and <b>the Eyjafjörður valley south of Akureyri replaces Siglufjörður</b> in the North (Kerling's trailhead is 30 min away instead of 1 h 15, Aldeyjarfoss 1 h 15 instead of 2 h 30 — Siglufjörður becomes a day trip). Big landmarks are hit at sunrise or late evening; the crowd-free midday hours go to trails tour buses can't reach.</p>
+  <p class="base-sub">You land at KEF on <b>Sept 10, 9:25 AM</b> (YVR red-eye) and fly out <b>Sept 29</b>. The route runs clockwise: south coast glaciers → Eastfjords → the North → Snæfellsnes, finishing 2.5 h from the airport instead of 6. Two changes from your draft, both to cut dead driving: <b>Egilsstaðir replaces Seyðisfjörður</b> as the East base (it's the hub every East hike radiates from — Seyðisfjörður becomes a day trip over the pass), and <b>the Eyjafjörður valley south of Akureyri replaces Siglufjörður</b> in the North (Kerling's trailhead is 30 min away instead of 1 h 15, Aldeyjarfoss 1 h 15 instead of 2 h 30 — Siglufjörður becomes a day trip). Big landmarks are hit at sunrise or late evening; the crowd-free midday hours go to trails tour buses can't reach. <b>Click any hike card</b> for the trail summary, scenic hotspots and a photo gallery.</p>
   <div class="info-grid">
     <div class="info"><h3>Base 1 · Kirkjubæjarklaustur</h3><ul>
       <li><b>Sept 10–15</b> · 5 nights</li>
@@ -237,9 +266,9 @@
       <p>Skip midday entirely. Come for blue-hour ice on black sand, stay after dark: with the Sept 11 new moon, an aurora reflected in the lagoon is a real possibility. This is the night-photo anchor of Base 1 — check vedur.is cloud cover and bolt here on any clear night.</p>
       <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/J%C3%B6kuls%C3%A1rl%C3%B3n">Route</a></div></div></div>
 
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Sunrise</span></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-sunrise">Sunrise</span></div>
       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sk%C3%B3gafoss%2C_Iceland%2C_20230501_1447_3978.jpg?width=900" alt="Skógafoss" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Skógafoss + Fimmvörðuháls "Waterfall Way"<small>The icon, then 20+ falls nobody walks to</small></h3>
+      <div class="body"><h3>Skógafoss + Fimmvörðuháls "Waterfall Way"<small>Must-do early: the icon, then 20+ falls nobody walks to</small></h3>
       <div class="stats"><span class="chip">🚗 <b>105 km</b> · 1 h 20 W</span><span class="chip">↔ <b>up to 16 km</b> RT</span><span class="chip">⛰ <b>~500 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4–6 h</span></div>
       <p>Shoot the empty base of Skógafoss at first light, then climb the 500 stairs and just keep going. Past the top, the crowd evaporates and the Skógá river throws a waterfall at you every ten minutes. Turn around whenever the weather says so.</p>
       <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Sk%C3%B3gafoss">Route</a></div></div></div>
@@ -339,6 +368,13 @@
       <div class="stats"><span class="chip">🚗 en route B1→B2</span><span class="chip">↔ <b>6.1 km</b> loop</span><span class="chip">⛰ <b>&lt;50 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1–1.5 h</span></div>
       <p>Grass-tufted dunes, tidal mirror-flats, and a 454 m wall of spikes. Walk the Yellow Path loop and hunt reflections. Midday works here — the drama is in the shapes, and September storms make it better, not worse.</p>
       <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/H%C3%B6fn/Stokksnes">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-enroute">Transfer Sept 20</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Islande_J%C3%B6kuls%C3%A1rglj%C3%BAfur_chaos_colline-rouge.jpg/960px-Islande_J%C3%B6kuls%C3%A1rglj%C3%BAfur_chaos_colline-rouge.jpg" alt="Rauðhólar red crater in Jökulsárgljúfur" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Rauðhólar Red Craters + Hljóðaklettar<small>The red crater from your list, paired with Echo Rocks</small></h3>
+      <div class="stats"><span class="chip">🚗 en route B2→B3</span><span class="chip">↔ <b>~5 km</b> loop</span><span class="chip">⛰ <b>~120 m</b></span><span class="diff d-mod">Easy-moderate</span><span class="chip">⏱ 1.5–2 h</span></div>
+      <p>The red crater is Rauðhólar in Vesturdalur/Jökulsárgljúfur: oxidized scoria hills above the Jökulsá canyon system, best combined with Hljóðaklettar's folded basalt formations. This is the keeper on the Dettifoss-to-North transfer if time gets tight.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Rau%C3%B0h%C3%B3lar+Vesturdalur/Akureyri">Route</a></div></div></div>
   </div>
 
   <details class="dayplan"><summary>Day-by-day · Base 2</summary><div class="dayrows">
@@ -354,7 +390,7 @@
     <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Stokksnes/H%C3%B6fn/Egilssta%C3%B0ir">▸ Transfer route: Klaustur → Stokksnes → Egilsstaðir</a></div></div>
 
   <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 20 · Egilsstaðir → Eyjafjörður (~330 km + detours, the trip's biggest day)</b><br>
-    Depart 7:00 across the Möðrudalur highlands. <b>Dettifoss west side at ~10:00</b> (before Diamond Circle buses), with Selfoss included — 3.9 km, easy <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">(AllTrails)</a>. Then <b>Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters</b> — the blood-red scoria cones over twisted basalt you've seen in photos; ~5 km loop, ~1.5–2 h <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle">(AllTrails)</a>. Then <b>Ásbyrgi</b> horseshoe canyon: the Eyjan rim trail, 4.8 km <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">(AllTrails)</a> — or skip Eyjan if time runs short; Rauðhólar is the keeper. Loop back via <b>Hverir</b> boiling mud flats and Mývatn (Mývatn Nature Baths if energy allows), catch <b>Goðafoss at sunset</b> <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">(AllTrails)</a>, arrive Eyjafjörður ~20:30. Refuel Reykjahlíð; groceries next morning at Bónus Akureyri.</div></div>
+    Depart 7:00 across the Möðrudalur highlands. <b>Dettifoss west side at ~10:00</b> (before Diamond Circle buses), with Selfoss included — 3.9 km, easy <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">(AllTrails)</a>. Then <b>★ MUST · Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters</b> — the blood-red scoria cones over twisted basalt you've seen in photos; ~5 km loop, ~1.5–2 h <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle">(AllTrails)</a>. Then <b>Ásbyrgi</b> horseshoe canyon: the Eyjan rim trail, 4.8 km <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">(AllTrails)</a> — or skip Eyjan if time runs short; Rauðhólar is the keeper. Loop back via <b>Hverir</b> boiling mud flats and Mývatn (Mývatn Nature Baths if energy allows), catch <b>Goðafoss at sunset</b> <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">(AllTrails)</a>, arrive Eyjafjörður ~20:30. Refuel Reykjahlíð; groceries next morning at Bónus Akureyri.</div></div>
 </section>
 
 <!-- ================= BASE 3 ================= -->
@@ -555,6 +591,21 @@
   <div class="note"><b>🌋 Volcano watch (as of July 2026):</b> no eruption is active right now — the last Sundhnúkur (Reykjanes) eruption ended in Aug 2025 — but magma is re-accumulating under Svartsengi and the Met Office rates a new eruption as likely. The whole eruption zone sits 20 min from KEF, far from every base in this plan, so it's zero risk to the itinerary — and if a fissure opens while you're here, it's a once-in-a-lifetime bolt-on for arrival or departure day. Check <b>en.vedur.is</b> and safetravel.is for status and legal viewpoints; never freelance onto fresh lava fields.</div>
 </section>
 
+
+<!-- ================= WEATHER ================= -->
+<section id="weather">
+  <h2>September Weather — What to Actually Expect</h2>
+  <p class="base-sub">Long-range forecasts for specific September 2026 days don't exist yet — Iceland's weather is only skillfully forecast ~5–7 days out (vedur.is). What's dependable is the climatology: September is the hinge month between mild autumn and the first Atlantic storms. Temperatures fall ~2°C over your 19 days, the first storm systems typically arrive after mid-month, and snow begins dusting peaks above ~800 m — which is exactly where Kerling and Helgrindur live. For reference, September 2025 ran ~0.5–1°C above these norms.</p>
+  <table class="wx">
+    <tr><th>Base (dates)</th><th>Day / night temp</th><th>Rain</th><th>Character</th></tr>
+    <tr><td>1 · South Coast (Sept 10–15)</td><td>~10–11°C / 5–6°C</td><td>~140–170 mm · rain on 15–18 days</td><td>The wettest, mildest region — Atlantic-facing. Expect showers most days, dramatic clearing light between them (a gift for the camera), and strong gusts near Reynisfjara/Dyrhólaey. Early Sept = statistically calmest of your trip.</td></tr>
+    <tr><td>2 · Eastfjords (Sept 15–20)</td><td>~9–10°C / 3–5°C</td><td>~90–100 mm · 12–15 days</td><td>Often the driest quarter in westerly flow — Egilsstaðir sits in a rain shadow and gets Iceland's best föhn-warmed afternoons. Stórurð (600 m+) can see its first snow dusting late Sept.</td></tr>
+    <tr><td>3 · North (Sept 20–25)</td><td>~8–9°C / 2–4°C</td><td>~55–75 mm · the fewest rain days</td><td>Driest region, coldest nights — which also means the best aurora odds when skies clear. Kerling's upper 500 m is genuinely alpine by now: snow patches, ice-glazed rock, winter kit non-negotiable.</td></tr>
+    <tr><td>4 · Snæfellsnes (Sept 25–29)</td><td>~9–10°C / 4–5°C</td><td>~110–130 mm · 15–17 days</td><td>Windiest exposure of the trip — late-Sept lows start queuing up. Plan Helgrindur on the calmest day of the block and treat wind, not rain, as the go/no-go call.</td></tr>
+  </table>
+  <div class="note"><b>How to run it in practice:</b> every evening check <b>vedur.is</b> (text forecast + wind map) and <b>belgingur.is</b>; rank the next 3 days and slot hikes accordingly — summits on the calm day, canyons and waterfalls in the drizzle, driving on the ugly day. Yellow warning = reshuffle; orange/red = nobody drives. Rain here is usually sideways drizzle in 10–15 m/s wind rather than downpours: full hard-shell armor beats an umbrella (which Iceland eats for breakfast). And the classic September pattern — 4 grey days, then one impossibly clear one — is exactly why every base has a flex day.</div>
+</section>
+
 <!-- ================= PHOTO ================= -->
 <section id="photo">
   <h2>Light &amp; Sky Calendar</h2>
@@ -624,5 +675,68 @@
     });
   });
 </script>
+
+<div class="modal-ov" id="mov" onclick="if(event.target===this)closeM()">
+  <div class="modal" id="mbox"></div>
+</div>
+
+<script>
+const FP = n => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(n) + '?width=640';
+const T = {
+"Múlagljúfur Canyon": {s:"An unsigned path climbs from a gravel pull-off through moss and birch scrub to the rim of a canyon that looks Photoshopped: 200 m walls drenched in green, with Hangandifoss free-falling into the void and Múlafoss below it. The trail is steep, muddy and narrow in places, but never technical.", h:["Hangandifoss overlook (the money shot)","Múlafoss lower falls","Upper rim — fog burns off ~1 h after dawn","Ocean & Öræfajökull views behind you"], g:[["Mulagljufur.jpg","The canyon and its hanging falls"]]},
+"Kristínartindar via Svartifoss": {s:"Skaftafell's grand tour: black basalt organ pipes at Svartifoss, then heath and ridgeline to the 1,126 m Kristínartindar saddle and summit scramble. The Sjónarnípa and Sjónarsker viewpoints hang directly over Skaftafellsjökull's crevasse field — the full loop strings all of it together.", h:["Svartifoss basalt amphitheater","Sjónarsker view dial","Sjónarnípa — straight down onto the glacier","Summit scree push & 360° panorama"], g:[["038 Svartifoss waterfall (Iceland) Photo by Giles Laurent.jpg","Svartifoss"],["Skaftafellsjökull panorama.jpg","Skaftafellsjökull from the ridge"],["Skaftafellsjökull 2010.jpg","The glacier tongue from Sjónarnípa"]]},
+"Jökulsárlón & Diamond Beach": {s:"Iceland's deepest lake, full of calved icebergs drifting to sea, with seals patrolling between them. Across the road, the surf polishes stranded ice on black sand — blue hour turns each block into glass. This is the flex-anytime location: any clear evening or dawn justifies the drive.", h:["Iceberg reflections from the east shore","Seals in the outflow channel","Diamond Beach ice at blue hour","Fjallsárlón (quieter sister lagoon, 10 min west)"], g:[["034 Freshly rotated icebergs at Jökulsárlón (Iceland) Photo by Giles Laurent.jpg","Freshly rotated blue ice"],["Diamond Beach, Iceland - Flickr - RickybanPhotography.jpg","Diamond Beach"],["021 Wild smiling harbor seal at Jökulsárlón (Iceland) Photo by Giles Laurent.jpg","The locals"]]},
+"Skógafoss + Fimmvörðuháls \"Waterfall Way\"": {s:"Skógafoss throws a permanent double rainbow on sunny mornings; the staircase beside it is the gateway to the Skógá river's upper valley, where 20+ waterfalls queue up one after another with almost nobody watching. Turn around at Hestavaðsfoss (~4 km) or push toward the Baldvinsskáli hut if legs and weather agree.", h:["Skógafoss base — dawn rainbow & spray","Top-of-stairs aerial view","Hestavaðsfoss & Steinbogafoss","The 'infinite falls' bend at km 5"], g:[["Skógafoss Waterfall, Iceland, 20240720 1411 3075.jpg","The full 60 m curtain"],["Hestavaðsfoss, Iceland, 20230501 1529 4038.jpg","Upper Skógá falls — the crowd-free part"]]},
+"Seljalandsfoss + Gljúfrabúi": {s:"The only major Icelandic waterfall you can fully walk behind — at sunset the sun sets straight through the water curtain. Then walk 600 m north to Gljúfrabúi, hidden inside a slot canyon: wade the ankle-deep stream through the crack and you're alone in a mossy chamber with a waterfall pouring through the ceiling.", h:["Behind-the-curtain sunset frame","Gljúfrabúi slot entrance","Inside the hidden chamber (waterproof everything)"], g:[["Seljalandsfoss, Suðurland, Islandia, 2014-08-16, DD 189-191 HDR.JPG","From behind the curtain"],["Gljúfrabúi-pjt1.jpg","Gljúfrabúi — the hidden one"]]},
+"Þakgil · Remundargil loop": {s:"A rough mountain road behind Vík ends at a campsite tucked inside a green canyon under Mýrdalsjökull. The Remundargil loop climbs ridgelines between glacier and coast through hoodoos, gorges and caves — the wildest, emptiest terrain of Base 1. Route-finding needed in places; the painted trail markers fade in and out.", h:["Remundargil gorge","Ridge viewpoint over Mýrdalsjökull","The dining cave at the campsite","Hoodoo towers on the eastern leg"], g:[["Þakgil Canyon Campsite, Iceland - Eric Marchese.jpg","The canyon campsite"],["Pakgil01(ws).jpg","Þakgil's green walls"]]},
+"Fjaðrárgljúfur Canyon": {s:"Two million years of meltwater carved this 100 m-deep serpentine slot. A fenced rim path hits viewpoint after viewpoint, ending at a platform over Mögáfoss where the canyon doubles back on itself. Ten minutes from your Airbnb — go whenever the light performs.", h:["First bend viewpoint","Mögáfoss waterfall platform at the end","Evening rake-light across the moss walls"], g:[["Fjaðrárgljúfur (Unsplash).jpg","The serpentine slot"],["Fjaðrárgljúfur (16283750267).jpg","Canyon walls and river"]]},
+"Gullfoss (+ Geysir)": {s:"The Golden Circle in one strategic pass: Þingvellir's continental rift, Strokkur erupting every 6–10 minutes, Gullfoss's two-tier cataract — plus Brúarfoss, the electric-blue one from your AllTrails list, if arrival-day energy allows the 3.5 km walk.", h:["Öxarárfoss in the Almannagjá rift","Strokkur eruption (stand upwind)","Gullfoss upper-rim compression shot","Brúarfoss — the bluest water in Iceland"], g:[["The blue waterfall - Bruarfoss - Iceland (41967794764).jpg","Brúarfoss"],["Öxarárfoss, Parque Nacional de Þingvellir, Suðurland, Islandia, 2014-08-16, DD 029.JPG","Öxarárfoss, Þingvellir"],["Strokkur in eruption, Geysir Geothermal Field, Haukadalur, Iceland, 20230501 0902 3743.jpg","Strokkur mid-burst"]]},
+"Stórurð — The Giant's Boulders": {s:"Landslide blocks the size of apartment buildings sit in a hidden alpine valley beneath the Dyrfjöll 'Door Mountains', with milky-turquoise ponds pooled between them. The trail crosses open heath with sweeping views before dropping into the boulder maze — waymarked, but wild.", h:["The first turquoise pond","'The flat rock' — a boulder the size of a tennis court","Dyrfjöll's notch (the 'door') above the valley","Heath viewpoint on the way in"], g:[["Stórurð in Iceland.jpg","The boulder field"],["Stórurd pond.jpg","Glacial pond among the giants"],["Stórurð, taken from Víknaslóðir Trail, Eastern fjords, Iceland 16.jpg","Stórurð under Dyrfjöll"]]},
+"Stuðlagil Canyon — east bank": {s:"The Jökla river's dam-tamed flow revealed this basalt cathedral only a decade ago. The east-bank hike (from Klaustursel) passes Stuðlafoss — a basalt-column waterfall warm-up — then descends to river level among the columns, where the west-side platform crowd can only wave from above.", h:["Stuðlafoss column waterfall (km 2)","River-level column wall","The downstream bend — best geometry","Rim view back toward the platform"], g:[["Stuðlagil Canyon 1.jpg","Columns at river level"],["Studlagil 2021, by Cristian Di Giacinto.jpg","The blue-green Jökla"]]},
+"Hengifoss & Litlanesfoss": {s:"A stepped climb above Lagarfljót lake with two headline acts: Litlanesfoss framed by one of Iceland's tallest basalt colonnades at halfway, and Hengifoss itself — 128 m over cliff strata striped red with iron-oxide clay layers between ancient lava flows.", h:["Litlanesfoss basalt amphitheater","Hengifoss red-stripe cliff","Lagarfljót lake views on the descent"], g:[["Hengifoss 2009 close gg.jpg","The red-striped wall"],["Litlanesfoss Hengifoss 2016 01.jpg","Litlanesfoss, Hengifoss behind"],["Litlanesfoss view.jpg","The colonnade up close"]]},
+"Brúnavík": {s:"From road's end at Borgarfjörður eystri, cross the 321 m Brúnavíkurskarð pass to a bay abandoned since 1944: rhyolite-tinted sand, driftwood, and mountains on three sides. Return over the second pass (Súluskarð) for the full loop. The village side offers Álfaborg — home of Iceland's elf queen, allegedly — and the Hafnarhólmi harbor.", h:["Brúnavíkurskarð pass view down to the bay","The abandoned bay & rhyolite beach","Álfaborg 'elf hill' viewpoint","Dyrfjöll on the drive in"], g:[["Borgarfjörður Eystri 2023 B.jpg","Borgarfjörður eystri"],["Alfaborg-pjt.jpg","Álfaborg"],["Dyrfjöll, taken from Víknaslóðir Trail, Eastern fjords, Iceland 03.jpg","The Dyrfjöll wall"]]},
+"Vestrahorn · Stokksnes": {s:"A 454 m wall of gabbro spikes rising straight from a black-sand spit. The Yellow Path loops the dunes and tidal flats — after rain or at low tide the wet sand turns into a perfect mirror. Works in any weather; storms make it better.", h:["Dune-grass foregrounds","Tidal mirror reflections","The Viking film-set village","Lighthouse point at the road's end"], g:[["Vestrahorn After Sunrise - Iceland.jpg","First light on the spikes"],["Vestrahorn-08-2018-gje.jpg","The full massif"]]},
+"Seyðisfjörður day + Vestdalur": {s:"Descend the hairpins past Gufufoss into the East's prettiest town — rainbow street, blue church, herring-era timber houses. The Vestdalur trail climbs the valley behind town past a staircase of waterfalls to a mountain lake; go as far as the light lasts.", h:["Gufufoss (on the pass road)","Rainbow street + blue church","Vestdalsfoss & the waterfall staircase","Fjord panorama from the trail"], g:[["The Church at Seyðisfjörður.png","The blue church"],["Gufufoss-pjt.jpg","Gufufoss"],["Seyðisfjörður. Vestdalsfoss. (4558225035).jpg","Vestdalsfoss"]]},
+"Kerling (1,538 m)": {s:"The Troll Peninsula's — and North Iceland's — highest point. From the Finnastaðir valley the route climbs steadily, then steeply, through scree and (by late September) fresh snow to a summit cairn with Eyjafjörður unrolled end-to-end below. No crowds because there's no shortcut: you earn every metre of the 1,416.", h:["Finnastaðadalur approach valley","The upper scree ridge","Summit cairn — fjord panorama","Akureyri glittering below on the descent"], g:[["Kerling.jpg","Kerling"],["Eyjafjörður, Svalbarðsstrandarhreppur commune, Iceland, 20240715 1811 1115.jpg","Eyjafjörður — the summit's view, from below"]]},
+"Aldeyjarfoss": {s:"The Skjálfandafljót crashes through a black basalt colonnade twisted into chaos — white glacial water against charcoal geometry, the highest-contrast subject in Iceland. The F26 approach keeps tour traffic away; at dawn you'll share it with ravens. Hrafnabjargafoss waits 4 km upstream if the track is dry.", h:["The amphitheater from the west rim","Low angle from the descent path","Hrafnabjargafoss upstream (4x4 bonus)"], g:[["Aldeyjarfoss vattenfall.jpg","White water, black columns"],["Aldeyjarfoss (panorama).jpg","The full amphitheater"]]},
+"Dettifoss + Selfoss (west bank)": {s:"The most powerful waterfall in Europe: 100 m wide, 44 m down, a permanent mist column you'll see before you hear. The west bank path also reaches Selfoss — a wide horseshoe of falls most visitors skip — and stares down the Jökulsárgljúfur canyon that the river carved in catastrophic glacial floods.", h:["Dettifoss west-rim spray zone","Selfoss horseshoe (1 km upstream)","Jökulsárgljúfur canyon views north"], g:[["Dettifoss, Iceland, 20240716 1500 1531.jpg","The monster"],["Selfoss waterfall, Iceland, 20240716 1537 1683.jpg","Selfoss — the one people skip"],["Aerial View of Jökulsá á Fjöllum 21.05.2008 15-44-34.JPG","The canyon it carved"]]},
+"Goðafoss": {s:"The 'Waterfall of the Gods' — where lawspeaker Þorgeir threw his pagan idols into the falls in the year 1000. A 30-minute hop from base, so treat it like a studio you revisit: sunset from the east bank, aurora overhead on clear nights, long-exposure work from the west-side spray zone.", h:["East bank classic horseshoe view","West bank close-up spray angle","Aurora overhead on clear nights"], g:[["Goðafoss July 2014.JPG","The horseshoe"],["Goðafoss Winter.jpg","Early-winter mood — late Sept can tease this"]]},
+"Tröllaskagi loop & Siglufjörður": {s:"A recovery-day road trip through Iceland's most alpine coastal scenery: one-lane fjord tunnels, the great Herring Era Museum in Siglufjörður (genuinely — it won the European museum prize), harbor fish soup, and the Hofsós infinity pool hanging over Skagafjörður on the return leg.", h:["Héðinsfjörður tunnel-window fjord","Siglufjörður harbor & museum","Hofsós infinity pool","Tröllaskagi coast road viewpoints"], g:[["Siglufjörður (2024).jpg","Siglufjörður"],["The village of Siglufjörður.jpg","Under the peaks"],["Mountains of Tröllaskagi in Northern Iceland, from the Stephan G. Stephansson monument, 20240715 1359 0872.jpg","Tröllaskagi"]]},
+"Mývatn & Ásbyrgi": {s:"The volcanic sampler, mostly banked on the Sept 20 transfer: Hverir's boiling mud and sulfur steam, Dimmuborgir's collapsed lava cathedral, Ásbyrgi's sheer horseshoe canyon with the Botnstjörn pond — plus Rauðhólar's red craters over the twisted basalt of Hljóðaklettar in Vesturdalur.", h:["Hverir mud pots & steam vents","Rauðhólar red craters ★","Hljóðaklettar 'Echo Rocks' & Kirkjan arch","Ásbyrgi Botnstjörn pond","Dimmuborgir 'Kirkjan' lava church"], g:[["Námafjall Hverir.jpg","Hverir"],["Raudholar.jpg","Rauðhólar — your red crater"],["Hljóðaklettar 01.jpg","Hljóðaklettar"],["Ásbyrgi Botnstjörn Panorama 01.jpg","Ásbyrgi's Botnstjörn"]]},
+"Kirkjufell & Kirkjufellsfoss": {s:"The arrowhead mountain, 2 km from your door. The classic frame stacks Kirkjufellsfoss's double drop under the peak; being resident means you own it at 6:45 AM and can return instantly on any aurora alert — it's among the most reliable aurora foregrounds in Iceland.", h:["Kirkjufellsfoss double-drop classic","Tide pools on the bay side","Aurora composition (Sept full moon = silver light)"], g:[["Kirkjufellsfoss, Iceland, 20230505 1402 5192.jpg","The classic"],["Aurora Borealis activity on top of the Kirkjufell mountain in September 2018.jpg","September aurora over the peak"],["Kirkjufell, Iceland, 20240714 1630 0702.jpg","Across the bay"]]},
+"Helgrindur (Lýsuhyrna approach)": {s:"The serrated spine that walls Grundarfjörður from the south — unmarked, unranked, unpeopled. Route-find up grassy ramps and scree to the ridge; the reward is ocean on both sides of the peninsula at once. GPS track from Wikiloc, calm clear day only, and tell someone your plan.", h:["The ridge line — ocean both sides","Grundarfjörður + Kirkjufell from above","Lýsuhyrna shoulder views south"], g:[["Helgrindur 2012-08.JPG","The Helgrindur ridge"],["Grundarfjörður from Kirkjufell.jpg","What you'll tower over"],["1 grundarfjörður 2017 aerial pano.jpg","The fjord from above"]]},
+"Arnarstapi → Hellnar coastal walk": {s:"A cliff-top path through a protected lava coast: Gatklettur's perfect circle arch, thundering blowholes, basalt stacks full of fulmars, and Snæfellsjökull glowing overhead. Coffee at the Hellnar cliff café is mandatory; the return walk doubles every composition in reverse light.", h:["Gatklettur arch","Hundagjá & Miðgjá blowholes","Hellnar cove café","Bárður Snæfellsás stone troll statue"], g:[["Gatklettur, Arnarstapi, Iceland, 20240714 1334 0646.jpg","Gatklettur"],["Arnarstapi (9).jpg","The basalt coast"]]},
+"Rauðfeldsgjá Gorge": {s:"A crack in the Botnsfjall wall named for a boy pushed into it by his uncle Bárður (Snæfellsnes' half-troll guardian — long story). Slip through the entrance and follow the stream into the mountain's green half-light. Short, weird, wonderful — and skipped by nearly everyone racing between photo stops.", h:["The entrance slot","Inside the mossy chamber","Optional waterfall scramble (wet!)"], g:[["Iceland (19387840494).jpg","The gorge entrance"]]},
+"Snæfellsjökull NP west loop": {s:"Chain the volcano's seaward tip: climb Saxhóll's stairs into a 100 m crater, stand over the Atlantic on Svörtuloft's blood-orange lighthouse cliffs, walk Djúpalónssandur's wave-polished black pearls among shipwreck iron, and finish at the Lóndrangar basalt pinnacles. Half a day, endless frames.", h:["Saxhóll crater rim","Svörtuloft lighthouse cliffs","Djúpalónssandur pearls & wreck iron","Lóndrangar pinnacles","Vatnshellir lava cave (guided, optional)"], g:[["Cráter Saxhóll, Vesturland, Islandia, 2014-08-14, DD 060.JPG","Saxhóll"],["Svörtuloft Lighthouse.jpg","Svörtuloft"],["Djupalonssandur Beach Iceland Travel Photography (212306465).jpeg","Djúpalónssandur"],["Lóndrangar, Iceland, 20230505 1305 5176.jpg","Lóndrangar"]]},
+"Búðakirkja & the south shore": {s:"A lone black timber church (1848) standing in the Búðahraun lava field — the night-photo set piece of Base 4, and with the Sept 26 full moon you'll be shooting silver-lit lava with aurora overhead instead of pitch black. Ytri-Tunga's resident seal colony basks 10 minutes east.", h:["The black church — night & moonlight comps","Búðahraun lava field textures","Ytri-Tunga seals (daylight bonus)"], g:[["Búðakirkja, Iceland, 20230505 1030 5034.jpg","Búðakirkja"]]},
+"Dynjandi": {s:"The Westfjords' crown: a 100 m bridal-veil that widens as it falls, with six named falls stacked beneath it. The path climbs past each one to the amphitheater at the top — turn around for the full sweep of Arnarfjörður catching the sunset.", h:["The full cascade from the bay","Each lower fall as foreground","Arnarfjörður sunset from the top platform"], g:[["Dynjandi Iceland.jpg","The full fan"],["Arnarfjörður, Vestfirðir, Islandia, 2014-08-15, DD 030.JPG","Arnarfjörður below"]]},
+"Kaldbakur (998 m)": {s:"The Westfjords' highest summit, reached by rough track to Kvennaskarð pass then an unmarked scree ridge. The summit cairn was built to push the peak over 1,000 m — climb it and you've 'summited a thousand-er'. Fjords in every direction, and statistically zero other humans.", h:["Kvennaskarð pass","The summit cairn (stand on it: 1,000 m+)","Arnarfjörður & Dýrafjörður both at once"], g:[["Westfjords, Iceland - panoramio (16).jpg","Westfjords ridgelines"]]},
+"Ísafjörður + the extras": {s:"The Westfjords' capital sits on a sand spit inside a fjord inside bigger mountains. Day-trip menu: Bolafjall's cliff-edge platform hanging 638 m over the open Atlantic, the Valagil ravine walk, Ósvör's turf fishing station, and essentially zero light pollution for aurora.", h:["Bolafjall sky platform","Valagil ravine & waterfall","Ósvör turf fishing station","Old town timber quarter"], g:[["Ísafjörður from the drone.jpg","The spit town"],["Samsett-bolungarvik-bolafjall.jpg","Bolafjall over Bolungarvík"]]}
+};
+function openM(key){
+  const d = T[key]; if(!d) return;
+  const box = document.getElementById('mbox');
+  let html = '<button class="close" onclick="closeM()">✕</button><h3>'+key+'</h3><p class="msub">'+d.s+'</p>';
+  html += '<div class="spots">'+d.h.map(x=>'<span class="spot">★ '+x+'</span>').join('')+'</div>';
+  html += '<div class="gal">'+d.g.map(g=>'<figure><img loading="lazy" src="'+FP(g[0])+'" alt="'+g[1]+'" onerror="this.parentNode.remove()"><figcaption>'+g[1]+' · Wikimedia Commons</figcaption></figure>').join('')+'</div>';
+  html += '<div class="links">'+(d.at?'<a class="btn at" target="_blank" href="'+d.at+'">AllTrails</a>':'')+'<a class="btn gm" target="_blank" href="https://www.google.com/maps/search/'+encodeURIComponent(key.split(' (')[0].split(' —')[0].split(' ·')[0])+'+Iceland">Google Maps</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q='+encodeURIComponent(key.split(' ')[0])+'&t=trails">Wikiloc tracks</a></div>';
+  box.innerHTML = html;
+  document.getElementById('mov').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeM(){ document.getElementById('mov').classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeM(); });
+// wire up cards: match card h3 title text to T keys; pull AllTrails link from the card itself
+document.querySelectorAll('.card').forEach(card=>{
+  const h3 = card.querySelector('h3'); if(!h3) return;
+  const key = h3.childNodes[0].textContent.trim();
+  if(!T[key]) return;
+  const at = card.querySelector('a.at'); if(at) T[key].at = at.href;
+  card.addEventListener('click', e=>{ if(e.target.closest('a')) return; openM(key); });
+  const small = h3.querySelector('small');
+  if(small) small.insertAdjacentHTML('afterend','<span class="hint">▸ click for trail details & gallery</span>');
+});
+</script>
+
 </body>
 </html>

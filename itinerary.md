@@ -23,7 +23,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 | ★ MUST · **Múlagljúfur Canyon** (off-beat) | 55 km · 45 min | 7.1 km RT | 386 m | Moderate | 2.5–3 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon) |
 | **Kristínartindar via Svartifoss** (Skaftafell) | 40 km · 35 min | 18.7 km loop | 1,065 m | **Hard** | 7.5–8 h | Dawn start | [link](https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi) |
 | **Jökulsárlón + Diamond Beach** | 70 km · 55 min | 1–3 km flat | — | Easy | flexible | Blue hour + **aurora** | — |
-| **Skógafoss + Fimmvörðuháls "Waterfall Way"** | 105 km · 1 h 20 | up to 16 km RT | ~500 m | Hard | 4–6 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls) |
+| ★ MUST · **Skógafoss + Fimmvörðuháls "Waterfall Way"** | 105 km · 1 h 20 | up to 16 km RT | ~500 m | Hard | 4–6 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls) |
 | **Seljalandsfoss + Gljúfrabúi** | en route Day 1 | 1.9 km | ~30 m | Easy | 40 min | Sunset (west-facing) | [link](https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls) |
 | **Þakgil · Remundargil loop** (off-beat) | ~85 km · 1 h 20 (14 km gravel) | 10.9 km loop | 752 m | Hard | 4.5–5.5 h | Midday | [link](https://www.alltrails.com/trail/iceland/southern/thakgil-remundargil-vatnsrasarhofud) |
 | ★ MUST · **Fjaðrárgljúfur Canyon** | 8 km · 10 min | 2.4 km | 86 m | Easy | 45 min | Golden hour | [link](https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon) |
@@ -55,6 +55,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 | **Brúnavík** (Borgarfjörður eystri, off-beat) | ~70 km · 1 h 10 | 13.8 km loop | 696 m | Moderate+ | 5–5.5 h | Day hike | [link](https://www.alltrails.com/trail/iceland/eastern/borgarfjordur-eystri-brunavik) |
 | **Seyðisfjörður + Vestdalur trail** | 27 km · 30 min | up to 7 km | ~450 m | Moderate | half-day | Any + **aurora** | — |
 | **Vestrahorn/Stokksnes** | done on transfer | 6.1 km loop | <50 m | Easy | 1–1.5 h | Any (shapes) | [link](https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path) |
+| ★ MUST · **Rauðhólar Red Craters + Hljóðaklettar** | transfer Sept 20 | ~5 km loop | ~120 m | Easy-moderate | 1.5–2 h | Midday | [link](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle) |
 
 **Day by day**
 - **Sept 15 (Mon):** Transfer day (above); arrive ~18:00.
@@ -64,7 +65,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 - **Sept 19 (Fri):** **Seyðisfjörður + Vestdalur** — or weather-flex day.
 - **Sept 20 (Sat):** The big transfer north.
 
-**Transfer Sept 20 · Egilsstaðir → Eyjafjörður (~330 km + detours — the biggest day):** depart 7:00 → **Dettifoss west + Selfoss** ~10:00 ([3.9 km, easy](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss)) → **Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters** (~5 km loop, 1.5–2 h — [AllTrails](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle)) → **Ásbyrgi Eyjan rim trail** ([4.8 km](https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail); skippable if time runs short — Rauðhólar is the keeper) → **Hverir** mud flats + Mývatn (Nature Baths optional) → **Goðafoss sunset** ([2.9 km](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall)) → base ~20:30. Fuel Reykjahlíð. [Route](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss/%C3%81sbyrgi/Hverir/Go%C3%B0afoss/Akureyri)
+**Transfer Sept 20 · Egilsstaðir → Eyjafjörður (~330 km + detours — the biggest day):** depart 7:00 → **Dettifoss west + Selfoss** ~10:00 ([3.9 km, easy](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss)) → ★ MUST · **Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters** (~5 km loop, 1.5–2 h — [AllTrails](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle)) → **Ásbyrgi Eyjan rim trail** ([4.8 km](https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail); skippable if time runs short — Rauðhólar is the keeper) → **Hverir** mud flats + Mývatn (Nature Baths optional) → **Goðafoss sunset** ([2.9 km](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall)) → base ~20:30. Fuel Reykjahlíð. [Route](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss/%C3%81sbyrgi/Hverir/Go%C3%B0afoss/Akureyri)
 
 ---
 
@@ -145,6 +146,19 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29**. Clockwise ro
 **Volcano watch (as of July 2026).** No active eruption — the last Sundhnúkur (Reykjanes) eruption ended Aug 2025, but magma is re-accumulating under Svartsengi and a new eruption is rated likely. The zone is 20 min from KEF and far from all bases (zero itinerary risk); if it erupts during the trip, it's a bolt-on for arrival/departure day. Check en.vedur.is + safetravel.is.
 
 **Driving & safety.** 4x4 needed: Þakgil road, Aldeyjarfoss (F26 stretch), Stuðlagil east gravel, Kvennaskarð. Check **road.is** + **vedur.is** every morning; file a **safetravel.is** plan before Kerling/Helgrindur/Kaldbakur. Hold doors in wind (classic rental damage); never drive in a yellow/red warning; headlights always on.
+
+## September weather — what to actually expect
+
+Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillfully forecast ~5–7 days out, via vedur.is). The climatology, though, is dependable: September is the hinge between mild autumn and the first Atlantic storms. Temps fall ~2°C across your 19 days; first storms typically arrive after mid-month; snow starts dusting peaks above ~800 m (i.e., Kerling and Helgrindur). Sept 2025 ran ~0.5–1°C above these norms.
+
+| Base | Day / night | Rain | Character |
+|---|---|---|---|
+| 1 · South Coast (10–15) | ~10–11°C / 5–6°C | ~140–170 mm · 15–18 rain days | Wettest, mildest; showers most days with dramatic clearings; strong gusts at Reynisfjara/Dyrhólaey. Statistically your calmest week. |
+| 2 · Eastfjords (15–20) | ~9–10°C / 3–5°C | ~90–100 mm · 12–15 days | Often the driest quarter (rain shadow); föhn-warmed afternoons; Stórurð can get its first snow dusting. |
+| 3 · North (20–25) | ~8–9°C / 2–4°C | ~55–75 mm · fewest rain days | Driest region, coldest nights → best aurora odds. Kerling's top 500 m is alpine: snow patches, winter kit. |
+| 4 · Snæfellsnes (25–29) | ~9–10°C / 4–5°C | ~110–130 mm · 15–17 days | Windiest block; late-Sept lows queue up. Wind, not rain, is the go/no-go call for Helgrindur. |
+
+**In practice:** every evening check vedur.is + belgingur.is, rank the next 3 days, slot hikes accordingly (summits on the calm day, canyons in drizzle, driving on the ugly day). Yellow warning = reshuffle; orange/red = nobody drives. Rain is usually sideways drizzle in 10–15 m/s wind — hard-shell armor, never umbrellas. The classic pattern of 4 grey days then one impossibly clear one is why every base has a flex day.
 
 ## Light & sky
 
