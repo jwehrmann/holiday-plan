@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iceland · 4-Base Wilderness Itinerary · Sept 10–29, 2026</title>
+<style>
+  :root{
+    --bg:#0b0f14; --bg2:#111820; --card:#151e28; --card2:#1a2532;
+    --ink:#e8eef4; --muted:#9db0c0; --faint:#5f7387;
+    --accent:#5eead4; --accent2:#7dd3fc; --gold:#fbbf24; --rose:#fb7185;
+    --easy:#34d399; --mod:#fbbf24; --hard:#fb7185; --vhard:#f43f5e;
+    --line:#233242; --radius:16px;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(11,15,20,.25) 0%,rgba(11,15,20,.55) 55%,var(--bg) 100%),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg/900px-Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg") center/cover no-repeat;}
+  .hero-inner{max-width:1100px;margin:0 auto;padding:80px 24px 64px;width:100%}
+  .hero .kicker{letter-spacing:.35em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:14px}
+  .hero h1{font-family:var(--serif);font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.08;font-weight:600}
+  .hero p.sub{max-width:640px;color:var(--muted);margin-top:18px;font-size:1.05rem}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .hstat{background:rgba(21,30,40,.75);backdrop-filter:blur(6px);border:1px solid var(--line);
+    border-radius:12px;padding:10px 18px;font-size:.9rem}
+  .hstat b{color:var(--accent);display:block;font-size:1.15rem}
+
+  /* ---------- Nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+  nav a{padding:14px 14px;white-space:nowrap;color:var(--muted);font-size:.88rem;border-bottom:2px solid transparent}
+  nav a:hover{color:var(--ink);text-decoration:none}
+  nav a.b1:hover{border-color:var(--accent)} nav a.b2:hover{border-color:var(--accent2)}
+  nav a.b3:hover{border-color:var(--gold)} nav a.b4:hover{border-color:var(--rose)}
+
+  /* ---------- Layout ---------- */
+  main{max-width:1100px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0 12px}
+  .base-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin-bottom:6px}
+  .base-num{font-family:var(--serif);font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+  h2{font-family:var(--serif);font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:600}
+  .dates{color:var(--gold);font-size:.95rem;font-weight:600}
+  .base-sub{color:var(--muted);max-width:820px;margin:10px 0 8px}
+  .basecamp{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);
+    border-radius:999px;padding:7px 16px;margin:12px 0 4px;font-size:.9rem}
+  .basecamp b{color:var(--accent)}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px;margin-top:26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-3px);border-color:#33485e}
+  .card .imgwrap{position:relative;height:200px;background:linear-gradient(135deg,#16324a,#0e4b46 60%,#173a2b);overflow:hidden}
+  .card img{width:100%;height:100%;object-fit:cover;display:block}
+  .badge{position:absolute;top:12px;left:12px;display:flex;gap:6px}
+  .tag{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+  .t-sunrise{background:rgba(251,191,36,.9);color:#1c1400}
+  .t-sunset{background:rgba(251,113,133,.9);color:#2a020b}
+  .t-night{background:rgba(125,211,252,.92);color:#04202e}
+  .t-offbeat{background:rgba(94,234,212,.9);color:#022c22}
+  .t-enroute{background:rgba(157,176,192,.9);color:#101820}
+  .card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .card h3{font-size:1.15rem;font-weight:700}
+  .card h3 small{display:block;font-weight:400;color:var(--faint);font-size:.8rem;margin-top:2px}
+  .stats{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:4px 10px;
+    font-size:.78rem;color:var(--muted)}
+  .chip b{color:var(--ink);font-weight:600}
+  .diff{border-radius:8px;padding:4px 10px;font-size:.78rem;font-weight:700}
+  .d-easy{background:rgba(52,211,153,.15);color:var(--easy);border:1px solid rgba(52,211,153,.35)}
+  .d-mod{background:rgba(251,191,36,.13);color:var(--mod);border:1px solid rgba(251,191,36,.35)}
+  .d-hard{background:rgba(251,113,133,.13);color:var(--hard);border:1px solid rgba(251,113,133,.35)}
+  .d-vhard{background:rgba(244,63,94,.16);color:var(--vhard);border:1px solid rgba(244,63,94,.45)}
+  .card p{font-size:.9rem;color:var(--muted);flex:1}
+  .links{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;
+    padding:8px 14px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--card2)}
+  .btn:hover{border-color:var(--accent);text-decoration:none}
+  .btn.at{color:#a7f3d0}.btn.gm{color:#bae6fd}
+
+  /* ---------- Day plan ---------- */
+  .dayplan{margin-top:34px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .dayplan summary{cursor:pointer;padding:16px 22px;background:var(--card);font-weight:700;list-style:none;
+    display:flex;justify-content:space-between;align-items:center}
+  .dayplan summary::after{content:"⌄";color:var(--faint);font-size:1.2rem;transition:transform .2s}
+  .dayplan[open] summary::after{transform:rotate(180deg)}
+  .dayrows{padding:6px 22px 18px;background:var(--bg2)}
+  .dayrow{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .dayrow:last-child{border-bottom:none}
+  .dayrow .d{color:var(--gold);font-weight:700;font-size:.88rem}
+  .dayrow .txt{font-size:.92rem;color:var(--muted)}
+  .dayrow .txt b{color:var(--ink)}
+
+  /* ---------- Map ---------- */
+  .mapwrap{margin-top:30px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .mapwrap iframe{display:block;width:100%;height:340px;border:0;filter:saturate(.85) contrast(1.02)}
+  .maplinks{display:flex;gap:10px;flex-wrap:wrap;padding:14px 18px;background:var(--card)}
+
+  /* ---------- Info blocks ---------- */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:26px}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .info h3{font-size:1.02rem;margin-bottom:10px;color:var(--accent)}
+  .info ul{list-style:none}
+  .info li{font-size:.9rem;color:var(--muted);padding:7px 0;border-bottom:1px dashed var(--line)}
+  .info li:last-child{border:none}
+  .info li b{color:var(--ink)}
+  .note{background:linear-gradient(135deg,rgba(94,234,212,.07),rgba(125,211,252,.05));
+    border:1px solid rgba(94,234,212,.25);border-radius:var(--radius);padding:22px 26px;margin-top:28px;font-size:.94rem;color:var(--muted)}
+  .note b{color:var(--accent)}
+  .transfer{display:flex;gap:16px;align-items:flex-start;background:var(--bg2);border:1px dashed var(--line);
+    border-radius:var(--radius);padding:20px 24px;margin:40px 0 0;font-size:.92rem;color:var(--muted)}
+  .transfer .icon{font-size:1.4rem}
+  .transfer b{color:var(--ink)}
+  footer{border-top:1px solid var(--line);margin-top:80px;padding:36px 24px;text-align:center;color:var(--faint);font-size:.85rem}
+  .alt-banner{background:linear-gradient(135deg,rgba(251,113,133,.08),rgba(251,191,36,.06));
+    border:1px solid rgba(251,113,133,.3);border-radius:var(--radius);padding:22px 26px;margin-top:24px;font-size:.93rem;color:var(--muted)}
+  .alt-banner b{color:var(--rose)}
+  table.light{width:100%;border-collapse:collapse;margin-top:26px;font-size:.88rem;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  table.light th,table.light td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line)}
+  table.light th{color:var(--faint);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+  table.light td{color:var(--muted)}
+  table.light td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  table.light tr.basehead td{background:var(--card2);color:var(--accent);font-weight:700;font-size:.82rem;
+    text-transform:uppercase;letter-spacing:.12em}
+  table.light .moonbar{display:inline-block;width:64px;height:7px;border-radius:4px;background:var(--line);
+    vertical-align:middle;margin-right:8px;overflow:hidden}
+  table.light .moonbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),#e2e8f0)}
+  table.light .best{color:var(--accent);font-weight:600}
+  @media(max-width:640px){.dayrow{grid-template-columns:1fr}.hero-inner{padding:60px 18px 44px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Iceland · September 10 – 29, 2026</div>
+    <h1>Four Bases.<br>Nineteen Nights.<br>Zero Crowds.</h1>
+    <p class="sub">A photographer's circuit of Iceland built around hard trails, empty trailheads, and the light nobody else wakes up for. Sunrise at the icons, golden hour in the canyons, aurora over the fjords — new moon on Sept 11 gives you a two-week dark-sky window.</p>
+    <div class="hero-stats">
+      <div class="hstat"><b>4</b>bases</div>
+      <div class="hstat"><b>~2,900 km</b>driven</div>
+      <div class="hstat"><b>120+ km</b>on trail</div>
+      <div class="hstat"><b>5</b>hard summits &amp; treks</div>
+      <div class="hstat"><b>Sept 11</b>new moon · aurora window</div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#overview">Overview</a>
+  <a class="b1" href="#base1">1 · South Coast</a>
+  <a class="b2" href="#base2">2 · Eastfjords</a>
+  <a class="b3" href="#base3">3 · North</a>
+  <a class="b4" href="#base4">4 · Snæfellsnes</a>
+  <a href="#alt">Alt: Westfjords</a>
+  <a href="#logistics">Logistics</a>
+  <a href="#photo">Light &amp; Sky</a>
+</div></nav>
+
+<main>
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview">
+  <h2>The Shape of the Trip</h2>
+  <p class="base-sub">You land at KEF on <b>Sept 10, 9:25 AM</b> (YVR red-eye) and fly out <b>Sept 29</b>. The route runs clockwise: south coast glaciers → Eastfjords → the North → Snæfellsnes, finishing 2.5 h from the airport instead of 6. Two changes from your draft, both to cut dead driving: <b>Egilsstaðir replaces Seyðisfjörður</b> as the East base (it's the hub every East hike radiates from — Seyðisfjörður becomes a day trip over the pass), and <b>the Eyjafjörður valley south of Akureyri replaces Siglufjörður</b> in the North (Kerling's trailhead is 30 min away instead of 1 h 15, Aldeyjarfoss 1 h 15 instead of 2 h 30 — Siglufjörður becomes a day trip). Big landmarks are hit at sunrise or late evening; the crowd-free midday hours go to trails tour buses can't reach.</p>
+  <div class="info-grid">
+    <div class="info"><h3>Base 1 · Kirkjubæjarklaustur</h3><ul>
+      <li><b>Sept 10–15</b> · 5 nights</li>
+      <li>Glaciers, black deserts, the big waterfalls</li>
+      <li>Hardest day: Kristínartindar, 18.7 km / 1,065 m</li></ul></div>
+    <div class="info"><h3>Base 2 · Egilsstaðir</h3><ul>
+      <li><b>Sept 15–20</b> · 5 nights</li>
+      <li>Basalt canyons, alpine boulder fields, quiet fjords</li>
+      <li>Hardest day: Brúnavík, 13.8 km / 696 m</li></ul></div>
+    <div class="info"><h3>Base 3 · Eyjafjörður (Akureyri)</h3><ul>
+      <li><b>Sept 20–25</b> · 5 nights</li>
+      <li>North Iceland's highest summit, Mývatn, dark-basalt falls</li>
+      <li>Hardest day: Kerling, 12.2 km / 1,416 m</li></ul></div>
+    <div class="info"><h3>Base 4 · Grundarfjörður</h3><ul>
+      <li><b>Sept 25–29</b> · 4 nights</li>
+      <li>Snæfellsnes: "Iceland in miniature," 2.5 h from KEF</li>
+      <li>Hardest day: Glymur loop (transfer day), 7.2 km / 430 m</li></ul></div>
+  </div>
+  <div class="mapwrap">
+    <iframe loading="lazy" src="https://maps.google.com/maps?q=Iceland&z=6&output=embed"></iframe>
+    <div class="maplinks">
+      <a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Kirkjub%C3%A6jarklaustur/Egilssta%C3%B0ir/Akureyri/Grundarfj%C3%B6r%C3%B0ur/Keflav%C3%ADk+International+Airport">▸ Full route in Google Maps (all 4 bases)</a>
+    </div>
+  </div>
+  <h2 style="margin-top:48px;font-size:1.5rem">The Original Shortlist</h2>
+  <p class="base-sub">Jonatas's hand-picked AllTrails list — the raw material this plan was built from and cross-checked against.</p>
+  <div class="mapwrap" style="margin-top:18px">
+    <iframe class="alltrails" src="https://www.alltrails.com/widget/list/iceland-tour-904a303?u=m&amp;sh=lw8cpc" width="100%" height="400" frameborder="0" scrolling="no" title="AllTrails: Iceland Tour list"></iframe>
+    <div class="maplinks"><a class="btn at" target="_blank" href="https://www.alltrails.com/lists/iceland-tour-904a303?u=m&amp;sh=lw8cpc">▸ Open the full list on AllTrails</a></div>
+  </div>
+</section>
+
+<!-- ================= BASE 1 ================= -->
+<section id="base1">
+  <div class="base-head"><span class="base-num">Base 01</span><h2>South Coast &amp; Glacier Realm</h2><span class="dates">Sept 10 – 15 · 5 nights</span></div>
+  <div class="basecamp">🏠 Airbnb in <b>Kirkjubæjarklaustur</b> (or a rural cabin just east) — the pivot point between the waterfall coast and Vatnajökull's glacier tongues</div>
+  <p class="base-sub">Klaustur sits deliberately east of the tour-bus bubble. Icons like Skógafoss and Seljalandsfoss are a dawn strike west; Múlagljúfur, Skaftafell and Jökulsárlón are under an hour east. Stock groceries in Selfoss on arrival day — Klaustur has only a small Kjarval.</p>
+
+  <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span><span class="tag t-sunrise">Sunrise</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Mulagljufur.jpg/900px-Mulagljufur.jpg" alt="Múlagljúfur Canyon" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Múlagljúfur Canyon<small>Unmarked trail to Hangandifoss — Iceland's best-kept canyon</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>55 km</b> · 45 min E</span><span class="chip">↔ <b>7.1 km</b> RT</span><span class="chip">⛰ <b>386 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 2.5–3 h</span></div>
+      <p>Steep, muddy, unsigned — which is exactly why you'll likely have a moss-drenched mega-canyon with two plunging waterfalls to yourselves at dawn. Fog hangs in the gorge on cool September mornings; bring the 60 MP sensor and a polarizer.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/M%C3%BAlaglj%C3%BAfur+Parking">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Dawn start</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/038_Svartifoss_waterfall_%28Iceland%29_Photo_by_Giles_Laurent.jpg/900px-038_Svartifoss_waterfall_%28Iceland%29_Photo_by_Giles_Laurent.jpg" alt="Svartifoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Kristínartindar via Svartifoss<small>Skaftafell's summit ridge — the challenge day</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>40 km</b> · 35 min E</span><span class="chip">↔ <b>18.7 km</b> loop</span><span class="chip">⛰ <b>1,065 m</b></span><span class="diff d-vhard">Hard</span><span class="chip">⏱ 7.5–8 h</span></div>
+      <p>Pass Svartifoss's basalt organ pipes before the buses arrive, then keep climbing: the Kristínartindar ridge delivers a full panorama over Skaftafellsjökull's crevasse field. The final scree push is steep and airy — tennis legs required.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Skaftafell+Visitor+Centre">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span><span class="tag t-sunset">Dusk</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg/900px-Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg" alt="Aurora over Iceland" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Jökulsárlón &amp; Diamond Beach<small>Glacier lagoon — icebergs, seals, aurora mirror</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>70 km</b> · 55 min E</span><span class="chip">↔ <b>1–3 km</b> flat</span><span class="chip">⛰ <b>0 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ flexible</span></div>
+      <p>Skip midday entirely. Come for blue-hour ice on black sand, stay after dark: with the Sept 11 new moon, an aurora reflected in the lagoon is a real possibility. This is the night-photo anchor of Base 1 — check vedur.is cloud cover and bolt here on any clear night.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/J%C3%B6kuls%C3%A1rl%C3%B3n">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Sunrise</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sk%C3%B3gafoss%2C_Iceland%2C_20230501_1447_3978.jpg/900px-Sk%C3%B3gafoss%2C_Iceland%2C_20230501_1447_3978.jpg" alt="Skógafoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Skógafoss + Fimmvörðuháls "Waterfall Way"<small>The icon, then 20+ falls nobody walks to</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>105 km</b> · 1 h 20 W</span><span class="chip">↔ <b>up to 16 km</b> RT</span><span class="chip">⛰ <b>~500 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4–6 h</span></div>
+      <p>Shoot the empty base of Skógafoss at first light, then climb the 500 stairs and just keep going. Past the top, the crowd evaporates and the Skógá river throws a waterfall at you every ten minutes. Turn around whenever the weather says so.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Sk%C3%B3gafoss">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Seljalandsfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_201-203_HDR.JPG/900px-Seljalandsfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_201-203_HDR.JPG" alt="Seljalandsfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Seljalandsfoss + Gljúfrabúi<small>Walk behind the curtain — done on arrival day</small></h3>
+      <div class="stats"><span class="chip">🚗 en route Day 1</span><span class="chip">↔ <b>1.9 km</b></span><span class="chip">⛰ <b>~30 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 40 min</span></div>
+      <p>West-facing, so sunset fires straight through the falling water — frame the sun through the curtain and let the a7RV eat the dynamic range. Don't skip Gljúfrabúi, the hidden fall inside a slot 600 m north that most visitors never find. Rain shell for the camera mandatory.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Selfoss/Seljalandsfoss">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG/900px-Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG" alt="Þakgil area near Mýrdalsjökull" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Þakgil · Remundargil loop<small>Green canyons behind Vík — almost nobody goes</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~85 km</b> · 1 h 20 (14 km gravel)</span><span class="chip">↔ <b>10.9 km</b> loop</span><span class="chip">⛰ <b>752 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4.5–5.5 h</span></div>
+      <p>A rough mountain road climbs from Vík into a hidden world of mossy gorges under Mýrdalsjökull's edge. The Remundargil–Vatnsrásarhöfuð loop is steep, wild, and gloriously empty — the "live the terrain" day of Base 1. 4x4 earns its keep here.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/thakgil-remundargil-vatnsrasarhofud">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/V%C3%ADk/%C3%9Eakgil">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Golden hour</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fja%C3%B0r%C3%A1rglj%C3%BAfur.JPG/900px-Fja%C3%B0r%C3%A1rglj%C3%BAfur.JPG" alt="Fjaðrárgljúfur" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Fjaðrárgljúfur Canyon<small>The serpentine canyon 10 minutes from your door</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>8 km</b> · 10 min</span><span class="chip">↔ <b>2.4 km</b></span><span class="chip">⛰ <b>86 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 45 min</span></div>
+      <p>Your local canyon. Being this close means you can hit it at 7 PM when the parking lot empties and low light rakes across the two-million-year-old walls. A perfect "bad weather cleared late" bonus stop, any evening.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Fja%C3%B0r%C3%A1rglj%C3%BAfur">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Day 1 en route</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Gullfoss%2C_Iceland%2C_20230501_0940_3780.jpg/900px-Gullfoss%2C_Iceland%2C_20230501_0940_3780.jpg" alt="Gullfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Gullfoss (+ Geysir)<small>Golden Circle, knocked out on the airport drive</small></h3>
+      <div class="stats"><span class="chip">🚗 detour on Day 1</span><span class="chip">↔ <b>1 km</b> paths</span><span class="chip">⛰ <b>minimal</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1 h</span></div>
+      <p>Hit it once, on landing day, and never fight the Golden Circle again. It'll be busy at midday — accept it, shoot the two-tier drop with the 200 mm compression from the upper rim, watch Strokkur erupt twice at Geysir, and roll on south.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Gullfoss+Falls">Route</a></div></div></div>
+  </div>
+
+  <details class="dayplan"><summary>Day-by-day · Base 1</summary><div class="dayrows">
+    <div class="dayrow"><span class="d">Sept 10 · Wed</span><span class="txt"><b>Land 9:25.</b> Coffee + SIM at KEF → big grocery run at <b>Krónan Selfoss</b> (~50 min away) → <b>Þingvellir rift walk + Öxarárfoss</b> (30 min, <a target="_blank" href="https://www.alltrails.com/trail/iceland/southern/oxararfoss-waterfall-trail">AllTrails</a>) → Geysir &amp; Gullfoss midday → <b>Brúarfoss</b>, the electric-blue one from your list (3.5 km RT, <a target="_blank" href="https://www.alltrails.com/trail/iceland/southern/hlauptungufoss-midfoss-and-bruarfoss-waterfalls">AllTrails</a>) if energy allows → Seljalandsfoss at golden hour → arrive Klaustur ~21:00. Long day on a red-eye; nap in the car park if needed — you're driving east while everyone else checks into Reykjavík.</span></div>
+    <div class="dayrow"><span class="d">Sept 11 · Thu</span><span class="txt"><b>Múlagljúfur at dawn</b> → Fjallsárlón &amp; Jökulsárlón afternoon → Diamond Beach blue hour. <b>New moon tonight</b> — if vedur.is shows clear, go straight back out for aurora over the lagoon.</span></div>
+    <div class="dayrow"><span class="d">Sept 12 · Fri</span><span class="txt"><b>Kristínartindar</b> full-day loop from Skaftafell (start 8:00). Recovery dinner; early night.</span></div>
+    <div class="dayrow"><span class="d">Sept 13 · Sat</span><span class="txt">Pre-dawn drive west → <b>Skógafoss at sunrise</b> → Waterfall Way climb → <b>Sólheimajökull glacier snout</b> (20 min from Skógafoss; walk to the ice's edge, or pre-book a crampon walk) → Reynisfjara black beach ~18:00 when the buses have gone (respect sneaker waves!) → Dyrhólaey arch for sunset.</span></div>
+    <div class="dayrow"><span class="d">Sept 14 · Sun</span><span class="txt"><b>Þakgil Remundargil loop</b> — or swap with any weather-ruined day above. Evening: Fjaðrárgljúfur golden hour, 10 min from home.</span></div>
+    <div class="dayrow"><span class="d">Sept 15 · Mon</span><span class="txt">Transfer day → East. See below.</span></div>
+  </div></details>
+
+  <div class="mapwrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Kirkjub%C3%A6jarklaustur&z=8&output=embed"></iframe>
+    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Gullfoss/Seljalandsfoss/Kirkjub%C3%A6jarklaustur">▸ Day 1 route: KEF → Gullfoss → Seljalandsfoss → Klaustur</a></div></div>
+
+  <div class="note"><b>🏜 Highland wildcard (your list's Landmannalaugar cluster):</b> Bláhnjúkur, the Laugavegur segments and Þórsmörk live in the Fjallabak highlands — reachable from Base 1 as one huge day: ~2.5 h each way on F208 to Landmannalaugar, then the <b>Bláhnjúkur–Brennisteinsalda loop</b> (~8.5 km, 550 m) through the rhyolite rainbow mountains <a target="_blank" href="https://www.alltrails.com/trail/iceland/southern/blahnjukur">(AllTrails)</a>. Mid-September is the last week the mountain huts and F-roads are reliably open — check road.is; the F208-north approach avoids serious river fords, but never ford toward Þórsmörk (F249) in a rental. If the forecast gives you a bonus stable day, trade the Þakgil day for this. Also from your list: <b>Reykjadalur hot-river</b> (3 km up, soak in a warm river) sits near Hveragerði — perfect stop on Day 1 if the red-eye spares you, or skip without guilt.</div>
+
+  <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 15 · Klaustur → Egilsstaðir (~420 km, 5 h driving)</b><br>
+    Leave by 7:30. <b>Vestrahorn / Stokksnes</b> (2 h 30 in) is the money stop — the spiky massif over black dunes, 900 ISK gate at the Viking Café, walk the 6.1 km Yellow Path loop <a target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path">(AllTrails)</a>. Lunch in Höfn (langoustine soup), then the Eastfjords coast road — one of Iceland's great drives. Refuel Höfn; groceries at <b>Nettó/Bónus Egilsstaðir</b> on arrival.</div></div>
+</section>
+<!-- ================= BASE 2 ================= -->
+<section id="base2">
+  <div class="base-head"><span class="base-num">Base 02</span><h2>The Eastfjords</h2><span class="dates">Sept 15 – 20 · 5 nights</span></div>
+  <div class="basecamp">🏠 Airbnb in/near <b>Egilsstaðir</b> — the East's road hub; every hike below radiates from it. (Prefer waking up to a fjord? Seyðisfjörður works too, at the cost of a 27 km mountain pass each way, ~+50 min/day.)</div>
+  <p class="base-sub">The least-visited quarter of the Ring Road. This is where the trip gets quiet: alpine boulder fields, columnar-basalt canyons, and fjord hikes where the only footprints are reindeer.</p>
+
+  <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Borgarfj%C3%B6r%C3%B0ur_eystri_2023_A.jpg/900px-Borgarfj%C3%B6r%C3%B0ur_eystri_2023_A.jpg" alt="Dyrfjöll mountains, Borgarfjörður eystri" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Stórurð — The Giant's Boulders<small>Turquoise ponds among house-sized tuff blocks</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~45 km</b> · 45 min (Vatnsskarð)</span><span class="chip">↔ <b>10.8 km</b> RT</span><span class="chip">⛰ <b>607 m</b></span><span class="diff d-mod">Moderate+</span><span class="chip">⏱ 4–4.5 h</span></div>
+      <p>Under the jagged Dyrfjöll "Door Mountains," a glacial valley strewn with colossal boulders and impossibly bright ponds. Save it for the best-weather day of the block — snow can arrive up here by late September. Poles help on the loose descent.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/storurd-via-borgarfjardarvegur">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/St%C3%B3rur%C3%B0+Trailhead+Vatnsskar%C3%B0">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Sunrise</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Stu%C3%B0lagil_Canyon_2.jpg/900px-Stu%C3%B0lagil_Canyon_2.jpg" alt="Stuðlagil Canyon" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Stuðlagil Canyon — east bank<small>Basalt columns over glacier-blue water</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~65 km</b> · 55 min</span><span class="chip">↔ <b>9.7 km</b> RT</span><span class="chip">⛰ <b>176 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 2.5–3 h</span></div>
+      <p>Everyone photographs it from the west viewing platform; almost everyone. Hike the east bank instead — it puts you at river level among the columns. Arrive at first light and the geometry is yours alone. September = low glacial flow = the water at its bluest.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/studlagil-canyon--2">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Stu%C3%B0lagil+East+Parking+Klaustursel">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Afternoon</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Hengifoss_Waterfall.jpg/900px-Hengifoss_Waterfall.jpg" alt="Hengifoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Hengifoss &amp; Litlanesfoss<small>Red-striped cliff fall above a basalt colonnade</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>34 km</b> · 30 min</span><span class="chip">↔ <b>5.1 km</b> RT</span><span class="chip">⛰ <b>264 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 1.5–2 h</span></div>
+      <p>Two waterfalls, one climb: Litlanesfoss framed by towering hexagonal columns halfway up, then Hengifoss (128 m) pouring over red clay strata like a layer cake. Pairs perfectly with a Stuðlagil morning.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/hengifoss-waterfall">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Hengifoss+Parking">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Borgarfj%C3%B6r%C3%B0ur_eystri_2023_A.jpg/900px-Borgarfj%C3%B6r%C3%B0ur_eystri_2023_A.jpg" alt="Borgarfjörður eystri" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Brúnavík<small>Over the pass to an abandoned rhyolite bay</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~70 km</b> · 1 h 10</span><span class="chip">↔ <b>13.8 km</b> loop</span><span class="chip">⛰ <b>696 m</b></span><span class="diff d-mod">Moderate+</span><span class="chip">⏱ 5–5.5 h</span></div>
+      <p>From Borgarfjörður eystri — the village Icelanders call the East's best hiking region — cross Brúnavíkurskarð pass to a deserted multicoloured beach where a farm was abandoned in 1944. Odds of meeting another hiker in September: low. Bring lunch, eat it owning an entire bay.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/borgarfjordur-eystri-brunavik">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Borgarfj%C3%B6r%C3%B0ur+Eystri">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/S%C3%B3lveigartorg_-_Sey%C3%B0isfj%C3%B6r%C3%B0ur_-_20250528_-_20.jpg/900px-S%C3%B3lveigartorg_-_Sey%C3%B0isfj%C3%B6r%C3%B0ur_-_20250528_-_20.jpg" alt="Seyðisfjörður" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Seyðisfjörður day + Vestdalur<small>The prettiest fjord town, earned on foot</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>27 km</b> · 30 min (mountain pass)</span><span class="chip">↔ <b>up to 7 km</b></span><span class="chip">⛰ <b>~450 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ half-day</span></div>
+      <p>Descend the switchbacks past Gufufoss, walk the rainbow street, then hike the Vestdalur valley trail past a staircase of waterfalls. Fjord walls block light pollution completely — a clear night here or at Stuðlagil is your Base 2 aurora play.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Sey%C3%B0isfj%C3%B6r%C3%B0ur">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Transfer Sept 15</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Vestrahorn_and_Stokksnes_beach_in_Iceland.jpg/900px-Vestrahorn_and_Stokksnes_beach_in_Iceland.jpg" alt="Vestrahorn at Stokksnes" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Vestrahorn · Stokksnes<small>The Batman mountain over black dunes</small></h3>
+      <div class="stats"><span class="chip">🚗 en route B1→B2</span><span class="chip">↔ <b>6.1 km</b> loop</span><span class="chip">⛰ <b>&lt;50 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1–1.5 h</span></div>
+      <p>Grass-tufted dunes, tidal mirror-flats, and a 454 m wall of spikes. Walk the Yellow Path loop and hunt reflections. Midday works here — the drama is in the shapes, and September storms make it better, not worse.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/H%C3%B6fn/Stokksnes">Route</a></div></div></div>
+  </div>
+
+  <details class="dayplan"><summary>Day-by-day · Base 2</summary><div class="dayrows">
+    <div class="dayrow"><span class="d">Sept 15 · Mon</span><span class="txt">Transfer with <b>Vestrahorn</b> + Höfn lunch + Eastfjords coast road. Arrive Egilsstaðir ~18:00, groceries, refuel.</span></div>
+    <div class="dayrow"><span class="d">Sept 16 · Tue</span><span class="txt"><b>Stórurð</b> on the best forecast day (swap freely within the block). Evening soak at Vök Baths on the lake, 5 min from town.</span></div>
+    <div class="dayrow"><span class="d">Sept 17 · Wed</span><span class="txt"><b>Stuðlagil east bank at sunrise</b> → <b>Hengifoss</b> mid-afternoon. Aurora watch from the Stuðlagil rim if clear.</span></div>
+    <div class="dayrow"><span class="d">Sept 18 · Thu</span><span class="txt"><b>Brúnavík loop</b> from Borgarfjörður eystri; Álfaborg "elf hill" and the harbour at Hafnarhólmi on the way out.</span></div>
+    <div class="dayrow"><span class="d">Sept 19 · Fri</span><span class="txt"><b>Seyðisfjörður + Vestdalur</b> — or the designated weather-flex day. Pack and prep for the longest transfer of the trip.</span></div>
+    <div class="dayrow"><span class="d">Sept 20 · Sat</span><span class="txt">Transfer day → North, loaded with stops. See below.</span></div>
+  </div></details>
+
+  <div class="mapwrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Egilssta%C3%B0ir&z=9&output=embed"></iframe>
+    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjub%C3%A6jarklaustur/Stokksnes/H%C3%B6fn/Egilssta%C3%B0ir">▸ Transfer route: Klaustur → Stokksnes → Egilsstaðir</a></div></div>
+
+  <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 20 · Egilsstaðir → Eyjafjörður (~330 km + detours, the trip's biggest day)</b><br>
+    Depart 7:00 across the Möðrudalur highlands. <b>Dettifoss west side at ~10:00</b> (before Diamond Circle buses), with Selfoss included — 3.9 km, easy <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">(AllTrails)</a>. Then <b>Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters</b> — the blood-red scoria cones over twisted basalt you've seen in photos; ~5 km loop, ~1.5–2 h <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle">(AllTrails)</a>. Then <b>Ásbyrgi</b> horseshoe canyon: the Eyjan rim trail, 4.8 km <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">(AllTrails)</a> — or skip Eyjan if time runs short; Rauðhólar is the keeper. Loop back via <b>Hverir</b> boiling mud flats and Mývatn (Mývatn Nature Baths if energy allows), catch <b>Goðafoss at sunset</b> <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">(AllTrails)</a>, arrive Eyjafjörður ~20:30. Refuel Reykjahlíð; groceries next morning at Bónus Akureyri.</div></div>
+</section>
+
+<!-- ================= BASE 3 ================= -->
+<section id="base3">
+  <div class="base-head"><span class="base-num">Base 03</span><h2>Eyjafjörður &amp; the North</h2><span class="dates">Sept 20 – 25 · 5 nights</span></div>
+  <div class="basecamp">🏠 Airbnb/cabin in the <b>Eyjafjörður valley near Akureyri</b> — 30 min to Kerling's trailhead, 1 h 15 to Aldeyjarfoss, 30 min to Goðafoss, with Siglufjörður as a fjord-tunnel day trip. (Your draft's Siglufjörður is lovely but puts 1–2.5 h between you and every major hike.)</div>
+  <p class="base-sub">The North block is built around one monster summit, one perfect dark-basalt waterfall, and the volcanic weirdness of Mývatn — with a herring-town day and a genuine flex day, because by day 12 your legs will have opinions.</p>
+
+  <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Summit day</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kerling.jpg/900px-Kerling.jpg" alt="Kerling, Eyjafjörður" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Kerling (1,538 m)<small>The highest peak in North Iceland — the trip's crux</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~25 km</b> · 30 min</span><span class="chip">↔ <b>12.2 km</b> RT</span><span class="chip">⛰ <b>1,416 m</b></span><span class="diff d-vhard">Very hard</span><span class="chip">⏱ 7–8 h</span></div>
+      <p>1,400+ vertical metres of relentless volcanic rubble to the roof of the North — on a clear day you see Eyjafjörður end to end. Expect snow patches up top in late September; hard-shell, gloves, and a strict turnaround time. Total isolation. Total payoff.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/kerling">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Kerling+Trailhead+Eyjafj%C3%B6r%C3%B0ur">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Sunrise</span><span class="tag t-offbeat">F-road</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Aldeyjarfoss.jpg/900px-Aldeyjarfoss.jpg" alt="Aldeyjarfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Aldeyjarfoss<small>White water through black basalt — your 4x4's reward</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~75 km</b> · 1 h 15 (last stretch gravel/F26)</span><span class="chip">↔ <b>2.4 km</b></span><span class="chip">⛰ <b>77 m</b></span><span class="diff d-easy">Easy walk</span><span class="chip">⏱ 1 h</span></div>
+      <p>The Skjálfandafljót punches through a jet-black colonnade — the best micro-contrast subject in Iceland. The highland approach keeps 95% of visitors away; at sunrise, likely 100%. Pair with Goðafoss on the drive back and Hrafnabjargafoss 4 km further upstream if the road is good.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/aldeyjarfoss-waterfall">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Aldeyjarfoss">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Transfer Sept 20</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Dettifoss_TimBekaert.JPG/900px-Dettifoss_TimBekaert.JPG" alt="Dettifoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Dettifoss + Selfoss (west bank)<small>Europe's most powerful waterfall, pre-bus</small></h3>
+      <div class="stats"><span class="chip">🚗 en route B2→B3</span><span class="chip">↔ <b>3.9 km</b></span><span class="chip">⛰ <b>78 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1–1.5 h</span></div>
+      <p>193 m³ of grey glacier water per second going over a 44 m edge — you feel it in your chest before you see it. Hit the west bank mid-morning ahead of the Diamond Circle circuit, and walk the extra kilometre to Selfoss, the wide horseshoe fall everyone skips.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss+west+parking">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Go%C3%B0afoss_July_2014.JPG/900px-Go%C3%B0afoss_July_2014.JPG" alt="Goðafoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Goðafoss<small>Waterfall of the Gods — 30 minutes from base</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>35 km</b> · 30 min</span><span class="chip">↔ <b>2.9 km</b></span><span class="chip">⛰ <b>89 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 45 min</span></div>
+      <p>The horseshoe where Iceland's lawspeaker threw his pagan idols in the year 1000. Close enough to home to treat like Fjaðrárgljúfur: show up at sunset or under aurora, whenever the sky performs. Both banks walkable; east bank for the classic wide shot.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Go%C3%B0afoss">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Day trip</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/2014-04-29_11-08-18_Iceland_-_Siglufir%C3%B0i_Siglufj%C3%B6r%C3%B0ur.JPG/900px-2014-04-29_11-08-18_Iceland_-_Siglufir%C3%B0i_Siglufj%C3%B6r%C3%B0ur.JPG" alt="Siglufjörður" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Tröllaskagi loop &amp; Siglufjörður<small>Fjord tunnels, herring history, ocean cliffs</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>76 km</b> · 1 h to Siglufjörður</span><span class="chip">↔ optional short walks</span><span class="chip">⛰ —</span><span class="diff d-easy">Scenic day</span><span class="chip">⏱ full day</span></div>
+      <p>Your draft's Base 3, repackaged as its best version: the one-way single-lane tunnels into Siglufjörður, the excellent Herring Era Museum, fish soup at the harbour, then the Tröllaskagi coast road home via Hofsós's fjord-edge infinity pool. Recovery day after Kerling.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Siglufj%C3%B6r%C3%B0ur/Hofs%C3%B3s/Akureyri">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Island_Schlucht_%C3%81sbyrgi_03.JPG/900px-Island_Schlucht_%C3%81sbyrgi_03.JPG" alt="Ásbyrgi canyon" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Mývatn &amp; Ásbyrgi<small>Volcanic badlands + the horseshoe canyon</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~100 km</b> · 1 h 15 (Mývatn)</span><span class="chip">↔ <b>4.8 km</b> Eyjan trail</span><span class="chip">⛰ <b>~60 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ en route + flex</span></div>
+      <p>Hverir's boiling mud and steam vents, Dimmuborgir's lava castles, Ásbyrgi's sheer horseshoe (Eyjan rim walk) — mostly banked on the Sept 20 transfer, with Mývatn Nature Baths as the geothermal nightcap. Any clear evening: aurora reflected in Mývatn's pseudocrater pools.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Hverir/M%C3%BDvatn">Route</a></div></div></div>
+  </div>
+
+  <details class="dayplan"><summary>Day-by-day · Base 3</summary><div class="dayrows">
+    <div class="dayrow"><span class="d">Sept 20 · Sat</span><span class="txt">The big transfer: Dettifoss → <b>Rauðhólar red craters (Vesturdalur)</b> → Ásbyrgi → Hverir/Mývatn → Goðafoss sunset → base.</span></div>
+    <div class="dayrow"><span class="d">Sept 21 · Sun</span><span class="txt">Easy legs: Akureyri town + botanical garden, Bónus restock, <b>Forest Lagoon</b> soak. Evening: Goðafoss under stars if clear.</span></div>
+    <div class="dayrow"><span class="d">Sept 22 · Mon</span><span class="txt"><b>Kerling summit</b> on the best weather window (swap days freely — this one needs visibility). Start 8:00, turnaround rule 14:00.</span></div>
+    <div class="dayrow"><span class="d">Sept 23 · Tue</span><span class="txt"><b>Aldeyjarfoss at sunrise</b> (+ Hrafnabjargafoss) → Goðafoss on the way back → afternoon at Mývatn if not done, or rest.</span></div>
+    <div class="dayrow"><span class="d">Sept 24 · Wed</span><span class="txt"><b>Tröllaskagi/Siglufjörður loop</b> — or the block's weather-flex day for anything bumped above.</span></div>
+    <div class="dayrow"><span class="d">Sept 25 · Thu</span><span class="txt">Transfer day → West, with a serious hike en route. See below.</span></div>
+  </div></details>
+
+  <div class="mapwrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Akureyri&z=9&output=embed"></iframe>
+    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss/%C3%81sbyrgi/Hverir/Go%C3%B0afoss/Akureyri">▸ Transfer route: Egilsstaðir → Dettifoss → Ásbyrgi → Mývatn → Goðafoss → Akureyri</a></div></div>
+
+  <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 25 · Eyjafjörður → Grundarfjörður (~420 km, 5 h driving + Glymur hike)</b><br>
+    Leave 7:00. Optional 20-min detour to <b>Hvítserkur</b> sea stack (Vatnsnes). Main event: <b>Glymur</b>, Iceland's second-tallest waterfall — a proper 7.2 km adventure loop with a cave, a log river-crossing (usually removed early Oct — you're just in time) and vertigo canyon rims; ~430 m gain, hard, ~4 h <a target="_blank" href="https://www.alltrails.com/trail/iceland/capital/glymur-waterfall-trail">(AllTrails)</a>. Then 2 h 15 to Grundarfjörður via Borgarnes — <b>full grocery + fuel stop at Bónus/N1 Borgarnes</b>, the last big shops before the peninsula.</div></div>
+</section>
+<!-- ================= BASE 4 ================= -->
+<section id="base4">
+  <div class="base-head"><span class="base-num">Base 04 · Recommended</span><h2>Snæfellsnes Peninsula</h2><span class="dates">Sept 25 – 29 · 4 nights</span></div>
+  <div class="basecamp">🏠 Airbnb in <b>Grundarfjörður</b> — Kirkjufell is 2 km from your door; the whole national park is within 50 min; KEF is a safe 2.5 h on departure morning</div>
+  <p class="base-sub">Why Snæfellsnes over your draft's Westfjords: it swaps ~6 hours of extra transfer driving (including a risky 6-hour airport haul on flight day) for more time on trails, and still delivers a hard unmarked summit, sea cliffs, lava fields, a glacier-topped volcano — with a fraction of the south coast's crowds in late September. The full Westfjords version is preserved <a href="#alt">below</a> if the remote pull wins.</p>
+
+  <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Sunrise</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Kirkjufellsfoss%2C_Iceland%2C_20230505_1406_5209.jpg/900px-Kirkjufellsfoss%2C_Iceland%2C_20230505_1406_5209.jpg" alt="Kirkjufell and Kirkjufellsfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Kirkjufell &amp; Kirkjufellsfoss<small>The most photographed mountain in Iceland — at 6:45 AM, yours</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>2 km</b> · 5 min</span><span class="chip">↔ <b>3.5 km</b></span><span class="chip">⛰ <b>16 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1 h</span></div>
+      <p>Living 5 minutes away is the cheat code: walk over for sunrise before any tour van leaves Reykjavík, and come back on any aurora night — the arrowhead peak under green sky is the classic for a reason. Waterfall-foreground comp works best with the tide-fed pools still.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/Kirkjufellsfoss+Parking">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Challenge</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sn%C3%A6fellsj%C3%B6kullfromthesea.JPG/900px-Sn%C3%A6fellsj%C3%B6kullfromthesea.JPG" alt="Snæfellsjökull" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Helgrindur (Lýsuhyrna approach)<small>The peninsula's wild, unmarked ridge — real mountaineering-lite</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~25 km</b> · 25 min</span><span class="chip">↔ <b>~9 km</b> RT</span><span class="chip">⛰ <b>~900 m</b></span><span class="diff d-vhard">Very hard · unmarked</span><span class="chip">⏱ 5–6 h</span></div>
+      <p>The serrated spine above Grundarfjörður, and your Base 4 answer to Kerling: no trail markers, no AllTrails page, no people — route-find up grassy ramps to a knife-edge summit ridge with ocean on both sides. GPS track from Wikiloc, calm-weather day only, and tell your host your plan. Backup challenge: a guided Snæfellsjökull glacier summit.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/L%C3%BDsuh%C3%B3ll">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gatklettur%2C_Arnarstapi-pjt.jpg/900px-Gatklettur%2C_Arnarstapi-pjt.jpg" alt="Gatklettur arch, Arnarstapi" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Arnarstapi → Hellnar coastal walk<small>Basalt arches, blowholes, cliff-nesting fulmars</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>45 km</b> · 40 min</span><span class="chip">↔ <b>6.8 km</b> RT</span><span class="chip">⛰ <b>~30 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 2–2.5 h RT</span></div>
+      <p>A lava-cliff path strung between two fishing hamlets: Gatklettur's perfect stone arch, collapsed sea caves thundering below, Snæfellsjökull glowing behind. Golden hour turns the whole coast amber. Coffee at the Hellnar cliff café before walking back.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/western/arnarstapi-gatklettur-hellnar">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/Arnarstapi">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Slot gorge</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Iceland_%2819387840494%29.jpg/900px-Iceland_%2819387840494%29.jpg" alt="Rauðfeldsgjá gorge" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Rauðfeldsgjá Gorge<small>Squeeze inside a mountain, walk up its stream</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>40 km</b> · 35 min</span><span class="chip">↔ <b>1.1 km</b></span><span class="chip">⛰ <b>83 m</b></span><span class="diff d-mod">Easy + scramble</span><span class="chip">⏱ 45 min</span></div>
+      <p>A crack in the Botnsfjall wall you can slip into and follow upstream — waterproof boots, and the a7RV at high ISO in the green half-light. Two minutes off the road, missed by nearly everyone driving to the arch photo stops.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/western/raudfeldsgja-gorge">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/Rau%C3%B0feldsgj%C3%A1">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Golden hour</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sn%C3%A6fellsj%C3%B6kullfromthesea.JPG/900px-Sn%C3%A6fellsj%C3%B6kullfromthesea.JPG" alt="Snæfellsjökull from the sea" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Snæfellsjökull NP west loop<small>Craters, orange lighthouses, black pearl beaches</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>40–55 km</b> · 40–50 min</span><span class="chip">↔ short walks, ~5 km total</span><span class="chip">⛰ <b>~100 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ half-day</span></div>
+      <p>Chain the tip of the peninsula: Saxhóll crater stairs, Svörtuloft's blood-orange lighthouse on black cliffs, Djúpalónssandur's wave-polished pearls and shipwreck iron, Lóndrangar basalt pinnacles. Under Jules Verne's volcano the whole way.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/Saxh%C3%B3ll+Crater/Svortuloft+Lighthouse/Dj%C3%BApal%C3%B3nssandur">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg/900px-Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg" alt="Aurora borealis" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Búðakirkja &amp; the south shore<small>The black church under the stars</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~55 km</b> · 50 min</span><span class="chip">↔ <b>&lt;1 km</b></span><span class="chip">⛰ <b>0 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ evening</span></div>
+      <p>A lone black timber church in the Búðahraun lava field — the night-photo set piece of Base 4. Full moon lands Sept 26, so expect moonlit-landscape aurora shots rather than pitch-black skies: lower ISO, lit foregrounds, still spectacular. Ytri-Tunga seal beach is 10 min away for daylight.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/B%C3%BA%C3%B0akirkja">Route</a></div></div></div>
+  </div>
+
+  <details class="dayplan"><summary>Day-by-day · Base 4</summary><div class="dayrows">
+    <div class="dayrow"><span class="d">Sept 25 · Thu</span><span class="txt">Transfer + <b>Glymur</b> hike; Borgarnes shop; arrive Grundarfjörður ~19:00.</span></div>
+    <div class="dayrow"><span class="d">Sept 26 · Fri</span><span class="txt"><b>Kirkjufell sunrise</b> on foot → national park west loop → <b>Arnarstapi–Hellnar at golden hour</b>. Full moon tonight — moonlit Kirkjufell if clear.</span></div>
+    <div class="dayrow"><span class="d">Sept 27 · Sat</span><span class="txt"><b>Helgrindur</b> on the calmest day of the block (or guided Snæfellsjökull summit). Evening: Búðakirkja night shoot.</span></div>
+    <div class="dayrow"><span class="d">Sept 28 · Sun</span><span class="txt">Flex day: Rauðfeldsgjá + Ytri-Tunga seals + anything the weather stole; Eldborg crater rim (2 h) if legs want one more. Pack, refuel Grundarfjörður N1.</span></div>
+    <div class="dayrow"><span class="d">Sept 29 · Mon</span><span class="txt"><b>Departure.</b> Grundarfjörður → KEF is ~2.5 h; leave 4–4.5 h before check-in closes. Optional farewell stop: Gerðuberg basalt columns, 2 min off Route 54.</span></div>
+  </div></details>
+
+  <div class="mapwrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Grundarfj%C3%B6r%C3%B0ur&z=9&output=embed"></iframe>
+    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Akureyri/Glymur+Parking/Borgarnes/Grundarfj%C3%B6r%C3%B0ur">▸ Transfer route: Akureyri → Glymur → Grundarfjörður</a>
+    <a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Grundarfj%C3%B6r%C3%B0ur/Keflav%C3%ADk+International+Airport">▸ Departure: Grundarfjörður → KEF (~2.5 h)</a></div></div>
+</section>
+
+<!-- ================= ALTERNATIVE ================= -->
+<section id="alt">
+  <div class="base-head"><span class="base-num">Alternative Base 04</span><h2>The Westfjords Version</h2><span class="dates">Sept 25 – 29 · Ísafjörður</span></div>
+  <div class="alt-banner"><b>The trade, honestly:</b> the Westfjords are Iceland's emptiest, most dramatic corner — deeper solitude than anything on the main route. The cost: the Sept 25 transfer grows to ~5.5–6 h (vs 4 h with a hike included), roads are slower and part gravel, weather cancellations bite harder with no nearby substitutes, and <b>departure day becomes a ~6 h drive to KEF</b> before your flight. Pick this if raw remoteness outranks trail time and airport safety margin. <b>One honest warning about your Hornstrandir picks</b> (Hornvík–Hornbjarg, Hesteyri): the reserve is boat-access only and the scheduled ferries from Ísafjörður essentially stop by early September — those hikes are realistically a summer trip of their own, not a late-September add-on.</div>
+
+  <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cascada_Dynjandi%2C_Vestfir%C3%B0ir%2C_Islandia%2C_2014-08-14%2C_DD_121-123_HDR.JPG/900px-Cascada_Dynjandi%2C_Vestfir%C3%B0ir%2C_Islandia%2C_2014-08-14%2C_DD_121-123_HDR.JPG" alt="Dynjandi" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Dynjandi<small>The bridal-veil giant of the fjords</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~60 km</b> · 1 h from Ísafjörður</span><span class="chip">↔ <b>1.6 km</b></span><span class="chip">⛰ <b>92 m</b></span><span class="diff d-mod">Short + steep</span><span class="chip">⏱ 40 min</span></div>
+      <p>100 m wide at its base, seven falls stacked beneath it, facing west into the sunset over Arnarfjörður. The climb past the lower falls layers composition after composition.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/westfjords/dynjandi-fjallfoss-trail">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Dynjandi">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Summit</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Westfjords%2C_Iceland_-_panoramio_%2816%29.jpg/900px-Westfjords%2C_Iceland_-_panoramio_%2816%29.jpg" alt="Westfjords fjord landscape" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Kaldbakur (998 m)<small>The Westfjords' highest point</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~50 km</b> · ~1 h via Þingeyri</span><span class="chip">↔ <b>~7–8 km</b> RT from Kvennaskarð</span><span class="chip">⛰ <b>~450 m</b></span><span class="diff d-hard">Hard · unmarked</span><span class="chip">⏱ ~4 h</span></div>
+      <p>Loose scree, no markings, a summit cairn that pushes the peak "over 1,000 m," and fjords carved to the horizon in every direction. No AllTrails page exists — that tells you everything about the crowds. (Note: rough mountain track to Kvennaskarð pass; the 4x4 requirement is real.)</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.westfjords.is/en/place/kaldbakur">Route info (Visit Westfjords)</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/%C3%9Eingeyri">Route</a></div></div></div>
+
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Base town</span></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg/900px-%C3%8Dsafj%C3%B6r%C3%B0ur_12_June_2019.jpg" alt="Ísafjörður" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Ísafjörður + the extras<small>Bolafjall, Valagil, Ósvör</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>15–25 km</b> day trips</span><span class="chip">↔ <b>2–5 km</b> walks</span><span class="chip">⛰ varies</span><span class="diff d-mod">Easy–moderate</span><span class="chip">⏱ fill days</span></div>
+      <p>Bolafjall's cliff-edge platform above the open Atlantic, Valagil ravine waterfall in Álftafjörður, the turf fishing station at Ósvör, and the fjord-locked old town under 700 m walls — with essentially zero light pollution for aurora on any clear night.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Bolafjall">Route</a></div></div></div>
+  </div>
+
+  <details class="dayplan"><summary>Day-by-day · Westfjords version</summary><div class="dayrows">
+    <div class="dayrow"><span class="d">Sept 25 · Thu</span><span class="txt">Akureyri → Ísafjörður (~455 km, 5.5–6 h; skip Glymur). Hvítserkur detour optional. Groceries at Bónus Ísafjörður.</span></div>
+    <div class="dayrow"><span class="d">Sept 26 · Fri</span><span class="txt"><b>Kaldbakur summit</b> on the best window; evening in town.</span></div>
+    <div class="dayrow"><span class="d">Sept 27 · Sat</span><span class="txt"><b>Dynjandi for sunset</b>, Valagil ravine on the way. Aurora from the fjord mouth if clear.</span></div>
+    <div class="dayrow"><span class="d">Sept 28 · Sun</span><span class="txt">Bolafjall + Ósvör + flex; pack and refuel — tomorrow is long.</span></div>
+    <div class="dayrow"><span class="d">Sept 29 · Mon</span><span class="txt"><b>Ísafjörður → KEF ~455 km / ~6 h</b> plus stops. Leave at dawn; treat it as the final scenic drive down Route 60/1.</span></div>
+  </div></details>
+</section>
+
+<!-- ================= LOGISTICS ================= -->
+<section id="logistics">
+  <h2>Provisions, Fuel &amp; Survival Logistics</h2>
+  <div class="info-grid">
+    <div class="info"><h3>🛒 Food strategy</h3><ul>
+      <li><b>Rule:</b> big-shop at the cheap chains (Bónus, Krónan, Nettó) at each base handover; rural stores are sparse and pricey.</li>
+      <li><b>Day 1:</b> Krónan/Bónus Selfoss — 5 days of food before Klaustur (only a small Kjarval there).</li>
+      <li><b>Sept 15:</b> Nettó/Bónus Egilsstaðir.</li>
+      <li><b>Sept 20/21:</b> Bónus Akureyri (biggest selection outside Reykjavík).</li>
+      <li><b>Sept 25:</b> Bónus Borgarnes (Snæfellsnes) or Bónus Ísafjörður (Westfjords) — last big shops.</li>
+      <li><b>Hike food:</b> skyr, flatkökur, dried fish, chocolate, instant soup. Pack lunch every day — trailhead cafés basically don't exist.</li></ul></div>
+    <div class="info"><h3>⛽ Fuel discipline</h3><ul>
+      <li><b>Rule of thumb: never below half a tank.</b> Gaps between stations in the East and Westfjords exceed 100 km.</li>
+      <li>Get an <b>N1 key fob / Orkan app</b> — most rural pumps are unmanned, card-only, and some reject foreign cards without a PIN.</li>
+      <li>Critical fill-ups: Selfoss → Vík → Klaustur → Höfn → Egilsstaðir → Reykjahlíð (Mývatn) → Akureyri → Borgarnes (or Hólmavík/Ísafjörður).</li>
+      <li>Budget: ~2,900 km × ~9 L/100km 4x4 ≈ 260 L ≈ <b>80,000 ISK (~$570)</b>.</li></ul></div>
+    <div class="info"><h3>💧 Water &amp; kit</h3><ul>
+      <li><b>Tap water is glacier-grade everywhere.</b> Carry two 1.5 L bottles each, refill daily; a thermos of hot drink earns its weight on summit days. (Ignore the sulfur smell in hot taps — cold is pristine.)</li>
+      <li>Streams above farms are drinkable on trail; glacial (milky) water is not.</li>
+      <li>Layers: hard-shell top+bottom, insulation, hat/gloves — Kerling and Helgrindur can be winter up top in late Sept.</li>
+      <li>Microspikes (light ones) for early-morning frost near falls; headlamps for pre-dawn starts.</li>
+      <li>Offline: download Iceland in Google Maps + AllTrails/Wikiloc tracks; cell coverage dies in exactly the places you're going.</li></ul></div>
+    <div class="info"><h3>🚙 Driving &amp; safety</h3><ul>
+      <li>4x4 needed for: Þakgil road, Aldeyjarfoss (F26 southern stretch), Stuðlagil east parking gravel, Kvennaskarð (Westfjords option).</li>
+      <li>Check <b>road.is</b> + <b>vedur.is</b> every morning; <b>safetravel.is</b> trip plan before Kerling/Helgrindur/Kaldbakur.</li>
+      <li>September = first storms. Hold doors against wind gusts (the classic rental damage) and never drive in a yellow/red weather warning.</li>
+      <li>Headlights on 24/7 (law). Sheep own the road.</li></ul></div>
+  </div>
+  <div class="note"><b>🌋 Volcano watch (as of July 2026):</b> no eruption is active right now — the last Sundhnúkur (Reykjanes) eruption ended in Aug 2025 — but magma is re-accumulating under Svartsengi and the Met Office rates a new eruption as likely. The whole eruption zone sits 20 min from KEF, far from every base in this plan, so it's zero risk to the itinerary — and if a fissure opens while you're here, it's a once-in-a-lifetime bolt-on for arrival or departure day. Check <b>en.vedur.is</b> and safetravel.is for status and legal viewpoints; never freelance onto fresh lava fields.</div>
+</section>
+
+<!-- ================= PHOTO ================= -->
+<section id="photo">
+  <h2>Light &amp; Sky Calendar</h2>
+  <div class="info-grid">
+    <div class="info"><h3>🌅 Daylight windows</h3><ul>
+      <li><b>Sept 10 (Klaustur):</b> sunrise 6:22, sunset 19:59 — 13.6 h of light.</li>
+      <li><b>Sept 29 (Grundarfjörður):</b> sunrise 7:37, sunset 19:12 — 11.6 h. You lose ~6 min/day; full table below.</li>
+      <li>Golden hour is long and lazy at this latitude — roughly 1.5 h after sunrise and before sunset.</li>
+      <li>Every "sunrise strike" in this plan means arriving at the trailhead/falls ~30 min before the listed sunrise.</li></ul></div>
+    <div class="info"><h3>🌌 Aurora playbook</h3><ul>
+      <li><b>New moon Sept 11, full moon Sept 26</b> — darkest skies land in Bases 1–2; late-trip nights are moonlit (still shootable, different look).</li>
+      <li>Nightly ritual: check the <b>vedur.is aurora forecast</b> (Kp + cloud map) at ~21:00; chase gaps in cloud, not Kp numbers.</li>
+      <li>Pre-scouted foregrounds: Jökulsárlón (B1), Stuðlagil rim / Seyðisfjörður (B2), Goðafoss &amp; Mývatn (B3), Kirkjufell &amp; Búðakirkja (B4).</li>
+      <li>Settings baseline: 14–20 mm, f/1.8–2.8, 5–10 s, ISO 1600–6400 (drop ISO under moonlight).</li></ul></div>
+    <div class="info"><h3>📷 a7RV field notes</h3><ul>
+      <li>Waterfall spray is relentless: 3+ microfiber cloths, a rocket blower, and a rain cover; wipe between every frame at Skógafoss/Dettifoss.</li>
+      <li>Polarizer for moss/canyon work (Múlagljúfur, Fjaðrárgljúfur); 6-stop ND for silky water at Aldeyjarfoss/Goðafoss.</li>
+      <li>Cold kills batteries ~30% faster — keep spares in an inside pocket; 60 MP files eat cards, bring doubles.</li>
+      <li>Crowd-dodging summary: icons at dawn or after 18:00; unmarked trails at midday; nobody is anywhere before 8 AM in September.</li></ul></div>
+  </div>
+  <h2 style="margin-top:48px;font-size:1.5rem">Sun &amp; Moon, Day by Day</h2>
+  <p class="base-sub">Computed for each base's coordinates (Iceland runs on UTC year-round). Moon % is illumination at midnight; ● marks the darkest aurora nights.</p>
+  <table class="light">
+    <tr><th>Date</th><th>Sunrise</th><th>Sunset</th><th>Moon</th><th>Phase</th></tr>
+    <tr class="basehead"><td colspan="5">Base 1 · Kirkjubæjarklaustur — the dark-sky jackpot</td></tr>
+    <tr><td>Sept 10</td><td>06:22</td><td>19:59</td><td><span class="moonbar"><i style="width:4%"></i></span>4%</td><td class="best">● Waning crescent — near-black skies</td></tr>
+    <tr><td>Sept 11</td><td>06:25</td><td>19:56</td><td><span class="moonbar"><i style="width:1%"></i></span>1%</td><td class="best">● NEW MOON — best aurora night of the trip</td></tr>
+    <tr><td>Sept 12</td><td>06:28</td><td>19:52</td><td><span class="moonbar"><i style="width:0%"></i></span>0%</td><td class="best">● New — Jökulsárlón night shoot window</td></tr>
+    <tr><td>Sept 13</td><td>06:31</td><td>19:49</td><td><span class="moonbar"><i style="width:2%"></i></span>2%</td><td class="best">● Waxing crescent</td></tr>
+    <tr><td>Sept 14</td><td>06:33</td><td>19:45</td><td><span class="moonbar"><i style="width:5%"></i></span>5%</td><td class="best">● Waxing crescent</td></tr>
+    <tr class="basehead"><td colspan="5">Base 2 · Egilsstaðir — crescent sets early, dark after ~22:00</td></tr>
+    <tr><td>Sept 15</td><td>06:19</td><td>19:29</td><td><span class="moonbar"><i style="width:11%"></i></span>11%</td><td class="best">● Waxing crescent</td></tr>
+    <tr><td>Sept 16</td><td>06:22</td><td>19:25</td><td><span class="moonbar"><i style="width:18%"></i></span>18%</td><td class="best">● Waxing crescent</td></tr>
+    <tr><td>Sept 17</td><td>06:25</td><td>19:21</td><td><span class="moonbar"><i style="width:27%"></i></span>27%</td><td>Waxing crescent</td></tr>
+    <tr><td>Sept 18</td><td>06:28</td><td>19:18</td><td><span class="moonbar"><i style="width:37%"></i></span>37%</td><td>Waxing crescent</td></tr>
+    <tr><td>Sept 19</td><td>06:31</td><td>19:14</td><td><span class="moonbar"><i style="width:48%"></i></span>48%</td><td>First quarter</td></tr>
+    <tr class="basehead"><td colspan="5">Base 3 · Eyjafjörður / Akureyri — brightening gibbous evenings</td></tr>
+    <tr><td>Sept 20</td><td>06:49</td><td>19:25</td><td><span class="moonbar"><i style="width:58%"></i></span>58%</td><td>Waxing gibbous</td></tr>
+    <tr><td>Sept 21</td><td>06:52</td><td>19:21</td><td><span class="moonbar"><i style="width:68%"></i></span>68%</td><td>Waxing gibbous</td></tr>
+    <tr><td>Sept 22</td><td>06:55</td><td>19:18</td><td><span class="moonbar"><i style="width:78%"></i></span>78%</td><td>Waxing gibbous — Kerling day: moon sets pre-dawn</td></tr>
+    <tr><td>Sept 23</td><td>06:58</td><td>19:14</td><td><span class="moonbar"><i style="width:86%"></i></span>86%</td><td>Waxing gibbous</td></tr>
+    <tr><td>Sept 24</td><td>07:01</td><td>19:10</td><td><span class="moonbar"><i style="width:92%"></i></span>92%</td><td>Waxing gibbous — moonlit Goðafoss works</td></tr>
+    <tr class="basehead"><td colspan="5">Base 4 · Grundarfjörður — full-moon landscapes (Snæfellsnes &amp; Westfjords alike)</td></tr>
+    <tr><td>Sept 25</td><td>07:25</td><td>19:27</td><td><span class="moonbar"><i style="width:97%"></i></span>97%</td><td>Waxing gibbous</td></tr>
+    <tr><td>Sept 26</td><td>07:28</td><td>19:23</td><td><span class="moonbar"><i style="width:100%"></i></span>100%</td><td>FULL MOON — moonlit Kirkjufell night</td></tr>
+    <tr><td>Sept 27</td><td>07:31</td><td>19:19</td><td><span class="moonbar"><i style="width:100%"></i></span>100%</td><td>Full — Búðakirkja under moonlight</td></tr>
+    <tr><td>Sept 28</td><td>07:34</td><td>19:16</td><td><span class="moonbar"><i style="width:98%"></i></span>98%</td><td>Waning gibbous</td></tr>
+    <tr><td>Sept 29</td><td>07:37</td><td>19:12</td><td><span class="moonbar"><i style="width:94%"></i></span>94%</td><td>Waning gibbous — departure</td></tr>
+  </table>
+  <div class="note" style="margin-top:18px"><b>How to read it:</b> Bases 1–2 are your true dark-sky window — a thin or absent moon means maximum aurora contrast and Milky Way frames (Jökulsárlón, Stuðlagil, Seyðisfjörður). From Base 3 on, the waxing moon lights the landscape itself: aurora still shows on camera, but switch strategy to moonlit foregrounds — glaciers, waterfalls and Kirkjufell rendered in silver instead of silhouette. Lower ISO to 400–800 and let the moon do the light painting.</div>
+
+  <div class="note"><b>Weather-flex doctrine:</b> every base has one designated flex day and every hard hike a swap partner. Rank days by forecast each evening (vedur.is), not by this schedule — the plan is a menu, the sky is the boss. If a summit day (Kristínartindar, Kerling, Helgrindur) has no visibility window in a block, trade it for canyons and waterfalls without regret: they're better in brooding weather anyway.</div>
+</section>
+
+</main>
+
+<footer>
+  Iceland · Sept 10–29, 2026 · Built for hard trails, empty trailheads, a Sony a7RV, and a 4x4.<br>
+  Trail stats via AllTrails · Images via Wikimedia Commons · Verify roads at road.is &amp; weather at vedur.is before every hike.
+</footer>
+
+<script>
+  // If the direct Wikimedia CDN URL fails (extension/referrer blocking, etc.),
+  // retry via the commons.wikimedia.org Special:FilePath redirect; if that also
+  // fails, drop the image gracefully (the gradient placeholder shows instead).
+  document.querySelectorAll('.card img').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.retried){ img.remove(); return; }
+      img.dataset.retried = '1';
+      var m = img.src.match(/\/commons\/thumb\/\w\/\w\w\/([^\/]+)\//);
+      if (m){ img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + m[1] + '?width=900'; }
+      else { img.remove(); }
+    });
+  });
+</script>
+</body>
+</html>
