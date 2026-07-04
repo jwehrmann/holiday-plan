@@ -3,7 +3,7 @@
 
 Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Clockwise route: South Coast → Eastfjords → North → **Westfjords**, ending with a **safety night beside KEF (Sept 28)** so the onward flight never depends on a 6-hour drive — with a Kirkjufell sunset built into the exit.
 
-**Base logic:**
+**Base logic (only Base 1 booked so far — the rest re-tunes as bookings land):**
 - **Base 2 = Egilsstaðir** — the East hub every hike radiates from; Seyðisfjörður is an evening hop over the pass.
 - **Base 3 = Eyjafjörður valley / Akureyri** — Kerling 30 min away, Aldeyjarfoss 1 h 15. (Siglufjörður → Extras list.)
 - **Base 4 = the Westfjords (Ísafjörður), 5 nights** — per your call: the emptiest corner gets the finale. Snæfellsnes preserved below as the weather escape hatch.
@@ -64,6 +64,7 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
 |---|---|---|---|---|---|---|---|
 | **Kerling (1,538 m)** — N. Iceland's highest | ~25 km · 30 min | 12.2 km RT | **1,416 m** | **Very hard** | 7–8 h | Clear-day window | [link](https://www.alltrails.com/trail/iceland/northeastern/kerling) |
+| **Súlur (1,213 m)** — Akureyri's town mountain, Kerling backup/bonus | ~10 km · 15 min | 11.3 km RT | 888 m | Hard | ~5 h | Flex day | [link](https://www.alltrails.com/trail/iceland/northeastern/sulur-mountain) |
 | **Aldeyjarfoss** (off-beat, F-road) | ~75 km · 1 h 15 | 2.4 km | 77 m | Easy walk | 1 h | Sunrise | [link](https://www.alltrails.com/trail/iceland/northeastern/aldeyjarfoss-waterfall) |
 | **Dettifoss + Selfoss (west)** | on transfer | 3.9 km | 78 m | Easy | 1–1.5 h | Pre-bus morning | [link](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss) |
 | **Goðafoss** | 35 km · 30 min | 2.9 km | 89 m | Easy | 45 min | Sunset / aurora | [link](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall) |
