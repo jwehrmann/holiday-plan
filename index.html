@@ -102,6 +102,26 @@
   .dayrow .txt{font-size:.92rem;color:var(--muted)}
   .dayrow .txt b{color:var(--ink)}
 
+  /* ---------- Per-day timelines ---------- */
+  .tlday{padding:16px 0 6px;border-bottom:1px dashed var(--line)}
+  .tlday:last-child{border-bottom:none}
+  .tlhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .tlhead .d{color:var(--gold);font-weight:800;font-size:.95rem;margin-right:4px}
+  .tlhead .chip{font-size:.74rem;padding:3px 8px}
+  .astro{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 10px}
+  .astro .chip{font-size:.72rem;color:var(--muted)}
+  .astro .chip b{color:var(--accent2)}
+  .sky{font-size:.8rem;color:var(--accent);margin:0 0 10px;font-style:italic}
+  ul.tl{list-style:none;margin:0 0 12px;padding:0 0 0 6px;border-left:2px solid var(--line)}
+  ul.tl li{position:relative;padding:4px 0 4px 86px;font-size:.9rem;color:var(--muted)}
+  ul.tl li b{color:var(--ink)}
+  ul.tl li .tlt{position:absolute;left:10px;top:5px;font-family:var(--serif);font-weight:700;
+    font-size:.8rem;color:var(--accent);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+  ul.tl li::before{content:"";position:absolute;left:-7px;top:12px;width:8px;height:8px;border-radius:50%;
+    background:var(--card2);border:2px solid var(--accent)}
+  ul.tl li.alt::before{border-color:var(--gold)}
+  ul.tl li.alt .tlt{color:var(--gold)}
+
   /* ---------- Map ---------- */
   .mapwrap{margin-top:30px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
   .mapwrap iframe{display:block;width:100%;height:340px;border:0;filter:saturate(.85) contrast(1.02)}
@@ -167,6 +187,25 @@
   table.wx th,table.wx td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);color:var(--muted)}
   table.wx th{color:var(--faint);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
   table.wx td:first-child{color:var(--ink);font-weight:600}
+
+  /* day tabs */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 6px}
+  .tabbtn{padding:12px 20px;border-radius:14px;border:1px solid var(--line);background:var(--card);
+    cursor:pointer;color:var(--muted);font-weight:700;font-size:.9rem;font-family:var(--sans);transition:.15s}
+  .tabbtn small{display:block;font-weight:400;font-size:.72rem;color:var(--faint);margin-top:2px}
+  .tabbtn:hover{border-color:var(--accent)}
+  .tabbtn.active{background:linear-gradient(135deg,rgba(94,234,212,.16),rgba(125,211,252,.10));
+    border-color:var(--accent);color:var(--ink)}
+  .tabbtn.active small{color:var(--accent)}
+  .daypane{display:none;animation:fadein .25s}
+  .daypane.active{display:block}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .dayhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin:28px 0 6px}
+  .dayhead h3{font-family:var(--serif);font-size:1.6rem;font-weight:600}
+  .dayhead .theme{color:var(--gold);font-weight:600;font-size:.95rem}
+  .daymeta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+  .daynote{color:var(--muted);font-size:.95rem;max-width:820px;margin:12px 0 8px;line-height:1.7}
+  .daylinks{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px}
 </style>
 </head>
 <body>
@@ -211,8 +250,8 @@
   <div class="info-grid">
     <div class="info"><h3>Base 1 · Hella (booked ✔)</h3><ul>
       <li><b>Sept 10–15</b> · 5 nights</li>
-      <li>Waterfall coast west, Landmannalaugar highlands, glacier day east</li>
-      <li>Hardest day: Þakgil loop 10.9 km / 752 m (or Bláhnjúkur)</li></ul></div>
+      <li>Waterfall Way first (bucket list), Landmannalaugar on the first clear day, two flex days</li>
+      <li>Hardest day: Waterfall Way — up to 26.2 km / +1,131 m (turn anywhere)</li></ul></div>
     <div class="info"><h3>Base 2 · Egilsstaðir</h3><ul>
       <li><b>Sept 15–19</b> · 4 nights</li>
       <li>Basalt canyons, alpine boulder fields, quiet fjords</li>
@@ -246,91 +285,162 @@
 
 <!-- ================= BASE 1 ================= -->
 <section id="base1">
-  <div class="base-head"><span class="base-num">Base 01 · Booked</span><h2>South Coast, from Hella</h2><span class="dates">Sept 10 – 15 · 5 nights</span></div>
-  <div class="basecamp">🏠 Booked: <b>cabin in Hella</b> (check-in Sept 10, 15:00) — Seljalandsfoss 25 min, Skógafoss 45 min, and the gateway to the Landmannalaugar highlands; the Vatnajökull glacier zone becomes one big eastern day + transfer-day stops</div>
-  <div class="stats" style="margin-top:12px"><span class="chip">Σ hiking: <b>~69 km</b></span><span class="chip">⛰ <b>~2,750 m</b> total gain</span><span class="chip">≈ 12 km/day · biggest block — now including Landmannalaugar</span></div>
-  <p class="base-sub">Hella flips the geometry: the icon waterfalls are on your doorstep for repeat sunrise/sunset strikes, dark rural skies surround the cabin for the new-moon aurora window, and Landmannalaugar's rhyolite mountains — Bláhnjúkur from your AllTrails list — are a 1 h 45 highland run up F208-north. The far-east glacier world (Múlagljúfur, Jökulsárlón) packs into one committed day, with Fjaðrárgljúfur and Skaftafell banked on the transfer east. Groceries: Krónan Selfoss on arrival; Hella has a Kjarval for top-ups.</p>
+  <div class="base-head"><span class="base-num">Base 01 · Booked ✔</span><h2>South Coast, from Hella</h2><span class="dates">Sept 10 – 15 · 5 nights</span></div>
+  <div class="basecamp">🏠 <b>Una Cottage 1, Hella</b> — check-in Sept 10 from 15:00 · checkout Sept 15 by 11:00. Flight YVR→KEF lands <b>Sept 10, 9:25 AM</b>.</div>
+  <div class="stats" style="margin-top:12px"><span class="chip">Σ hiking: <b>~68 km</b></span><span class="chip">⛰ <b>~2,500 m</b> total gain</span><span class="chip">+ optional Grænihryggur (~10 km) · every day swappable by weather</span></div>
+  <p class="base-sub">Six days, one tab each — pick a day below. Big days (Þakgil, Landmannalaugar) alternate with lighter ones, the icons get dawn/dusk slots, and nothing repeats a road twice. New moon lands Sept 11: any clear night, the cabin porch is your aurora seat.</p>
 
-  <div class="grid">
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-offbeat">Off-beat</span><span class="tag t-sunrise">Sunrise</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mulagljufur.jpg?width=900" alt="Múlagljúfur Canyon" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Múlagljúfur Canyon<small>Unmarked trail to Hangandifoss — Iceland's best-kept canyon</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>250 km</b> · 3 h E — pair with Jökulsárlón</span><span class="chip">↔ <b>7.1 km</b> RT</span><span class="chip">⛰ <b>386 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 2.5–3 h</span></div>
-      <p>Steep, muddy, unsigned — which is exactly why you'll likely have a moss-drenched mega-canyon with two plunging waterfalls to yourselves at dawn. Fog hangs in the gorge on cool September mornings; bring the 60 MP sensor and a polarizer.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Mulagljufur+Parking%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunrise">Dawn start</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/038_Svartifoss_waterfall_%28Iceland%29_Photo_by_Giles_Laurent.jpg?width=900" alt="Svartifoss" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Svartifoss &amp; Sjónarnípa loop<small>Skaftafell — banked on the Sept 15 transfer east</small></h3>
-      <div class="stats"><span class="chip">🚗 en route Sept 15 (230 km E)</span><span class="chip">↔ <b>7.4 km</b> loop</span><span class="chip">⛰ <b>~330 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 2.5–3 h</span></div>
-      <p>Straight from your AllTrails list: Svartifoss's basalt organ pipes, then up to the <b>Sjónarnípa</b> rim — hanging directly over Skaftafellsjökull's crevasse field. Fits the transfer day perfectly. (The full Kristínartindar ridge, 18.7 km / 1,065 m, moved to Extras — it doesn't fit a Hella base.)</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/sjonarnipa-svartifoss-magnusafoss-hundafoss-via-austurbrekkur">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Skaftafell+Visitor+Centre%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span><span class="tag t-sunset">Dusk</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aurora_Borealis_-_Iceland_-_2_Nov._2013.jpg?width=900" alt="Aurora over Iceland" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Jökulsárlón &amp; Diamond Beach<small>Glacier lagoon — icebergs, seals, aurora mirror</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>260 km</b> · 3 h 10 E — same day as Múlagljúfur</span><span class="chip">↔ <b>1–3 km</b> flat</span><span class="chip">⛰ <b>0 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ flexible</span></div>
-      <p>Skip midday entirely. Come for blue-hour ice on black sand, stay after dark: with the Sept 11 new moon, an aurora reflected in the lagoon is a real possibility. From Hella it's one committed eastern day (Sept 14) rather than a repeatable evening — shoot blue hour hard, then the long cruise home. Your aurora anchor instead: the dark skies around the cabin and Seljalandsfoss, 25 min away.</p>
-      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Jokulsarlon%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-sunrise">Sunrise</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sk%C3%B3gafoss%2C_Iceland%2C_20230501_1447_3978.jpg?width=900" alt="Skógafoss" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Skógafoss + Fimmvörðuháls "Waterfall Way"<small>Must-do early: the icon, then 20+ falls nobody walks to</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>55 km</b> · 45 min</span><span class="chip">↔ <b>up to 16 km</b> RT</span><span class="chip">⛰ <b>~500 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4–6 h</span></div>
-      <p>Shoot the empty base of Skógafoss at first light, then climb the 500 stairs and just keep going. Past the top, the crowd evaporates and the Skógá river throws a waterfall at you every ten minutes. Turn around whenever the weather says so.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Skogafoss%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seljalandsfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_201-203_HDR.JPG?width=900" alt="Seljalandsfoss" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Seljalandsfoss + Gljúfrabúi<small>Walk behind the curtain — done on arrival day</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>30 km</b> · 25 min — return any evening</span><span class="chip">↔ <b>1.9 km</b></span><span class="chip">⛰ <b>~30 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 40 min</span></div>
-      <p>West-facing, so sunset fires straight through the falling water — frame the sun through the curtain and let the a7RV eat the dynamic range. Don't skip Gljúfrabúi, the hidden fall inside a slot 600 m north that most visitors never find. Rain shell for the camera mandatory.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Selfoss%2C+Iceland/Seljalandsfoss%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG?width=900" alt="Þakgil area near Mýrdalsjökull" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Þakgil · Remundargil loop<small>Green canyons behind Vík — almost nobody goes</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>~105 km</b> · 1 h 30 (14 km gravel)</span><span class="chip">↔ <b>10.9 km</b> loop</span><span class="chip">⛰ <b>752 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4.5–5.5 h</span></div>
-      <p>A rough mountain road climbs from Vík into a hidden world of mossy gorges under Mýrdalsjökull's edge. The Remundargil–Vatnsrásarhöfuð loop is steep, wild, and gloriously empty — the "live the terrain" day of Base 1. 4x4 earns its keep here.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/thakgil-remundargil-vatnsrasarhofud">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Vik+i+Myrdal%2C+Iceland/Thakgil%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-sunset">Golden hour</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fja%C3%B0r%C3%A1rglj%C3%BAfur.JPG?width=900" alt="Fjaðrárgljúfur" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Fjaðrárgljúfur Canyon<small>The serpentine canyon — first stop of the transfer east</small></h3>
-      <div class="stats"><span class="chip">🚗 en route Sept 15 (180 km E)</span><span class="chip">↔ <b>2.4 km</b></span><span class="chip">⛰ <b>86 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 45 min</span></div>
-      <p>Hit it at ~8:30 on the Sept 15 drive east — before the tour flow arrives from Vík — with low morning light raking across the two-million-year-old walls. Twenty minutes off Ring Road, then onward to Skaftafell.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Fjadrargljufur%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Day 1 en route</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss%2C_Iceland%2C_20230501_0940_3780.jpg?width=900" alt="Gullfoss" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Gullfoss (+ Geysir)<small>Golden Circle, knocked out on the airport drive</small></h3>
-      <div class="stats"><span class="chip">🚗 detour on Day 1</span><span class="chip">↔ <b>1 km</b> paths</span><span class="chip">⛰ <b>minimal</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1 h</span></div>
-      <p>Hit it once, on landing day, and never fight the Golden Circle again. It'll be busy at midday — accept it, shoot the two-tier drop with the 200 mm compression from the upper rim, watch Strokkur erupt twice at Geysir, and roll on south.</p>
-      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Gullfoss+Falls%2C+Iceland">Route</a></div></div></div>
-
-    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Highlands</span><span class="tag t-night">Dark skies</span></div>
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bl%C3%A1hn%C3%BAkur%20from%20Brennisteinsalda%20panoramic%201.jpg?width=900" alt="Bláhnjúkur, Landmannalaugar" loading="lazy" referrerpolicy="no-referrer"></div>
-      <div class="body"><h3>Landmannalaugar — Bláhnjúkur loop<small>The rhyolite rainbow mountains — Hella is the gateway</small></h3>
-      <div class="stats"><span class="chip">🚗 <b>~90 km</b> · 1 h 45 (F208-north)</span><span class="chip">↔ <b>~8.5 km</b> loop</span><span class="chip">⛰ <b>~550 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 3.5–4 h</span></div>
-      <p>From your AllTrails list, and suddenly practical: Hella sits at the bottom of the highland road. Bláhnjúkur's black summit over Brennisteinsalda's red-yellow-green slopes, the Laugahraun lava field, and a natural hot-river soak at the hut before driving down. Mid-September is the last reliable week — check road.is, F208-north only, no fords.</p>
-      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/blahnjukur">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland">Route</a></div></div></div>
+  <div class="tabs" id="b1tabs">
+    <button class="tabbtn active" data-day="d1">Sept 10<small>Arrival · Golden Circle</small></button>
+    <button class="tabbtn" data-day="d2">Sept 11<small>Waterfall Fest</small></button>
+    <button class="tabbtn" data-day="d3">Sept 12<small>Hot River · recovery</small></button>
+    <button class="tabbtn" data-day="d4">Sept 13<small>Þakgil · big hike</small></button>
+    <button class="tabbtn" data-day="d5">Sept 14<small>Landmannalaugar</small></button>
+    <button class="tabbtn" data-day="d6">Sept 15<small>Transfer East</small></button>
   </div>
 
-  <details class="dayplan"><summary>Day-by-day · Base 1</summary><div class="dayrows">
-    <div class="dayrow"><span class="d">Sept 10 · Wed</span><span class="txt"><b>Land 9:25.</b> Coffee + SIM at KEF → grocery run at <b>Krónan Selfoss</b> → <b>Þingvellir + Öxarárfoss</b> (30 min) → Geysir &amp; Gullfoss midday → <b>Brúarfoss</b> (3.5 km RT) if energy allows → check-in Hella 15:00+ → <b>Seljalandsfoss + Gljúfrabúi at sunset</b>, 25 min from the cabin. Gentlest possible red-eye day.</span></div>
-    <div class="dayrow"><span class="d">Sept 11 · Thu</span><span class="txt"><b>Landmannalaugar day:</b> up F208-N by 8:30, Bláhnjúkur–Brennisteinsalda loop, hot-river soak, down by 17:00. <b>New moon tonight</b> — aurora watch from the cabin porch or Seljalandsfoss.</span></div>
-    <div class="dayrow"><span class="d">Sept 12 · Fri</span><span class="txt"><b>Skógafoss at sunrise</b> (45 min away) → Waterfall Way climb → <b>Sólheimajökull glacier snout</b> → Reynisfjara ~18:00 (post-bus; sneaker waves!) → Dyrhólaey sunset.</span></div>
-    <div class="dayrow"><span class="d">Sept 13 · Sat</span><span class="txt"><b>Þakgil Remundargil loop</b> behind Vík — or the weather-swap day. Evening: Seljalandsfoss re-shoot or hot tub.</span></div>
-    <div class="dayrow"><span class="d">Sept 14 · Sun</span><span class="txt"><b>The eastern glacier day:</b> depart 6:30 → <b>Múlagljúfur</b> mid-morning (quiet — it's unmarked) → Fjallsárlón → <b>Jökulsárlón + Diamond Beach blue hour</b> → long cruise home (~520 km RT; split driving between you).</span></div>
-    <div class="dayrow"><span class="d">Sept 15 · Mon</span><span class="txt">Transfer east, loaded: Fjaðrárgljúfur + Skaftafell + Vestrahorn. See below.</span></div>
-  </div></details>
+  <!-- DAY 1 -->
+  <div class="daypane active" id="d1">
+    <div class="dayhead"><h3>Arrival &amp; the Golden Circle</h3><span class="theme">everything "in-route-ish" to Hella</span></div>
+    <div class="daymeta"><span class="chip">🚗 ~330 km total, broken into short hops</span><span class="chip">🥾 ~8 km of easy walking</span><span class="chip">🌅 sunset 19:59</span></div>
+    <p class="daynote">Land 9:25 → coffee + SIM → big shop at <b>Krónan Selfoss</b> → Þingvellir's rift &amp; Öxarárfoss (30 min leg-stretcher) → Geysir &amp; Gullfoss midday → the Brúarfoss blue-water trail → check-in from 15:00 → <b>Seljalandsfoss + Gljúfrabúi at sunset</b>, 25 min from the cottage. If the red-eye hits hard, everything before Gullfoss is skippable — groceries and sunset are the only fixed points.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland">▸ Full day route</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">En route</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gullfoss%2C_Iceland%2C_20230501_0940_3780.jpg?width=900" alt="Gullfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Gullfoss (+ Geysir)<small>Golden Circle, knocked out on the landing drive</small></h3>
+      <div class="stats"><span class="chip">🚗 en route</span><span class="chip">↔ <b>1–2 km</b> paths</span><span class="chip">⛰ minimal</span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1.5 h</span></div>
+      <p>Watch Strokkur erupt twice, then Gullfoss's two-tier cataract from the upper rim. Midday crowds — accept them once, never fight the Golden Circle again.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland">Route</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Blue water</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_blue_waterfall_-_Bruarfoss_-_Iceland_%2841967794764%29.jpg?width=900" alt="Brúarfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Brúarfoss, Miðfoss &amp; Hlauptungufoss<small>The bluest water in Iceland — three falls, one riverside path</small></h3>
+      <div class="stats"><span class="chip">🚗 en route (20 min off Gullfoss)</span><span class="chip">↔ <b>~5.5 km</b> RT</span><span class="chip">⛰ <b>~70 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1.5 h</span></div>
+      <p>A flat riverside walk up the Brúará: Hlauptungufoss, then Miðfoss, finishing at Brúarfoss's impossibly electric-blue cascade. Straight from your AllTrails list; skippable if the red-eye wins.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/hlauptungufoss-midfoss-and-bruarfoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Bruarfoss&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-sunset">Sunset</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seljalandsfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_201-203_HDR.JPG?width=900" alt="Seljalandsfoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Seljalandsfoss + Gljúfrabúi<small>Walk behind the curtain — 25 min from the cottage</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>30 km</b> · 25 min</span><span class="chip">↔ <b>1.9 km</b></span><span class="chip">⛰ <b>~30 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 40 min</span></div>
+      <p>West-facing: sunset fires straight through the falling water. Don't miss Gljúfrabúi, hidden inside a slot 600 m north. Rain shell for the camera mandatory — and it's close enough to re-shoot any evening this week.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Seljalandsfoss&t=trails">Wikiloc</a></div></div></div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="daypane" id="d2">
+    <div class="dayhead"><h3>Waterfall Fest — Skógafoss &amp; the Waterfall Way</h3><span class="theme">go super early, own the falls</span></div>
+    <div class="daymeta"><span class="chip">🚗 ~110 km RT (50 km each way)</span><span class="chip">🥾 up to 16 km / ~500 m — turn around whenever</span><span class="chip">🌄 sunrise 06:25 — be there</span></div>
+    <p class="daynote">Leave the cottage ~05:40, shoot Skógafoss's base utterly alone at first light, then climb the 500 stairs and follow the Skógá upstream — a waterfall every ten minutes, crowds evaporating past the first kilometre. Hike patiently as far as legs allow (Skálabrekkufoss and beyond), picnic up top, amble back down mid-afternoon. Optional add-on 10 min east: Sólheimajökull's glacier snout. <b>New moon tonight</b> — aurora watch from the porch.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Skogafoss%2C+Iceland">▸ Day route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Skogafoss&t=trails">Wikiloc tracks</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-sunrise">Sunrise</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sk%C3%B3gafoss%2C_Iceland%2C_20230501_1447_3978.jpg?width=900" alt="Skógafoss" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Skógafoss + Fimmvörðuháls "Waterfall Way"<small>The icon at dawn, then 20+ falls nobody walks to</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>50 km</b> · 45 min</span><span class="chip">↔ <b>up to 16 km</b> RT</span><span class="chip">⛰ <b>~500 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4–6 h</span></div>
+      <p>Arrive pre-dawn, own the 60 m curtain, then climb the stairs and keep going: Skálabrekkufoss, Steinbogafoss, Hestavaðsfoss and the endless upper valley. Turn around whenever legs vote. This is the day you brought the tripod for.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Skogafoss%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Skogafoss+Fimmvorduhals&t=trails">Wikiloc</a></div></div></div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="daypane" id="d3">
+    <div class="dayhead"><h3>Hot River &amp; Easy Wonders</h3><span class="theme">recovery day — bring towels</span></div>
+    <div class="daymeta"><span class="chip">🚗 ~150 km loop</span><span class="chip">🥾 ~9 km / ~330 m</span><span class="chip">♨ soak in a warm river</span></div>
+    <p class="daynote">The Reykjadalur valley steams above Hveragerði: an hour's gentle climb to where the river runs bath-warm, then pick your pool. Around it, a menu of zero-effort wonders for the drive home: <b>Kerið</b> crater's red walls (10 min off Route 35), <b>Urriðafoss</b> — Iceland's most voluminous waterfall, 15 min from Hella and nearly always empty — and <b>Keldur</b>, the oldest turf-house farm in Iceland, 20 min east of the cottage. Pick two, skip guilt-free.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Kerid+Crater%2C+Iceland/Reykjadalur+Car+Park%2C+Iceland/Urridafoss%2C+Iceland/Hella%2C+Iceland">▸ Day loop route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Reykjadalur&t=trails">Wikiloc tracks</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Hot river</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Warm_river_in_Reykjadalur_-_panoramio.jpg?width=900" alt="Reykjadalur warm river" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Reykjadalur Hot-River Soak<small>Hike an hour, bathe in a warm river</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>60 km</b> · 45 min</span><span class="chip">↔ <b>~9 km</b> RT</span><span class="chip">⛰ <b>~330 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 3 h + soak</span></div>
+      <p>The steaming valley above Hveragerði: mud pots and fumaroles line the climb, then the river itself runs bath-temperature — walk upstream for hotter pools and fewer people. Towels, swimsuit, sandals. The definition of a recovery day.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/reykjadalur-hot-spring-thermal-river">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Reykjadalur+Car+Park%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Reykjadalur&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Pick two</span></div>
+      </div>
+      <div class="body"><h3>The easy-wonder menu<small>Zero-effort stops looped around the hot river</small></h3>
+      <div class="stats"><span class="chip">🚗 all within the day loop</span><span class="chip">↔ strolls</span><span class="chip">⛰ —</span><span class="diff d-easy">Easy</span><span class="chip">⏱ as you like</span></div>
+      <p><b>Kerið</b> — a 3,000-year-old crater with oxblood walls and a teal lake (ISK 600). <b>Urriðafoss</b> — Iceland's most voluminous waterfall, 15 min from Hella, nearly always empty. <b>Keldur</b> — the country's oldest turf farm, 20 min east. <b>Hveragerði</b> — greenhouse town for lunch. Pick two, nap later.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kerid+Crater%2C+Iceland/Urridafoss%2C+Iceland/Keldur%2C+Iceland">Route</a></div></div></div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="daypane" id="d4">
+    <div class="dayhead"><h3>Þakgil — the Big Loop</h3><span class="theme">the challenge day of Base 1</span></div>
+    <div class="daymeta"><span class="chip">🚗 116 km · ~2 h each way (last 14 km gravel)</span><span class="chip">🥾 ~19 km / ~800 m</span><span class="chip">⚠ start by 9:30 — full daylight buffer</span></div>
+    <p class="daynote">The mountain road behind Vík ends in a hidden green canyon under Mýrdalsjökull — and the big loop is the whole feast: Remundargil gorge, ridgelines between glacier and coast, hoodoos, caves, and hours of genuine solitude. Markers fade in and out; download the track offline. If weather argues, this day swaps freely with Sept 12 or 14 — Þakgil deserves visibility.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Vik+i+Myrdal/Thakgil%2C+Iceland">▸ Day route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Thakgil&t=trails">Wikiloc tracks</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">Off-beat</span><span class="tag t-sunrise">Early start</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pakgil01(ws).jpg?width=900" alt="Þakgil" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Þakgil Loop (19 km)<small>Hidden canyons under Mýrdalsjökull — the challenge day</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>116 km</b> · ~2 h (14 km gravel)</span><span class="chip">↔ <b>~19 km</b> loop</span><span class="chip">⛰ <b>~800 m</b></span><span class="diff d-vhard">Hard</span><span class="chip">⏱ 6–7 h</span></div>
+      <p>The full circuit: Remundargil gorge, glacier-edge ridgelines, hoodoo towers and the dining cave at the campsite. Wild, faintly marked, gloriously empty — offline map + track non-negotiable. Shorter bail loops exist from the same trailhead if weather turns.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/thakgil-loop">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Thakgil%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Thakgil&t=trails">Wikiloc</a></div></div></div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="daypane" id="d5">
+    <div class="dayhead"><h3>Landmannalaugar</h3><span class="theme">the rhyolite rainbow — Hella is the gateway</span></div>
+    <div class="daymeta"><span class="chip">🚗 ~90 km · 1 h 45 each way (F208-north, no fords)</span><span class="chip">🥾 ~10.5 km / ~700 m (+10 km bonus)</span><span class="chip">♨ hot-river soak at the hut</span></div>
+    <p class="daynote">Up the highland road by 8:30 for the <b>Bláhnúkur + Brennisteinsalda loop</b> — black obsidian, steaming vents, and slopes painted every color geology owns. Legs still fresh afterwards? The <b>Grænihryggur "Green Ridge"</b> extension via Halldórsgil is the best-kept secret in the reserve. End in the natural hot river beside the hut, drive down before dark. Mid-September is the last reliable week for the huts and F-roads — check road.is that morning; this day swaps with Sept 13 if weather says so.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland">▸ Day route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Landmannalaugar&t=trails">Wikiloc tracks</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Anchor</span><span class="tag t-offbeat">Highlands</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bl%C3%A1hn%C3%BAkur_from_Brennisteinsalda_panoramic_1.jpg?width=900" alt="Bláhnúkur" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Landmannalaugar — Bláhnúkur &amp; Brennisteinsalda<small>The rhyolite rainbow loop</small></h3>
+      <div class="stats"><span class="chip">🚗 <b>~90 km</b> · 1 h 45 (F208-N)</span><span class="chip">↔ <b>~10.5 km</b> loop</span><span class="chip">⛰ <b>~700 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 4 h</span></div>
+      <p>Bláhnúkur's black obsidian summit stares across at Brennisteinsalda — "the most colorful mountain in Iceland" — with the Laugahraun lava field between them. Steep, loose in places, endlessly photogenic. Finish in the hot river by the hut.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/landmannalaugar-blahnukur-brennisteinsalda">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Landmannalaugar&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-offbeat">If energy</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brennisteinsalda_4_(js).jpg?width=900" alt="Rhyolite slopes near Grænihryggur" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Grænihryggur via Halldórsgil<small>The hidden Green Ridge — bonus loop</small></h3>
+      <div class="stats"><span class="chip">🚗 same trailhead area</span><span class="chip">↔ <b>~10 km</b> RT</span><span class="chip">⛰ <b>~400 m</b></span><span class="diff d-hard">Hard</span><span class="chip">⏱ 3–4 h</span></div>
+      <p>Deeper into the reserve: a ridge of glassy green rhyolite most Landmannalaugar visitors never learn exists. Only if legs and daylight both say yes — it turns the day into a ~20 km double-header. (Photo shows the neighboring Brennisteinsalda slopes; the ridge itself hides from photographers too.)</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/graenihryggur-3">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Graenihryggur&t=trails">Wikiloc</a></div></div></div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="daypane" id="d6">
+    <div class="dayhead"><h3>Transfer East — rest day on wheels</h3><span class="theme">checkout 11:00 → Egilsstaðir, freebies en route</span></div>
+    <div class="daymeta"><span class="chip">🚗 ~630 km — the one long haul, all stops on the road</span><span class="chip">🥾 ~6 km of strolls</span><span class="chip">🛏 legs rest, eyes don't</span></div>
+    <p class="daynote">Checkout, then let Route 1 do the work: <b>Seljalandsfoss</b> one-more-time freebie as you pass → <b>Reynisfjara</b> black sand (on the way, sneaker-wave respect) → <b>Fjaðrárgljúfur</b> ★ (20 min off-road, morning-quiet) → then the glacier coast rolls by. If pace holds, two legendary quick-stops sit right on the road: <b>Múlagljúfur's</b> viewpoint climb and <b>Jökulsárlón / Diamond Beach</b> for a leg-stretch among icebergs. Höfn for langoustine + fuel, Eastfjords coast road at dusk, Egilsstaðir ~21:00. Bail order if running late: skip Múlagljúfur hike (viewpoint only) → shorten Jökulsárlón → never skip fuel.</p>
+    <div class="daylinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland">▸ Full transfer route</a></div>
+    <div class="grid">
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-enroute">Freebie</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG?width=900" alt="Reynisfjara" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Reynisfjara Black Sand Beach<small>Basalt columns, sea stacks, sneaker waves</small></h3>
+      <div class="stats"><span class="chip">🚗 on the way east</span><span class="chip">↔ <b>~1 km</b></span><span class="chip">⛰ —</span><span class="diff d-easy">Easy</span><span class="chip">⏱ 45 min</span></div>
+      <p>The Reynisdrangar stacks, Hálsanefshellir's basalt cave, and the Atlantic showing off. Morning pass keeps you ahead of the Vík bus flow. Never turn your back on the water — the waves here are genuinely dangerous.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/reynisfjara-black-sand-beach">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Reynisfjara&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fja%C3%B0r%C3%A1rglj%C3%BAfur.JPG?width=900" alt="Fjaðrárgljúfur" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Fjaðrárgljúfur Canyon<small>The serpentine canyon — 20 min off Route 1</small></h3>
+      <div class="stats"><span class="chip">🚗 en route (180 km in)</span><span class="chip">↔ <b>2.4 km</b></span><span class="chip">⛰ <b>86 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 45 min</span></div>
+      <p>Two million years of meltwater carved this 100 m serpentine slot; the rim path ends at the Mögáfoss platform where the canyon doubles back on itself. Timed right you're ahead of the eastbound tour flow.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Fjadrargljufur&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-must">★ Must</span><span class="tag t-enroute">If pace holds</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mulagljufur.jpg?width=900" alt="Múlagljúfur Canyon" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Múlagljúfur Canyon<small>Iceland's best-kept canyon — right off the transfer road</small></h3>
+      <div class="stats"><span class="chip">🚗 en route (2 min off Route 1)</span><span class="chip">↔ <b>up to 7.1 km</b> RT</span><span class="chip">⛰ <b>386 m</b></span><span class="diff d-mod">Moderate</span><span class="chip">⏱ 1–3 h (scalable)</span></div>
+      <p>The unmarked trail to Hangandifoss's hanging falls. Full hike if the day is running early; even the 40-minute lower viewpoint punch delivers the money view. This is the stop that makes the long day worth it.</p>
+      <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Fjadrargljufur%2C+Iceland/Mulagljufur%2C+Iceland">Route</a><a class="btn" target="_blank" href="https://www.wikiloc.com/wikiloc/find.do?q=Mulagljufur&t=trails">Wikiloc</a></div></div></div>
+    <div class="card"><div class="imgwrap"><div class="badge"><span class="tag t-night">Blue hour</span></div>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/034_Freshly_rotated_icebergs_at_J%C3%B6kuls%C3%A1rl%C3%B3n_(Iceland)_Photo_by_Giles_Laurent.jpg?width=900" alt="Jökulsárlón" loading="lazy" referrerpolicy="no-referrer"></div>
+      <div class="body"><h3>Jökulsárlón &amp; Diamond Beach<small>Iceberg leg-stretch on the glacier coast</small></h3>
+      <div class="stats"><span class="chip">🚗 en route (10 min past Múlagljúfur)</span><span class="chip">↔ <b>1–2 km</b> flat</span><span class="chip">⛰ —</span><span class="diff d-easy">Easy</span><span class="chip">⏱ 30–60 min</span></div>
+      <p>The lagoon and its stranded diamonds sit directly on Route 1 — even a half-hour stop among the icebergs resets the driving brain. Seals patrol the outflow; the light does the rest.</p>
+      <div class="links"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland">Route</a></div></div></div>
+    </div>
+  </div>
 
   <div class="mapwrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Hella%2C+Iceland&z=8&output=embed"></iframe>
-    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland">▸ Day 1 route: KEF → Golden Circle → Hella → Seljalandsfoss</a></div></div>
-
-  <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 15 · Hella → Egilsstaðir (~630 km — the monster day, every stop en route)</b><br>
-    Depart 7:00. <b>Fjaðrárgljúfur</b> ~9:15 (45 min walk) → <b>Skaftafell: Svartifoss–Sjónarnípa loop</b> 11:30–14:30 → <b>Vestrahorn/Stokksnes</b> Yellow Path ~16:30 <a target="_blank" href="https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path">(AllTrails)</a> → Höfn langoustine dinner + fuel → Eastfjords coast road → Egilsstaðir ~21:30. Bail options if running late: trim Vestrahorn to the viewpoint, or skip Sjónarnípa's upper leg. Groceries next morning at Nettó/Bónus Egilsstaðir.</div></div>
+    <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Hella%2C+Iceland/Egilsstadir%2C+Iceland">▸ Base 1 → Base 2 overview</a></div></div>
 </section>
+
 <!-- ================= BASE 2 ================= -->
 <section id="base2">
   <div class="base-head"><span class="base-num">Base 02</span><h2>The Eastfjords</h2><span class="dates">Sept 15 – 19 · 4 nights</span></div>
@@ -401,7 +511,7 @@
     <div class="maplinks"><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Kirkjubaejarklaustur%2C+Iceland/Stokksnes%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland">▸ Transfer route: Klaustur → Stokksnes → Egilsstaðir</a></div></div>
 
   <div class="transfer"><span class="icon">🚗</span><div><b>Transfer · Sept 19 · Egilsstaðir → Eyjafjörður (~330 km + detours, a huge day)</b><br>
-    Depart 7:00 across the Möðrudalur highlands. <b>Dettifoss west side at ~10:00</b> (before Diamond Circle buses), with Selfoss included — 3.9 km, easy <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">(AllTrails)</a>. Then <b>Ásbyrgi</b> horseshoe canyon: the Eyjan rim trail, 4.8 km <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">(AllTrails)</a>. (Rauðhólar/Hljóðaklettar sit just off this route if curiosity strikes — parked in the Extras list.) Loop back via <b>Hverir</b> boiling mud flats and Mývatn (Mývatn Nature Baths if energy allows), catch <b>Goðafoss at sunset</b> <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">(AllTrails)</a>, arrive Eyjafjörður ~20:30. Refuel Reykjahlíð; groceries next morning at Bónus Akureyri.</div></div>
+    Depart 7:00 across the Möðrudalur highlands. <b>Dettifoss west side at ~10:00</b> (before Diamond Circle buses), with Selfoss included — 3.9 km, easy <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss">(AllTrails)</a>. Then <b>★ MUST · Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters</b> — ~5 km loop, 1.5–2 h <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle">(AllTrails)</a> → <b>Ásbyrgi</b> Eyjan rim trail, 4.8 km <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail">(AllTrails)</a>, skippable if time runs short — Rauðhólar is the keeper. Loop back via <b>Hverir</b> boiling mud flats and Mývatn (Mývatn Nature Baths if energy allows), catch <b>Goðafoss at sunset</b> <a target="_blank" href="https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall">(AllTrails)</a>, arrive Eyjafjörður ~20:30. Refuel Reykjahlíð; groceries next morning at Bónus Akureyri.</div></div>
 </section>
 
 <!-- ================= BASE 3 ================= -->
@@ -586,7 +696,7 @@
     <tr><td><input type="checkbox" data-x="reykjadalur"></td><td><b>Reykjadalur</b> hot-river soak</td><td>Day 1, near Hveragerði</td><td>3 km up, bathe in a warm river; only if the red-eye spares you.</td></tr>
     <tr><td><input type="checkbox" data-x="solheima"></td><td><b>Sólheimajökull</b> glacier snout</td><td>Sept 13, between Skógafoss &amp; Reynisfjara</td><td>20-min detour; walk to the ice edge or pre-book a crampon walk.</td></tr>
     <tr><td><input type="checkbox" data-x="kristinar"></td><td><b>Kristínartindar full ridge</b> (18.7 km / 1,065 m)</td><td>Only with an overnight near Skaftafell</td><td>The summit-ridge extension above Sjónarnípa; doesn't fit a Hella base — the loop version IS in the plan (Sept 15).</td></tr>
-    <tr><td><input type="checkbox" data-x="raudholar"></td><td><b>Rauðhólar + Hljóðaklettar</b> red craters</td><td>Sept 19 transfer, 15 km off-route</td><td>~5 km loop, 1.5–2 h; skippable per your verdict — here if the day runs early.</td></tr>
+    <tr><td><input type="checkbox" data-x="raudholar"></td><td><b>Rauðhólar + Hljóðaklettar</b> red craters ★</td><td>IN the plan: Sept 19 transfer</td><td>~5 km loop, 1.5–2 h; skippable per your verdict — here if the day runs early.</td></tr>
     <tr><td><input type="checkbox" data-x="siglo"></td><td><b>Siglufjörður &amp; Tröllaskagi loop</b></td><td>Base 3 flex (Sept 20 or 22)</td><td>Herring Era Museum, fjord tunnels, Hofsós pool; full day of mostly driving.</td></tr>
     <tr><td><input type="checkbox" data-x="hvitserkur"></td><td><b>Hvítserkur</b> sea stack</td><td>Sept 23 transfer</td><td>+45 min; the basalt "drinking dragon" at mid-tide.</td></tr>
     <tr><td><input type="checkbox" data-x="raudasandur"></td><td><b>Rauðasandur &amp; Látrabjarg</b></td><td>Sept 27 flex, only in stable weather</td><td>~3 h each way from Ísafjörður; red-sand beach + Europe's greatest sea cliff (puffins gone by Sept).</td></tr>
@@ -678,7 +788,7 @@
     <tr class="basehead"><td colspan="5">Base 1 · Kirkjubæjarklaustur — the dark-sky jackpot</td></tr>
     <tr><td>Sept 10</td><td>06:22</td><td>19:59</td><td><span class="moonbar"><i style="width:4%"></i></span>4%</td><td class="best">● Waning crescent — near-black skies</td></tr>
     <tr><td>Sept 11</td><td>06:25</td><td>19:56</td><td><span class="moonbar"><i style="width:1%"></i></span>1%</td><td class="best">● NEW MOON — best aurora night of the trip</td></tr>
-    <tr><td>Sept 12</td><td>06:28</td><td>19:52</td><td><span class="moonbar"><i style="width:0%"></i></span>0%</td><td class="best">● New — Jökulsárlón night shoot window</td></tr>
+    <tr><td>Sept 12</td><td>06:28</td><td>19:52</td><td><span class="moonbar"><i style="width:0%"></i></span>0%</td><td class="best">● New — dark-sky window from the cottage</td></tr>
     <tr><td>Sept 13</td><td>06:31</td><td>19:49</td><td><span class="moonbar"><i style="width:2%"></i></span>2%</td><td class="best">● Waxing crescent</td></tr>
     <tr><td>Sept 14</td><td>06:33</td><td>19:45</td><td><span class="moonbar"><i style="width:5%"></i></span>5%</td><td class="best">● Waxing crescent</td></tr>
     <tr class="basehead"><td colspan="5">Base 2 · Egilsstaðir (Sept 15–18) — crescent sets early, dark after ~22:00</td></tr>
@@ -715,12 +825,12 @@
   <p class="base-sub">One Google Maps route per day, chaining every attraction in driving order — open on your phone each morning and go. (Gravel/F-road legs like Þakgil and Landmannalaugar may show as "adjust route" in Maps; follow the physical road signs.)</p>
   <div class="info-grid">
     <div class="info"><h3>Base 1 · Hella</h3><ul>
-      <li><b>Sept 10:</b> <a target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Hella%2C+Iceland">KEF → Selfoss → Þingvellir → Geysir → Gullfoss → Brúarfoss → Hella → Seljalandsfoss</a></li>
-      <li><b>Sept 11:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland/Hella%2C+Iceland">Hella → Landmannalaugar (F208-N) → back</a></li>
-      <li><b>Sept 12:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Skogafoss%2C+Iceland/Solheimajokull+Parking%2C+Iceland/Dyrholaey%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Hella%2C+Iceland">Hella → Skógafoss → Sólheimajökull → Dyrhólaey → Reynisfjara → back</a></li>
-      <li><b>Sept 13:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Vik+i+Myrdal%2C+Iceland/Thakgil%2C+Iceland/Hella%2C+Iceland">Hella → Vík → Þakgil → back</a></li>
-      <li><b>Sept 14:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Mulagljufur+Parking%2C+Iceland/Fjallsarlon%2C+Iceland/Jokulsarlon%2C+Iceland/Hella%2C+Iceland">Hella → Múlagljúfur → Fjallsárlón → Jökulsárlón → back</a></li>
-      <li><b>Sept 15:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Fjadrargljufur%2C+Iceland/Skaftafell+Visitor+Centre%2C+Iceland/Stokksnes%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland">Hella → Fjaðrárgljúfur → Skaftafell → Stokksnes → Höfn → Egilsstaðir</a></li></ul></div>
+      <li><b>Sept 10:</b> <a target="_blank" href="https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland">KEF → Selfoss → Þingvellir → Geysir → Gullfoss → Brúarfoss → Hella → Seljalandsfoss</a></li>
+      <li><b>Sept 11:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Skogafoss%2C+Iceland/Hella%2C+Iceland">Hella → Skógafoss (Waterfall Way) → back</a></li>
+      <li><b>Sept 12:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Kerid+Crater%2C+Iceland/Reykjadalur+Car+Park%2C+Iceland/Urridafoss%2C+Iceland/Hella%2C+Iceland">Hella → Kerið → Reykjadalur hot river → Urriðafoss → back</a></li>
+      <li><b>Sept 13:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Vik+i+Myrdal/Thakgil%2C+Iceland/Hella%2C+Iceland">Hella → Vík → Þakgil (19 km loop) → back</a></li>
+      <li><b>Sept 14:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland/Hella%2C+Iceland">Hella → Landmannalaugar (F208-N) → back</a></li>
+      <li><b>Sept 15:</b> <a target="_blank" href="https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland">Hella → Seljalandsfoss → Reynisfjara → Fjaðrárgljúfur → Múlagljúfur → Jökulsárlón → Höfn → Egilsstaðir</a></li></ul></div>
     <div class="info"><h3>Base 2 · Egilsstaðir</h3><ul>
       <li><b>Sept 16:</b> <a target="_blank" href="https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Storurd+Trailhead%2C+Iceland/Vok+Baths%2C+Iceland/Egilsstadir%2C+Iceland">Egilsstaðir → Stórurð (Vatnsskarð) → Vök Baths → back</a></li>
       <li><b>Sept 17:</b> <a target="_blank" href="https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Studlagil+Canyon+East+Side+Parking%2C+Iceland/Hengifoss+Parking%2C+Iceland/Seydisfjordur%2C+Iceland/Egilsstadir%2C+Iceland">Egilsstaðir → Stuðlagil east → Hengifoss → Seyðisfjörður evening → back</a></li>
@@ -762,6 +872,14 @@
 <script>
 const FP = n => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(n) + '?width=640';
 const T = {
+"Brúarfoss, Miðfoss & Hlauptungufoss": {s:"A flat riverside path up the Brúará river collects three waterfalls, saving the best for last: Brúarfoss, whose glacial water froths an electric, almost artificial blue over black lava. Twenty minutes off the Gullfoss road — the Golden Circle's best-kept endnote.", h:["Hlauptungufoss rapids","Miðfoss","Brúarfoss — the blue one","Riverside birch path"], g:[["The blue waterfall - Bruarfoss - Iceland (41967794764).jpg","Brúarfoss"]]},
+"Reykjadalur Hot-River Soak": {s:"The 'Steam Valley' above Hveragerði: an hour's climb past mud pots and fumaroles to where geothermal springs feed the river until it runs bath-warm. Walk upstream for hotter water and fewer people; small wooden walkways and screens mark the bathing stretch.", h:["The bathing stretch — pick your pool temperature","Mud pots & fumaroles on the climb","Djúpagilsfoss gorge viewpoint","Hveragerði greenhouse town below"], g:[["Warm river in Reykjadalur - panoramio.jpg","The warm river"]]},
+"The easy-wonder menu": {s:"Recovery-day satellites, all near the hot-river loop: Kerið's 3,000-year-old crater with oxblood scoria walls and a teal lake; Urriðafoss, Iceland's most voluminous waterfall thundering 15 minutes from Hella in near-total anonymity; Keldur's medieval turf farm; and Hveragerði's greenhouse cafés for lunch.", h:["Kerið crater rim walk","Urriðafoss — volume champion, zero crowds","Keldur turf farm (oldest in Iceland)","Hveragerði lunch stop"], g:[["Kerid1.jpg","Kerið crater"]]},
+"Þakgil Loop (19 km)": {s:"The full Þakgil circuit is Base 1's endurance test: out of the campsite canyon, up Remundargil's gorge, along ridgelines with Mýrdalsjökull's ice on one shoulder and the black coast on the other, past hoodoos and caves, and back. Faint markers, big silence — offline track essential, start early.", h:["Remundargil gorge","Glacier-edge ridgeline","Hoodoo towers","The dining cave at the campsite"], g:[["Þakgil Canyon Campsite, Iceland - Eric Marchese.jpg","The canyon campsite"],["Pakgil01(ws).jpg","Þakgil's green walls"]]},
+"Landmannalaugar — Bláhnúkur & Brennisteinsalda": {s:"The rhyolite amphitheater of the Fjallabak reserve, 1 h 45 up F208-north from the cottage. The classic loop links Bláhnúkur's black obsidian summit with Brennisteinsalda — 'the most colorful mountain in Iceland' — across the Laugahraun lava field, and ends in the natural hot river by the hut.", h:["Bláhnúkur summit — the color panorama","Brennisteinsalda's painted slopes","Laugahraun obsidian field","Hot-river soak at the hut"], g:[["Bláhnúkur from Brennisteinsalda panoramic 1.jpg","Bláhnúkur over the lava field"],["Brennisteinsalda 4 (js).jpg","Brennisteinsalda"],["View on Landmannalaugar area from Laugavegur 2012 panoramic 1.jpg","The amphitheater"]]},
+"Grænihryggur via Halldórsgil": {s:"The 'Green Ridge' — a wall of glassy, iron-tinted rhyolite hidden up the Halldórsgil ravine, deep enough into the reserve that even Landmannalaugar's crowds never find it. Stream-bed scrambling and route-finding; save it for a dry day with legs to spare, and treat it as the bonus it is.", h:["The green rhyolite wall","Halldórsgil ravine scramble","Views back over Fjallabak"], g:[["Brennisteinsalda 4 (js).jpg","Neighboring rhyolite slopes (the ridge hides from cameras)"]]},
+"Reynisfjara Black Sand Beach": {s:"Basalt columns stacked like organ pipes, the Reynisdrangar sea stacks offshore, and Hálsanefshellir cave at the base of the cliff. Beautiful and genuinely dangerous: sneaker waves here take lives — stay high on the sand and never turn your back on the water.", h:["Hálsanefshellir basalt cave","Reynisdrangar stacks","Dyrhólaey arch view west"], g:[["Reynisfjara, Suðurland, Islandia, 2014-08-17, DD 164.JPG","The basalt coast"]]},
+
 "Svartifoss & Sjónarnípa loop": {s:"Skaftafell's greatest-hits loop, straight from your AllTrails list: black basalt organ pipes at Svartifoss via Hundafoss and Magnúsafoss, then the Austurbrekkur path to Sjónarnípa — a rim viewpoint hanging directly over Skaftafellsjökull's crevasse field. Slotted into the Sept 15 transfer east.", h:["Svartifoss basalt amphitheater","Hundafoss & Magnúsafoss on the way up","Sjónarnípa — straight down onto the glacier","Sjónarsker view dial"], g:[["038 Svartifoss waterfall (Iceland) Photo by Giles Laurent.jpg","Svartifoss"],["Skaftafellsjökull panorama.jpg","Skaftafellsjökull from the rim"],["Skaftafellsjökull 2010.jpg","The crevasse field below Sjónarnípa"]]},
 "Landmannalaugar — Bláhnjúkur loop": {s:"The Fjallabak highlands' rhyolite amphitheater, 1 h 45 up F208-north from your Hella cabin. Climb Bláhnjúkur ('Blue Peak') for the full color wheel — Brennisteinsalda's red-yellow-green sulfur slopes, black obsidian lava, steam vents — then descend through the Laugahraun lava field and finish with a soak in the natural hot river by the hut.", h:["Bláhnjúkur summit — the color panorama","Brennisteinsalda's painted slopes","Laugahraun obsidian lava field","Hot-river soak at the hut"], g:[["Bláhnúkur from Brennisteinsalda panoramic 1.jpg","Bláhnjúkur over the lava field"],["Brennisteinsalda 4 (js).jpg","Brennisteinsalda's slopes"],["View on Landmannalaugar area from Laugavegur 2012 panoramic 1.jpg","The Landmannalaugar amphitheater"]]},
 "Múlagljúfur Canyon": {s:"An unsigned path climbs from a gravel pull-off through moss and birch scrub to the rim of a canyon that looks Photoshopped: 200 m walls drenched in green, with Hangandifoss free-falling into the void and Múlafoss below it. The trail is steep, muddy and narrow in places, but never technical.", h:["Hangandifoss overlook (the money shot)","Múlafoss lower falls","Upper rim — fog burns off ~1 h after dawn","Ocean & Öræfajökull views behind you"], g:[["Mulagljufur.jpg","The canyon and its hanging falls"]]},
@@ -819,5 +937,16 @@ document.querySelectorAll('.card').forEach(card=>{
 });
 </script>
 
+
+<script>
+  document.querySelectorAll('#b1tabs .tabbtn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('#b1tabs .tabbtn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.daypane').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.day).classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
