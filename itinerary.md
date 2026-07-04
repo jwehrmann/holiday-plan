@@ -92,6 +92,7 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 | **Bolafjall platform** | ~20 km · 25 min | <1 km | — | Easy | 1 h | Any | — |
 | **Valagil ravine** | ~25 km · 25 min | ~5 km RT | ~150 m | Easy-moderate | 1.5 h | Pairs with Dynjandi day | — |
 | **Ósvör + old town + hot pots** | 0–15 km | strolls | — | Easy | evenings | Any + **aurora** | — |
+| ★ MUST · **Kirkjufell & Kirkjufellsfoss** (leg finale) | on the Sept 28 exit drive (~4 h 15) | 3.5 km | 16 m | Easy | 1 h | Sunset ~19:15 | [link](https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss) |
 
 **Day by day**
 - **Sept 23 (Tue):** Transfer day (above); arrive ~16:30; Bónus load; old-town evening.
