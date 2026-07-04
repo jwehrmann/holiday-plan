@@ -11,7 +11,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 
 **Crowd doctrine:** icons at sunrise or after 18:00; unmarked trails at midday; nobody is anywhere before 8 AM in September. New moon **Sept 11** (dark-sky aurora window, Bases 1–2), full moon **Sept 26**.
 
-**Full route:** [Google Maps — KEF → Hella → Egilsstaðir → Akureyri → Ísafjörður → Kirkjufell → KEF](https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Hella/Egilssta%C3%B0ir/Akureyri/%C3%8Dsafj%C3%B6r%C3%B0ur/Grundarfj%C3%B6r%C3%B0ur/Keflav%C3%ADk)
+**Full route:** [Google Maps — KEF → Hella → Egilsstaðir → Akureyri → Ísafjörður → Kirkjufell → KEF](https://www.google.com/maps/dir/Keflavik+International+Airport/Hella%2C+Iceland/Egilsstadir%2C+Iceland/Akureyri%2C+Iceland/Isafjordur%2C+Iceland/Grundarfjordur%2C+Iceland/Keflavik)
 
 ---
 
@@ -32,14 +32,14 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 | **Landmannalaugar — Bláhnjúkur loop** (highlands) | ~90 km · 1 h 45 (F208-N) | ~8.5 km loop | ~550 m | Hard | 3.5–4 h | Best-weather day | [link](https://www.alltrails.com/trail/iceland/southern/blahnjukur) |
 
 **Day by day**
-- **Sept 10 (Wed):** Land 9:25 → Krónan Selfoss → **Þingvellir + Öxarárfoss** → Geysir & Gullfoss → **Brúarfoss** if energy allows → check-in Hella 15:00+ → **Seljalandsfoss + Gljúfrabúi sunset** (25 min). Gentlest possible red-eye day. (Reykjadalur hot river = Day-1 option.) [Day-1 route](https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Kr%C3%B3nan+Selfossi/%C3%96xar%C3%A1rfoss/Geysir/Gullfoss/Br%C3%BAarfoss/Hella/Seljalandsfoss)
+- **Sept 10 (Wed):** Land 9:25 → Krónan Selfoss → **Þingvellir + Öxarárfoss** → Geysir & Gullfoss → **Brúarfoss** if energy allows → check-in Hella 15:00+ → **Seljalandsfoss + Gljúfrabúi sunset** (25 min). Gentlest possible red-eye day. (Reykjadalur hot river = Day-1 option.) [Day-1 route](https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland)
 - **Sept 11 (Thu):** **Landmannalaugar day** — Bláhnjúkur–Brennisteinsalda loop + hot-river soak; down by 17:00. **New moon — aurora from the cabin or Seljalandsfoss.**
 - **Sept 12 (Fri):** **Skógafoss sunrise** → Waterfall Way → **Sólheimajökull snout** → Reynisfjara ~18:00 → Dyrhólaey sunset.
 - **Sept 13 (Sat):** **Þakgil loop** (or weather-swap) → evening Seljalandsfoss re-shoot.
 - **Sept 14 (Sun):** **Eastern glacier day:** depart 6:30 → **Múlagljúfur** mid-morning → Fjallsárlón → **Jökulsárlón + Diamond Beach blue hour** → home (~520 km RT).
 - **Sept 15 (Mon):** Transfer east, loaded.
 
-**Transfer Sept 15 · Hella → Egilsstaðir (~630 km — the monster day, every stop en route):** depart 7:00 → **Fjaðrárgljúfur** 9:15 → **Skaftafell: Svartifoss–Sjónarnípa loop** 11:30–14:30 → **Vestrahorn/Stokksnes** Yellow Path ~16:30 ([AllTrails](https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path), 900 ISK) → Höfn dinner + fuel → Egilsstaðir ~21:30. Bail options: viewpoint-only Vestrahorn, or skip Sjónarnípa's upper leg. [Route](https://www.google.com/maps/dir/Hella/Fja%C3%B0r%C3%A1rglj%C3%BAfur/Skaftafell+Visitor+Centre/Stokksnes/H%C3%B6fn/Egilssta%C3%B0ir)
+**Transfer Sept 15 · Hella → Egilsstaðir (~630 km — the monster day, every stop en route):** depart 7:00 → **Fjaðrárgljúfur** 9:15 → **Skaftafell: Svartifoss–Sjónarnípa loop** 11:30–14:30 → **Vestrahorn/Stokksnes** Yellow Path ~16:30 ([AllTrails](https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path), 900 ISK) → Höfn dinner + fuel → Egilsstaðir ~21:30. Bail options: viewpoint-only Vestrahorn, or skip Sjónarnípa's upper leg. [Route](https://www.google.com/maps/dir/Hella%2C+Iceland/Fjadrargljufur%2C+Iceland/Skaftafell+Visitor+Centre%2C+Iceland/Stokksnes%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland)
 
 ---
 
@@ -63,7 +63,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 - **Sept 18 (Thu):** **Brúnavík loop** — or weather-flex day. Pack: tomorrow is the biggest driving day.
 - **Sept 19 (Fri):** The big transfer north.
 
-**Transfer Sept 19 · Egilsstaðir → Eyjafjörður (~330 km + detours — a huge day):** depart 7:00 → **Dettifoss west + Selfoss** ~10:00 ([3.9 km, easy](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss)) → ★ MUST · **Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters** (~5 km loop, 1.5–2 h — [AllTrails](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle)) → **Ásbyrgi Eyjan rim trail** ([4.8 km](https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail); skippable if time runs short — Rauðhólar is the keeper) → **Hverir** mud flats + Mývatn (Nature Baths optional) → **Goðafoss sunset** ([2.9 km](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall)) → base ~20:30. Fuel Reykjahlíð. [Route](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss/%C3%81sbyrgi/Hverir/Go%C3%B0afoss/Akureyri)
+**Transfer Sept 19 · Egilsstaðir → Eyjafjörður (~330 km + detours — a huge day):** depart 7:00 → **Dettifoss west + Selfoss** ~10:00 ([3.9 km, easy](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss)) → ★ MUST · **Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters** (~5 km loop, 1.5–2 h — [AllTrails](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle)) → **Ásbyrgi Eyjan rim trail** ([4.8 km](https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail); skippable if time runs short — Rauðhólar is the keeper) → **Hverir** mud flats + Mývatn (Nature Baths optional) → **Goðafoss sunset** ([2.9 km](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall)) → base ~20:30. Fuel Reykjahlíð. [Route](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Dettifoss%2C+Iceland/Asbyrgi%2C+Iceland/Hverir%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
 
 ---
 
@@ -87,7 +87,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 - **Sept 22 (Mon):** **Aldeyjarfoss sunrise** (+ Hrafnabjargafoss) → Goðafoss → rest; pack for the fjords.
 - **Sept 23 (Tue):** Transfer west to Ísafjörður.
 
-**Transfer Sept 23 · Eyjafjörður → Ísafjörður (~455 km, 5.5–6 h):** leave 8:00 → optional **Hvítserkur** detour (+45 min) → fuel Blönduós AND Hólmavík (never pass a pump out here) → Steingrímsfjarðarheiði pass → Ísafjarðardjúp coast road → arrive ~16:30, **Bónus Ísafjörður** 5-night load, old-town evening. [Route](https://www.google.com/maps/dir/Akureyri/Hv%C3%ADtserkur/H%C3%B3lmav%C3%ADk/%C3%8Dsafj%C3%B6r%C3%B0ur)
+**Transfer Sept 23 · Eyjafjörður → Ísafjörður (~455 km, 5.5–6 h):** leave 8:00 → optional **Hvítserkur** detour (+45 min) → fuel Blönduós AND Hólmavík (never pass a pump out here) → Steingrímsfjarðarheiði pass → Ísafjarðardjúp coast road → arrive ~16:30, **Bónus Ísafjörður** 5-night load, old-town evening. [Route](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Hvitserkur%2C+Iceland/Holmavik%2C+Iceland/Isafjordur%2C+Iceland)
 
 ---
 
@@ -116,7 +116,7 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 ## Base 5 · Keflavík — the safety stop
 **Sept 28–29 · 1 night.** Airbnb in Keflavík/Njarðvík, 10 min from the terminal — the Milan leg starts rested with zero drive-day risk.
 
-**Sept 28 — the farewell drive (~640 km, ~7.5 h broken by the best stop in the country):** Ísafjörður → Route 60 south → Snæfellsnes → **★ Kirkjufell & Kirkjufellsfoss at golden hour** (5 min off Route 54, sunset ~19:15) → Gerðuberg basalt columns if light remains → Keflavík ~21:30. [Route](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Kirkjufellsfoss+Parking/Ger%C3%B0uberg+Cliffs/Keflav%C3%ADk)
+**Sept 28 — the farewell drive (~640 km, ~7.5 h broken by the best stop in the country):** Ísafjörður → Route 60 south → Snæfellsnes → **★ Kirkjufell & Kirkjufellsfoss at golden hour** (5 min off Route 54, sunset ~19:15) → Gerðuberg basalt columns if light remains → Keflavík ~21:30. [Route](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Kirkjufellsfoss+Parking%2C+Iceland/Gerduberg+Cliffs%2C+Iceland/Keflavik)
 
 **Evening menu (all <30 min):** late Blue Lagoon slot (check eruption status) or Sky Lagoon; Gunnuhver steam vents; Brimketill lava pool; Bridge Between Continents; last aurora watch from the Garður lighthouses.
 **Sept 29:** coffee → 10-min drive → drop the 4x4 → Milan.
@@ -250,23 +250,23 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 
 ## Day-by-day route maps
 
-- **Sept 10:** [KEF → Selfoss → Þingvellir → Geysir → Gullfoss → Brúarfoss → Hella → Seljalandsfoss](https://www.google.com/maps/dir/Keflav%C3%ADk+International+Airport/Kr%C3%B3nan+Selfossi/%C3%96xar%C3%A1rfoss/Geysir/Gullfoss/Br%C3%BAarfoss/Hella/Seljalandsfoss)
-- **Sept 11:** [Hella → Landmannalaugar → back](https://www.google.com/maps/dir/Hella/Landmannalaugar/Hella)
-- **Sept 12:** [Hella → Skógafoss → Sólheimajökull → Dyrhólaey → Reynisfjara → back](https://www.google.com/maps/dir/Hella/Sk%C3%B3gafoss/S%C3%B3lheimaj%C3%B6kull+Parking/Dyrh%C3%B3laey/Reynisfjara+Beach/Hella)
-- **Sept 13:** [Hella → Vík → Þakgil → back](https://www.google.com/maps/dir/Hella/V%C3%ADk/%C3%9Eakgil/Hella)
-- **Sept 14:** [Hella → Múlagljúfur → Fjallsárlón → Jökulsárlón → back](https://www.google.com/maps/dir/Hella/M%C3%BAlaglj%C3%BAfur+Parking/Fjalls%C3%A1rl%C3%B3n/J%C3%B6kuls%C3%A1rl%C3%B3n/Hella)
-- **Sept 15:** [Hella → Fjaðrárgljúfur → Skaftafell → Stokksnes → Höfn → Egilsstaðir](https://www.google.com/maps/dir/Hella/Fja%C3%B0r%C3%A1rglj%C3%BAfur/Skaftafell+Visitor+Centre/Stokksnes/H%C3%B6fn/Egilssta%C3%B0ir)
-- **Sept 16:** [Egilsstaðir → Stórurð → Vök Baths → back](https://www.google.com/maps/dir/Egilssta%C3%B0ir/St%C3%B3rur%C3%B0+Trailhead/V%C3%B6k+Baths/Egilssta%C3%B0ir)
-- **Sept 17:** [Egilsstaðir → Stuðlagil east → Hengifoss → Seyðisfjörður → back](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Stu%C3%B0lagil+Canyon+East+Side+Parking/Hengifoss+Parking/Sey%C3%B0isfj%C3%B6r%C3%B0ur/Egilssta%C3%B0ir)
-- **Sept 18:** [Egilsstaðir → Borgarfjörður eystri → back](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Borgarfj%C3%B6r%C3%B0ur+Eystri/Egilssta%C3%B0ir)
-- **Sept 19:** [Egilsstaðir → Dettifoss W → Ásbyrgi → Hverir → Goðafoss → Akureyri](https://www.google.com/maps/dir/Egilssta%C3%B0ir/Dettifoss+West+Parking/%C3%81sbyrgi/Hverir/Go%C3%B0afoss/Akureyri)
-- **Sept 20:** [Akureyri → Forest Lagoon → Goðafoss night → back](https://www.google.com/maps/dir/Akureyri/Forest+Lagoon/Go%C3%B0afoss/Akureyri)
-- **Sept 21:** [Base → Kerling trailhead (Finnastaðir) → back](https://www.google.com/maps/dir/Akureyri/Finnasta%C3%B0ir/Akureyri)
-- **Sept 22:** [Base → Aldeyjarfoss → Goðafoss → back](https://www.google.com/maps/dir/Akureyri/Aldeyjarfoss/Go%C3%B0afoss/Akureyri)
-- **Sept 23:** [Akureyri → Hvítserkur → Hólmavík → Ísafjörður](https://www.google.com/maps/dir/Akureyri/Hv%C3%ADtserkur/H%C3%B3lmav%C3%ADk/%C3%8Dsafj%C3%B6r%C3%B0ur)
-- **Sept 24:** [Ísafjörður → Þingeyri/Kvennaskarð (Kaldbakur) → back](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/%C3%9Eingeyri/%C3%8Dsafj%C3%B6r%C3%B0ur)
-- **Sept 25:** [Ísafjörður → Valagil → Dynjandi sunset → back](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Valagil/Dynjandi/%C3%8Dsafj%C3%B6r%C3%B0ur)
-- **Sept 26:** [Ísafjörður → Bolafjall → Bolungarvík → Ósvör → back](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Bolafjall/Bolungarv%C3%ADk/%C3%93sv%C3%B6r+Maritime+Museum/%C3%8Dsafj%C3%B6r%C3%B0ur)
-- **Sept 27 (flex option):** [Rauðasandur → Látrabjarg loop](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Rau%C3%B0asandur/L%C3%A1trabjarg/%C3%8Dsafj%C3%B6r%C3%B0ur)
-- **Sept 28:** [Ísafjörður → Kirkjufell sunset → Gerðuberg → Keflavík](https://www.google.com/maps/dir/%C3%8Dsafj%C3%B6r%C3%B0ur/Kirkjufellsfoss+Parking/Ger%C3%B0uberg+Cliffs/Keflav%C3%ADk)
+- **Sept 10:** [KEF → Selfoss → Þingvellir → Geysir → Gullfoss → Brúarfoss → Hella → Seljalandsfoss](https://www.google.com/maps/dir/Keflavik+International+Airport/Kronan+Selfossi%2C+Iceland/Oxararfoss%2C+Iceland/Geysir+Hot+Springs%2C+Iceland/Gullfoss%2C+Iceland/Bruarfoss%2C+Iceland/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland)
+- **Sept 11:** [Hella → Landmannalaugar → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland/Hella%2C+Iceland)
+- **Sept 12:** [Hella → Skógafoss → Sólheimajökull → Dyrhólaey → Reynisfjara → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Skogafoss%2C+Iceland/Solheimajokull+Parking%2C+Iceland/Dyrholaey%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Hella%2C+Iceland)
+- **Sept 13:** [Hella → Vík → Þakgil → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Vik+i+Myrdal%2C+Iceland/Thakgil%2C+Iceland/Hella%2C+Iceland)
+- **Sept 14:** [Hella → Múlagljúfur → Fjallsárlón → Jökulsárlón → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Mulagljufur+Parking%2C+Iceland/Fjallsarlon%2C+Iceland/Jokulsarlon%2C+Iceland/Hella%2C+Iceland)
+- **Sept 15:** [Hella → Fjaðrárgljúfur → Skaftafell → Stokksnes → Höfn → Egilsstaðir](https://www.google.com/maps/dir/Hella%2C+Iceland/Fjadrargljufur%2C+Iceland/Skaftafell+Visitor+Centre%2C+Iceland/Stokksnes%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 16:** [Egilsstaðir → Stórurð → Vök Baths → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Storurd+Trailhead%2C+Iceland/Vok+Baths%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 17:** [Egilsstaðir → Stuðlagil east → Hengifoss → Seyðisfjörður → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Studlagil+Canyon+East+Side+Parking%2C+Iceland/Hengifoss+Parking%2C+Iceland/Seydisfjordur%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 18:** [Egilsstaðir → Borgarfjörður eystri → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Borgarfjordur+Eystri%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 19:** [Egilsstaðir → Dettifoss W → Ásbyrgi → Hverir → Goðafoss → Akureyri](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Dettifoss+West+Parking%2C+Iceland/Asbyrgi%2C+Iceland/Hverir%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
+- **Sept 20:** [Akureyri → Forest Lagoon → Goðafoss night → back](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Forest+Lagoon%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
+- **Sept 21:** [Base → Kerling trailhead (Finnastaðir) → back](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Finnastadir%2C+Iceland/Akureyri%2C+Iceland)
+- **Sept 22:** [Base → Aldeyjarfoss → Goðafoss → back](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Aldeyjarfoss%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
+- **Sept 23:** [Akureyri → Hvítserkur → Hólmavík → Ísafjörður](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Hvitserkur%2C+Iceland/Holmavik%2C+Iceland/Isafjordur%2C+Iceland)
+- **Sept 24:** [Ísafjörður → Þingeyri/Kvennaskarð (Kaldbakur) → back](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Thingeyri%2C+Iceland/Isafjordur%2C+Iceland)
+- **Sept 25:** [Ísafjörður → Valagil → Dynjandi sunset → back](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Valagil%2C+Iceland/Dynjandi%2C+Iceland/Isafjordur%2C+Iceland)
+- **Sept 26:** [Ísafjörður → Bolafjall → Bolungarvík → Ósvör → back](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Bolafjall%2C+Iceland/Bolungarvik%2C+Iceland/Osvor+Maritime+Museum%2C+Iceland/Isafjordur%2C+Iceland)
+- **Sept 27 (flex option):** [Rauðasandur → Látrabjarg loop](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Raudasandur%2C+Iceland/Latrabjarg%2C+Iceland/Isafjordur%2C+Iceland)
+- **Sept 28:** [Ísafjörður → Kirkjufell sunset → Gerðuberg → Keflavík](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Kirkjufellsfoss+Parking%2C+Iceland/Gerduberg+Cliffs%2C+Iceland/Keflavik)
 - **Sept 29:** Keflavík → KEF (10 min) → Milan ✈
