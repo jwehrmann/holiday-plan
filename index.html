@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trips 2026 · Iceland &amp; Canada</title>
+<title>Iceland 2026 · Wilderness Itinerary</title>
 <style>
   :root{--bg:#0b0f14;--card:#121822;--ink:#eef2f7;--muted:#9fb0c3;--accent:#5ec5c9;--accent2:#7bd88f;--gold:#e6b453;--line:#1e2836}
   *{box-sizing:border-box}
@@ -12,30 +12,27 @@
   .wrap{max-width:900px;margin:0 auto;padding:64px 20px 80px}
   h1{font-size:2.2rem;margin:0 0 6px;letter-spacing:-.01em}
   .sub{color:var(--muted);margin:0 0 40px;font-size:1.05rem}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:560px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;
     transition:transform .15s ease,border-color .15s ease}
   .card:hover{transform:translateY(-3px);border-color:#2c3a4c}
   .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-  .ice .tag{color:var(--accent)} .can .tag{color:var(--gold)}
+  .ice .tag{color:var(--accent)}
   .card h2{margin:2px 0 0;font-size:1.5rem}
   .dates{color:var(--muted);font-size:.92rem}
   .desc{color:var(--muted);font-size:.95rem;margin:2px 0 8px}
   .btns{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
   a.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;font-size:.92rem;text-decoration:none}
   a.primary{background:var(--accent);color:#062024}
-  .can a.primary{background:var(--gold);color:#2a1e05}
   a.ghost{border:1px solid var(--line);color:var(--ink)}
   a.ghost:hover{border-color:#33465a}
-  .status{font-size:.8rem;color:var(--accent2)}
   footer{margin-top:48px;color:#6b7c90;font-size:.82rem}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Trips 2026</h1>
-  <p class="sub">Two big mountain trips, back to back — the Rockies &amp; Coast Mountains of Canada, then wild Iceland.</p>
+  <h1>Iceland 2026</h1>
+  <p class="sub">A September wilderness circuit built around hard trails, empty fjords, aurora, and a 4x4.</p>
 
   <div class="grid">
     <div class="card ice">
@@ -46,17 +43,6 @@
       <div class="btns">
         <a class="btn primary" href="iceland/index.html">Open the interactive site →</a>
         <a class="btn ghost" href="https://github.com/jwehrmann/holiday-plan/blob/main/iceland/itinerary.md">Itinerary (md)</a>
-      </div>
-    </div>
-
-    <div class="card can">
-      <span class="tag">Canada · Remote-work leg</span>
-      <h2>Rockies + Coast Mountains</h2>
-      <span class="dates">Aug 14 – Sept 9, 2026 · working Brasília hours</span>
-      <p class="desc">Vancouver → Golden → Calgary. Afternoon &amp; weekend hikes, guided alpine objectives (Bugaboos, Athabasca), Banff rock climbing.</p>
-      <div class="btns">
-        <a class="btn primary" href="https://github.com/jwehrmann/holiday-plan/blob/main/canada/itinerary.md">Read the plan (md)</a>
-        <span class="status">● planning in progress</span>
       </div>
     </div>
   </div>
