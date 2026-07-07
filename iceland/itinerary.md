@@ -1,17 +1,18 @@
-# Iceland · 4-Base (+1) Wilderness Itinerary
-**Sept 10 – 29, 2026 · 19 nights · 4 Airbnbs + 1 KEF safety stop · 4x4 SUV · Sony a7RV**
+# Iceland · 5-Base (+1) Wilderness Itinerary
+**Sept 10 – 29, 2026 · 19 nights · 5 Airbnbs + 1 KEF safety stop · 4x4 SUV · Sony a7RV**
 
 Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Clockwise route: South Coast → Eastfjords → North → **Westfjords**, ending with a **safety night beside KEF (Sept 28)** so the onward flight never depends on a 6-hour drive — with a Kirkjufell sunset built into the exit.
 
-**Base logic (only Base 1 booked so far — the rest re-tunes as bookings land):**
-- **Base 2 = Egilsstaðir** — the East hub every hike radiates from; Seyðisfjörður is an evening hop over the pass.
-- **Base 3 = Eyjafjörður valley / Akureyri** — Kerling 30 min away, Aldeyjarfoss 1 h 15. (Siglufjörður → Extras list.)
-- **Base 4 = the Westfjords (Ísafjörður), 5 nights** — per your call: the emptiest corner gets the finale. Snæfellsnes preserved below as the weather escape hatch.
-- **Base 5 = Keflavík, 1 night (Sept 28–29)** — breather beside the terminal before Milan.
+**Base logic (Bases 1–2 booked — the rest re-tunes as bookings land):**
+- **Base 2 = Skaftafell / Öræfi (Svínafell), 2 nights** — BOOKED. The short glacier base carved out of the old one-shot transfer east: 5 min from Skaftafell, it finally makes the big Kristínartindar ridge hikeable and puts Jökulsárlón on the doorstep.
+- **Base 3 = Eastfjords (Egilsstaðir), 2 nights (TBD)** — trimmed to fit the new Skaftafell nights; still the East hub (Seyðisfjörður an evening hop over the pass), but now a tight one-hike block that needs re-tuning.
+- **Base 4 = Eyjafjörður valley / Akureyri** — Kerling 30 min away, Aldeyjarfoss 1 h 15. (Siglufjörður → Extras list.)
+- **Base 5 = the Westfjords (Ísafjörður), 5 nights** — per your call: the emptiest corner gets the finale. Snæfellsnes preserved below as the weather escape hatch.
+- **Base 6 = Keflavík, 1 night (Sept 28–29)** — breather beside the terminal before Milan.
 
 **Crowd doctrine:** icons at sunrise or after 18:00; unmarked trails at midday; nobody is anywhere before 8 AM in September. New moon **Sept 11** (dark-sky aurora window, Bases 1–2), full moon **Sept 26**.
 
-**Full route:** [Google Maps — KEF → Hella → Egilsstaðir → Akureyri → Ísafjörður → Kirkjufell → KEF](https://www.google.com/maps/dir/Keflavik+International+Airport/Hella%2C+Iceland/Egilsstadir%2C+Iceland/Akureyri%2C+Iceland/Isafjordur%2C+Iceland/Grundarfjordur%2C+Iceland/Keflavik)
+**Full route:** [Google Maps — KEF → Hella → Skaftafell → Egilsstaðir → Akureyri → Ísafjörður → Kirkjufell → KEF](https://www.google.com/maps/dir/Keflavik+International+Airport/Hella%2C+Iceland/Skaftafell%2C+Iceland/Egilsstadir%2C+Iceland/Akureyri%2C+Iceland/Isafjordur%2C+Iceland/Grundarfjordur%2C+Iceland/Keflavik)
 
 ---
 
@@ -26,16 +27,44 @@ Land KEF **Sept 10, 9:25 AM** (YVR red-eye) → depart **Sept 29** for Milan. Cl
 | **Sept 12** | Recovery + hot river | **Reykjadalur hot-river soak** + easy-wonder menu: Kerið crater, Urriðafoss, Keldur turf farm, Hveragerði | 9 km / ~330 m · Moderate | [AllTrails](https://www.alltrails.com/trail/iceland/southern/reykjadalur-hot-spring-thermal-river) · [loop route](https://www.google.com/maps/dir/Hella%2C+Iceland/Kerid+Crater%2C+Iceland/Reykjadalur+Car+Park%2C+Iceland/Urridafoss%2C+Iceland/Hella%2C+Iceland) |
 | **Sept 13** | ★ Big hike | **Þakgil Loop** — Remundargil, glacier-edge ridges, hoodoos | ~19 km / ~800 m · Hard · 116 km / ~2 h drive | [AllTrails](https://www.alltrails.com/trail/iceland/southern/thakgil-loop) |
 | **Sept 14** | ★ Highlands | **Landmannalaugar: Bláhnúkur + Brennisteinsalda** loop + hot river; bonus **Grænihryggur via Halldórsgil** if energy | ~10.5 km / ~700 m (+~10 km bonus) · Hard | [Bláhnúkur](https://www.alltrails.com/trail/iceland/southern/landmannalaugar-blahnukur-brennisteinsalda) · [Grænihryggur](https://www.alltrails.com/trail/iceland/southern/graenihryggur-3) · F208-N, check road.is |
-| **Sept 15** | Rest + transfer east | Freebies en route: **Seljalandsfoss** → **Reynisfjara** → **Fjaðrárgljúfur ★** → if pace holds: **Múlagljúfur ★** (scalable) + **Jökulsárlón** leg-stretch → Egilsstaðir ~21:00 | ~6 km strolls · ~630 km | [Reynisfjara](https://www.alltrails.com/trail/iceland/southern/reynisfjara-black-sand-beach) · [transfer route](https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland) |
+| **Sept 15 (Tue)** | Rest + short transfer to Skaftafell | Freebies en route, no rush: **Seljalandsfoss** → **Reynisfjara** black sand → **Fjaðrárgljúfur ★** canyon → arrive **Svínafell / Skaftafell ~17:00** (check-in). Big-shop at Vík or Klaustur before you land. | ~6 km strolls · ~340 km | [Reynisfjara](https://www.alltrails.com/trail/iceland/southern/reynisfjara-black-sand-beach) · [transfer route](https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Svinafell%2C+Iceland) |
 
 Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skógafoss works in drizzle; Reykjadalur works in anything.
 
 
 ---
 
-## Base 2 · The Eastfjords — Egilsstaðir
-**Cadence: Σ ~46 km · ~1,800 m (≈11 km/day over a tighter 4-day block).**
-**Sept 15–19 · 4 nights.** The least-visited quarter of the Ring Road: alpine boulder fields, basalt canyons, fjord hikes with reindeer footprints. (Seyðisfjörður as base is prettier but adds a 27 km pass each way.)
+## Base 2 · Skaftafell & Öræfi — Svínafell (BOOKED ✔)
+**Country home in Svínafell, Öræfi (Sveitarfélagið Hornafjörður) · self check-in (lockbox) · check-in Sept 15 17:00 · checkout Sept 17 10:00.** Under Öræfajökull, next to Svínafellsjökull, ~5 min from the Skaftafell trailheads and ~50 min from Jökulsárlón — the glacier base that finally makes the big ridge hikeable.
+**Cadence: Σ ~22 km · ~1,100 m (one signature ridge day + a glacier/beach evening).**
+**Sept 15–17 · 2 nights.** Carved out of the old 630 km one-shot dash to Egilsstaðir: instead of driving past Skaftafell at dusk, you sleep beside it and actually hike it. Canyons on the way in, the Kristínartindar ridge in the middle, more canyons + Vestrahorn on the way out.
+
+| Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
+|---|---|---|---|---|---|---|---|
+| ★ **Kristínartindar via Svartifoss** (Skaftafellsheiði loop) | ~5 min | 18.7 km loop | ~1,065 m | Hard | 6–7 h | Full day, clear window | [link](https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi) |
+| **Svartifoss + Sjónarnípa** (short version — drizzle fallback) | ~5 min | 7.4 km | ~380 m | Moderate | 2.5–3 h | Any | [link](https://www.alltrails.com/trail/iceland/southern/sjonarnipa-svartifoss-magnusafoss-hundafoss-via-austurbrekkur) |
+| **Skaftafellsjökull glacier snout** | ~5 min | 3.7 km RT | 50 m | Easy | 1–1.5 h | Any | [link](https://www.alltrails.com/trail/iceland/southern/skaftafellsjokull-glacier-trail) |
+| **Jökulsárlón + Diamond Beach** | ~60 km · 50 min | strolls | — | Easy | Sunset / aurora | evening | — |
+| **Fjallsárlón** (quieter lagoon) | ~50 km · 45 min | short | — | Easy | golden hour | — | — |
+| **Hjallanes / Skálafellsjökull loop** (transfer-day option) | near Höfn (Skálafell farm) | 8.4 km loop | ~140 m | Moderate | 3–4 h | Any | [link](https://www.alltrails.com/trail/iceland/eastern/hijallanes) |
+
+**Day by day**
+- **Sept 15 (Tue):** Transfer + canyons day (see Base 1, Sept 15). Arrive Svínafell 17:00; settle in. If light and legs hold: **Skaftafellsjökull snout** stroll or the Svínafellsjökull viewpoint at dusk.
+- **Sept 16 (Wed):** ★ **Kristínartindar via Svartifoss** — the full ridge (18.7 km / 1,065 m) on the best-weather window; Svartifoss and Sjónarnípa sit right on the loop. Evening: **Jökulsárlón + Diamond Beach** for icebergs and, on a clear sky, aurora. Drizzle plan: short **Svartifoss/Sjónarnípa** loop + glacier snouts + the two lagoons.
+- **Sept 17 (Thu):** Checkout 10:00 → transfer east to Base 3 (Múlagljúfur canyon + Vestrahorn en route, below).
+
+**Ice cave note.** Mid-September is *before* the natural blue-ice-cave season under Vatnajökull (those open ~November when the glacier refreezes). The only year-round option is the **Katla ice cave** from Vík (Kötlujökull) — guided, roughly **20,000 ISK+ per person**, and it's back west near Base 1, not here. So an ice cave from Skaftafell is either out of season or a paid backtrack — easy to skip per your "won't do if expensive" call. If you do want one, slot Katla onto the Sept 15 transfer while you're near Vík.
+
+**Transfer Sept 17 · Skaftafell → Eastfjords (Egilsstaðir) (~360 km, ~5 h with stops):** checkout 10:00 → ★ **Múlagljúfur canyon / Hangandifoss** (~45 km east, the viewpoint climb — rough 2 km gravel spur, 4x4) → **Jökulsárlón / Diamond Beach** if skipped the night before → **Höfn** fuel + langoustine → ★ **Vestrahorn / Stokksnes** (6.1 km easy, the shapes) → Eastfjords coast road → Egilsstaðir ~19:00. [Route](https://www.google.com/maps/dir/Svinafell%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Stokksnes%2C+Iceland/Egilsstadir%2C+Iceland)
+
+*Optional on the transfer:* **Hjallanes / Skálafellsjökull loop** (8.4 km, near Skálafell between Jökulsárlón and Höfn) if you want a proper leg-stretch hike instead of just Vestrahorn — but it competes with Múlagljúfur/Vestrahorn for daylight, so pick by energy. (**Flaajökull/Haukafell dropped** — redundant with the Skaftafellsjökull/Svínafellsjökull glaciers you already have at the door.)
+
+---
+
+## Base 3 · The Eastfjords — Egilsstaðir (BOOKED ✔)
+**Cabin near Egilsstaðir · hosts Einar & Melanie · check-in Sept 17 · checkout Sept 19 11:00.**
+**Cadence: Σ ~14 km · ~700 m (one big loop day — up to ~25 km / 1,300 m if you bolt on Stórurð).**
+**Sept 17–19 · 2 nights.** The least-visited quarter of the Ring Road: alpine boulder fields, basalt canyons, fjord hikes with reindeer footprints. With the Skaftafell base taking two nights off the front, the East runs on **one full hiking day (Sept 18)** bookended by two half driving-days — but it's cleanly enough for the region's best: the **canyons come free** (Múlagljúfur at Base 2, **Stuðlagil on the transfer north**), **Seyðisfjörður** slots into the arrival evening, and the full day goes to **Brúnavík**. **Stórurð is a same-road bonus** — its Vatnsskarð trailhead sits right on the drive to Brúnavík's Bakkagerði, so on a clear day with fresh legs you can bag both (~25 km / 1,300 m). Cut for this cut: Hengifoss. (Seyðisfjörður as base is prettier but adds a 27 km pass each way.)
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
 |---|---|---|---|---|---|---|---|
@@ -47,17 +76,15 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 | **Vestrahorn/Stokksnes** | done on transfer | 6.1 km loop | <50 m | Easy | 1–1.5 h | Any (shapes) | [link](https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path) |
 
 **Day by day**
-- **Sept 15 (Mon):** Transfer day (above); arrive ~18:00.
-- **Sept 16 (Tue):** **Stórurð** on the best forecast day; Vök Baths in the evening.
-- **Sept 17 (Wed):** **Stuðlagil east bank sunrise** → **Hengifoss** afternoon → evening hop to **Seyðisfjörður** for dinner, Gufufoss and the rainbow street in golden light.
-- **Sept 18 (Thu):** **Brúnavík loop** — or weather-flex day. Pack: tomorrow is the biggest driving day.
-- **Sept 19 (Fri):** The big transfer north.
+- **Sept 17 (Thu):** Transfer-in day (Skaftafell → Egilsstaðir with Múlagljúfur + Vestrahorn, above); arrive ~19:00, groceries at Nettó/Bónus, refuel. Evening over the pass to **Seyðisfjörður** (dinner, Gufufoss, the rainbow street) — or a fjord-mouth aurora watch if the sky's clear.
+- **Sept 18 (Fri):** The big day — ★ **Brúnavík** loop from Borgarfjörður eystri (13.8 km / 696 m). **Bonus if the weather's glorious and legs are fresh:** add **Stórurð** on the way in (its Vatnsskarð trailhead is right on the road to Bakkagerði) for a ~25 km / 1,300 m double — decide that morning by forecast. Vök Baths to close.
+- **Sept 19 (Sat):** The big transfer north — **Stuðlagil east bank** on the way out (it's on the Jökuldalur road heading north), then the loaded run to Base 4.
 
 **Transfer Sept 19 · Egilsstaðir → Eyjafjörður (~330 km + detours — a huge day):** depart 7:00 → **Dettifoss west + Selfoss** ~10:00 ([3.9 km, easy](https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss)) → ★ MUST · **Vesturdalur: Hljóðaklettar "Echo Rocks" + Rauðhólar red craters** (~5 km loop, 1.5–2 h — [AllTrails](https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle)) → **Ásbyrgi Eyjan rim trail** ([4.8 km](https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail); skippable if time runs short — Rauðhólar is the keeper) → **Hverir** mud flats + Mývatn (Nature Baths optional) → **Goðafoss sunset** ([2.9 km](https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall)) → base ~20:30. Fuel Reykjahlíð. [Route](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Dettifoss%2C+Iceland/Asbyrgi%2C+Iceland/Hverir%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
 
 ---
 
-## Base 3 · Eyjafjörður & the North — near Akureyri
+## Base 4 · Eyjafjörður & the North — near Akureyri
 **Cadence: Σ ~26 km · ~1,720 m (one huge summit day, easy otherwise).**
 **Sept 19–23 · 4 nights.** Airbnb/cabin in the Eyjafjörður valley: 30 min to Kerling, 1 h 15 to Aldeyjarfoss, 30 min to Goðafoss. (Siglufjörður → Extras.)
 
@@ -72,18 +99,29 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 | **Mývatn: Hverir, Dimmuborgir** | ~100 km · 1 h 15 | short walks | — | Easy | flex | Evening baths | — |
 
 **Day by day**
-- **Sept 19 (Fri):** Transfer with Dettifoss → Ásbyrgi → Mývatn → Goðafoss sunset.
-- **Sept 20 (Sat):** Recovery: Akureyri town, Bónus restock, **Forest Lagoon**; Goðafoss under stars if clear.
-- **Sept 21 (Sun):** **Kerling summit** on the better window (start 8:00, turnaround 14:00; winter kit up top).
-- **Sept 22 (Mon):** **Aldeyjarfoss sunrise** (+ Hrafnabjargafoss) → Goðafoss → rest; pack for the fjords.
-- **Sept 23 (Tue):** Transfer west to Ísafjörður.
+- **Sept 19 (Sat):** Transfer with Dettifoss → Ásbyrgi → Mývatn → Goðafoss sunset.
+- **Sept 20 (Sun):** Recovery: Akureyri town, Bónus restock, **Forest Lagoon**; Goðafoss under stars if clear.
+- **Sept 21 (Mon):** **Kerling summit** on the better window (start 8:00, turnaround 14:00; winter kit up top).
+- **Sept 22 (Tue):** **Aldeyjarfoss sunrise** (+ Hrafnabjargafoss) → Goðafoss → rest; pack for the fjords.
+- **Sept 23 (Wed):** Transfer west to Ísafjörður.
+
+**★ Kerling summit brief (Sept 21, weather permitting).** North Iceland's highest peak — 1,538 m, ~12.2 km / **1,416 m**, 7–8 h. **Not glaciated or technical:** a trail-less, steep scramble-hike (basalt lower, a rhyolite summit pyramid), so you can **self-guide it in good conditions** — but three things make it serious: no marked trail (route-finding, whiteout risk), it's remote (no people, no nearby rescue), and by late September the top usually holds **snow/ice** that can push the final section toward crampon terrain. Set a **hard turnaround time** and only go on a clear, stable window.
+- **"Acclimatization" = recovery + weather, not altitude** (1,538 m is low). The two easy days first (Sept 19–20) are to rest the legs and wait for the window. **Súlur** (1,213 m, marked trail, ~5 h) is the ideal warm-up *and* the plan B if Kerling never opens.
+- **Gear to bring / rent:**
+  - Sturdy boots + **trekking poles** (the loose, steep descent is the crux)
+  - **Microspikes + ice axe** for late-Sept snow/ice — *bring, or rent in Reykjavík (Fjallakofinn, Everest) / Akureyri if you'd rather not fly with them*
+  - **Offline GPS track** (AllTrails/Wikiloc) — there is no trail
+  - Hardshell jacket + pants, warm layers, hat/gloves — it's alpine and wind-exposed up top
+  - Food/water, headlamp, first-aid; **file a plan at safetravel.is** (it's isolated)
+  - **No rope/glacier gear** — it's not that kind of peak (helmet optional, for loose rock)
+- **If there's fresh snow or the window's marginal:** swap to Súlur, or hire an Akureyri guide (I can pull names + costs on request).
 
 **Transfer Sept 23 · Eyjafjörður → Ísafjörður (~455 km, 5.5–6 h):** leave 8:00 → optional **Hvítserkur** detour (+45 min) → fuel Blönduós AND Hólmavík (never pass a pump out here) → Steingrímsfjarðarheiði pass → Ísafjarðardjúp coast road → arrive ~16:30, **Bónus Ísafjörður** 5-night load, old-town evening. [Route](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Hvitserkur%2C+Iceland/Holmavik%2C+Iceland/Isafjordur%2C+Iceland)
 
 ---
 
-## Base 4 · The Westfjords — Ísafjörður
-**Cadence: Σ ~16 km · ~850 m (deep-solitude block — shorter trails, bigger silences, the most scenic driving of the trip). Trip total: ~160 km / ~7,300 m.**
+## Base 5 · The Westfjords — Ísafjörður
+**Cadence: Σ ~16 km · ~850 m (deep-solitude block — shorter trails, bigger silences, the most scenic driving of the trip). Trip total: ~180 km / ~8,000 m (re-tunes as Base 3 firms up).**
 **Sept 23–28 · 5 nights.** The emptiest quarter of Iceland: 30% of the coastline, ~1% of the tourists. Dynjandi 1 h, Kaldbakur ~1 h, Bolafjall 25 min, zero light pollution. Kirkjufell survives as a built-in sunset stop on the Sept 28 exit drive.
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | Link |
@@ -96,19 +134,19 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 | ★ MUST · **Kirkjufell & Kirkjufellsfoss** (leg finale) | on the Sept 28 exit drive (~4 h 15) | 3.5 km | 16 m | Easy | 1 h | Sunset ~19:15 | [link](https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss) |
 
 **Day by day**
-- **Sept 23 (Tue):** Transfer day (above); arrive ~16:30; Bónus load; old-town evening.
-- **Sept 24 (Wed):** **Kaldbakur summit** on the best window of the block (swap freely). Evening: Ósvör + harbor dinner.
-- **Sept 25 (Thu):** **Valagil** on the way out → **Dynjandi golden hour** over Arnarfjörður. Aurora watch from the fjord mouth.
-- **Sept 26 (Fri):** **Bolafjall sky platform** + Bolungarvík + Skálavík beach road; hot pots; full-moon fjord night.
-- **Sept 27 (Sat):** Flex/weather day — or (bulletproof forecast only) the long **Rauðasandur/Látrabjarg** day (~3 h each way). Pack, refuel, early night.
-- **Sept 28 (Sun):** The farewell drive — see Base 5.
+- **Sept 23 (Wed):** Transfer day (above); arrive ~16:30; Bónus load; old-town evening.
+- **Sept 24 (Thu):** **Kaldbakur summit** on the best window of the block (swap freely). Evening: Ósvör + harbor dinner.
+- **Sept 25 (Fri):** **Valagil** on the way out → **Dynjandi golden hour** over Arnarfjörður. Aurora watch from the fjord mouth.
+- **Sept 26 (Sat):** **Bolafjall sky platform** + Bolungarvík + Skálavík beach road; hot pots; full-moon fjord night.
+- **Sept 27 (Sun):** Flex/weather day — or (bulletproof forecast only) the long **Rauðasandur/Látrabjarg** day (~3 h each way). Pack, refuel, early night.
+- **Sept 28 (Mon):** The farewell drive — see Base 6.
 
 ---
 
-## Base 5 · Keflavík — the safety stop
+## Base 6 · Keflavík — the safety stop
 **Sept 28–29 · 1 night.** Airbnb in Keflavík/Njarðvík, 10 min from the terminal — the Milan leg starts rested with zero drive-day risk.
 
-**Sept 28 — the farewell drive (~640 km, ~7.5 h broken by the best stop in the country):** Ísafjörður → Route 60 south → Snæfellsnes → **★ Kirkjufell & Kirkjufellsfoss at golden hour** (5 min off Route 54, sunset ~19:15) → Gerðuberg basalt columns if light remains → Keflavík ~21:30. [Route](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Kirkjufellsfoss+Parking%2C+Iceland/Gerduberg+Cliffs%2C+Iceland/Keflavik)
+**Sept 28 (Mon) — the farewell drive (~640 km, ~7.5 h broken by the best stop in the country):** Ísafjörður → Route 60 south → Snæfellsnes → **★ Kirkjufell & Kirkjufellsfoss at golden hour** (5 min off Route 54, sunset ~19:15) → Gerðuberg basalt columns if light remains → Keflavík ~21:30. [Route](https://www.google.com/maps/dir/Isafjordur%2C+Iceland/Kirkjufellsfoss+Parking%2C+Iceland/Gerduberg+Cliffs%2C+Iceland/Keflavik)
 
 **Evening menu (all <30 min):** late Blue Lagoon slot (check eruption status) or Sky Lagoon; Gunnuhver steam vents; Brimketill lava pool; Bridge Between Continents; last aurora watch from the Garður lighthouses.
 **Sept 29:** coffee → 10-min drive → drop the 4x4 → Milan.
@@ -116,7 +154,7 @@ Swap rules: Þakgil ↔ Landmannalaugar by forecast (both want visibility); Skó
 
 ---
 
-## Alternative Base 4 · Snæfellsnes — Grundarfjörður (weather escape hatch)
+## Alternative Base 5 · Snæfellsnes — Grundarfjörður (weather escape hatch)
 If the ~Sept 18 long-range forecast shows the Westfjords socked in for the whole window, swap this back: 80% of the drama at 50% of the driving, KEF safety night still applies (2.5 h out). You lose the deep-solitude factor.
 
 | Hike / landmark | From base | Length | Elev. | Difficulty | Time | Best light | AllTrails |
@@ -142,13 +180,14 @@ Everything rated worth doing that didn't make the core schedule; each slots into
 | ☐ | **Brúarfoss** blue waterfall | Day 1, Golden Circle | 3.5 km RT; the bluest water in Iceland |
 | ☐ | **Reykjadalur** hot river | Day 1, Hveragerði | 3 km up, bathe in a warm river — only if the red-eye spares you |
 | ☐ | **Sólheimajökull** glacier snout | Sept 13 | 20-min detour between Skógafoss & Reynisfjara |
-| ☐ | **Kristínartindar full ridge** (18.7 km / 1,065 m) | only with an overnight near Skaftafell | the ridge above Sjónarnípa; loop version IS in the plan (Sept 15) |
+| ✅ | **Kristínartindar full ridge** (18.7 km / 1,065 m) | **now IN the plan — Base 2, Sept 16** | the Skaftafell overnight unlocked it; the ridge above Sjónarnípa via Svartifoss |
+| ☐ | **Eastfjords overflow** (Hengifoss + Stórurð if you don't bolt it onto the Brúnavík day) | Base 3 flex | Brúnavík, Seyðisfjörður & Stuðlagil are now in the plan; these are what a 3rd East night (or a Westfjords swap) would buy back |
 | ☐ | **Rauðhólar + Hljóðaklettar** | Sept 19 transfer, just off-route | ~5 km loop; parked here per your verdict |
-| ☐ | **Siglufjörður & Tröllaskagi loop** | Base 3 flex day | Herring Era Museum, fjord tunnels, Hofsós pool |
+| ☐ | **Siglufjörður & Tröllaskagi loop** | Base 4 flex day | Herring Era Museum, fjord tunnels, Hofsós pool |
 | ☐ | **Hvítserkur** sea stack | Sept 23 transfer | +45 min; the basalt "drinking dragon" |
 | ☐ | **Rauðasandur & Látrabjarg** | Sept 27, stable weather only | ~3 h each way; red sand + Europe's biggest sea cliff |
 | ☐ | **Glymur** | Snæfellsnes version only | doesn't fit the Westfjords exit cleanly |
-| ☐ | **Snæfellsnes cluster** (Helgrindur, NP loop, Arnarstapi, Rauðfeldsgjá, Búðakirkja) | Alternative Base 4 | Kirkjufell itself is IN the plan (Sept 28) |
+| ☐ | **Snæfellsnes cluster** (Helgrindur, NP loop, Arnarstapi, Rauðfeldsgjá, Búðakirkja) | Alternative Base 5 | Kirkjufell itself is IN the plan (Sept 28) |
 | ☐ | **Blue Lagoon / Sky Lagoon** | Sept 28 evening | the decompress before the flight |
 | ☐ | **Hornstrandir** (Hornvík, Hesteyri) | separate summer trip | ferries stop by early Sept |
 
@@ -157,7 +196,7 @@ Everything rated worth doing that didn't make the core schedule; each slots into
 
 ## Logistics
 
-**Food.** Big-shop at Bónus/Krónan/Nettó at every base handover; rural stores are sparse and pricey. Day 1: Krónan Selfoss (5 days of food — Klaustur has only a small Kjarval). Sept 15: Nettó/Bónus Egilsstaðir. Sept 19/20: Bónus Akureyri. Sept 23: Bónus Ísafjörður (5-night load; village stores beyond are tiny). Trail food: skyr, flatkökur, dried fish, chocolate, instant soup — pack lunch daily, trailhead cafés don't exist.
+**Food.** Big-shop at Bónus/Krónan/Nettó at every base handover; rural stores are sparse and pricey. Day 1: Krónan Selfoss (5 days of food — Klaustur has only a small Kjarval). Sept 15: top-up at Krónan Vík or the Kjarval in Klaustur before Skaftafell (no store at Svínafell — the Freysnes/Fagurhólsmýri shops are tiny). Sept 17: Nettó/Bónus Egilsstaðir on the way in. Sept 19/20: Bónus Akureyri. Sept 23: Bónus Ísafjörður (5-night load; village stores beyond are tiny). Trail food: skyr, flatkökur, dried fish, chocolate, instant soup — pack lunch daily, trailhead cafés don't exist.
 
 **Fuel.** Never below half a tank — East/Westfjords station gaps exceed 100 km. Get an N1 fob / Orkan app (unmanned pumps, PIN required). Critical fill-ups: Selfoss, Vík, Klaustur, Höfn, Egilsstaðir, Reykjahlíð, Akureyri, Blönduós, Hólmavík, Ísafjörður, (Sept 28) Þingeyri, Borgarnes. Budget ≈ 3,200 km ≈ 290 L ≈ **88,000 ISK (~$630)**.
 
@@ -165,7 +204,7 @@ Everything rated worth doing that didn't make the core schedule; each slots into
 
 **Volcano watch (as of July 2026).** No active eruption — the last Sundhnúkur (Reykjanes) eruption ended Aug 2025, but magma is re-accumulating under Svartsengi and a new eruption is rated likely. The zone is 20 min from KEF and far from all bases (zero itinerary risk); if it erupts during the trip, it's a bolt-on for arrival/departure day. Check en.vedur.is + safetravel.is.
 
-**Driving & safety.** 4x4 needed: Þakgil road, Aldeyjarfoss (F26 stretch), Stuðlagil east gravel, Kvennaskarð track to Kaldbakur. Check **road.is** + **vedur.is** every morning; file a **safetravel.is** plan before Kerling and Kaldbakur. Hold doors in wind (classic rental damage); never drive in a yellow/red warning; headlights always on.
+**Driving & safety.** 4x4 needed: Þakgil road, Múlagljúfur gravel spur (Sept 17), Aldeyjarfoss (F26 stretch), Stuðlagil east gravel, Kvennaskarð track to Kaldbakur. Check **road.is** + **vedur.is** every morning; file a **safetravel.is** plan before Kerling and Kaldbakur. Hold doors in wind (classic rental damage); never drive in a yellow/red warning; headlights always on.
 
 ## September weather — what to actually expect
 
@@ -174,10 +213,11 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 | Base | Day / night | Rain | Character |
 |---|---|---|---|
 | 1 · South Coast (10–15) | ~10–11°C / 5–6°C | ~140–170 mm · 15–18 rain days | Wettest, mildest; showers most days with dramatic clearings; strong gusts at Reynisfjara/Dyrhólaey. Statistically your calmest week. |
-| 2 · Eastfjords (15–20) | ~9–10°C / 3–5°C | ~90–100 mm · 12–15 days | Often the driest quarter (rain shadow); föhn-warmed afternoons; Stórurð can get its first snow dusting. |
-| 3 · North (20–25) | ~8–9°C / 2–4°C | ~55–75 mm · fewest rain days | Driest region, coldest nights → best aurora odds. Kerling's top 500 m is alpine: snow patches, winter kit. |
-| 4 · Westfjords (23–28) | ~8–9°C / 3–4°C | ~120–140 mm · 15–17 days | Raw and changeable; fjords make their own weather; wind is the Kaldbakur go/no-go. Passes can see first snow. |
-| 5 · Keflavík (28–29) | ~9–10°C / 5–6°C | — | One night; weather no longer matters. |
+| 2 · Skaftafell / Öræfi (15–17) | ~9–10°C / 4–5°C | ~110–140 mm · 14–17 days | Glacier-cool; Öræfi sits in Vatnajökull's variable rain shadow — showers with big clearings, katabatic gusts off the icecap. Kristínartindar's top is exposed: check wind. |
+| 3 · Eastfjords (17–19) | ~9–10°C / 3–5°C | ~90–100 mm · 12–15 days | Often the driest quarter (rain shadow); föhn-warmed afternoons; Stórurð can get its first snow dusting. |
+| 4 · North (19–23) | ~8–9°C / 2–4°C | ~55–75 mm · fewest rain days | Driest region, coldest nights → best aurora odds. Kerling's top 500 m is alpine: snow patches, winter kit. |
+| 5 · Westfjords (23–28) | ~8–9°C / 3–4°C | ~120–140 mm · 15–17 days | Raw and changeable; fjords make their own weather; wind is the Kaldbakur go/no-go. Passes can see first snow. |
+| 6 · Keflavík (28–29) | ~9–10°C / 5–6°C | — | One night; weather no longer matters. |
 
 **In practice:** every evening check vedur.is + belgingur.is, rank the next 3 days, slot hikes accordingly (summits on the calm day, canyons in drizzle, driving on the ugly day). Yellow warning = reshuffle; orange/red = nobody drives. Rain is usually sideways drizzle in 10–15 m/s wind — hard-shell armor, never umbrellas. The classic pattern of 4 grey days then one impossibly clear one is why every base has a flex day.
 
@@ -197,16 +237,21 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 | Sept 13 | 06:31 | 19:49 | 2% | ● Waxing crescent |
 | Sept 14 | 06:33 | 19:45 | 5% | ● Waxing crescent |
 
-**Base 2 · Egilsstaðir — crescent sets early, dark after ~22:00**
+**Base 2 · Skaftafell / Öræfi — thin crescent, dark-sky over the glaciers**
 
 | Date | Sunrise | Sunset | Moon | Phase |
 |---|---|---|---|---|
-| Sept 15 | 06:19 | 19:29 | 11% | ● Waxing crescent |
-| Sept 16 | 06:22 | 19:25 | 18% | ● Waxing crescent |
+| Sept 15 | 06:29 | 19:38 | 11% | ● Waxing crescent — Jökulsárlón night window |
+| Sept 16 | 06:32 | 19:34 | 18% | ● Waxing crescent |
+
+**Base 3 · Egilsstaðir — crescent sets early, dark after ~22:00**
+
+| Date | Sunrise | Sunset | Moon | Phase |
+|---|---|---|---|---|
 | Sept 17 | 06:25 | 19:21 | 27% | Waxing crescent |
 | Sept 18 | 06:28 | 19:18 | 37% | Waxing crescent |
 
-**Base 3 · Eyjafjörður / Akureyri — brightening gibbous evenings**
+**Base 4 · Eyjafjörður / Akureyri — brightening gibbous evenings**
 
 | Date | Sunrise | Sunset | Moon | Phase |
 |---|---|---|---|---|
@@ -215,7 +260,7 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 | Sept 21 | 06:52 | 19:21 | 68% | Waxing gibbous — Kerling day: moon sets pre-dawn |
 | Sept 22 | 06:55 | 19:18 | 78% | Waxing gibbous — moonlit Goðafoss works |
 
-**Base 4 · Ísafjörður — full-moon fjords**
+**Base 5 · Ísafjörður — full-moon fjords**
 
 | Date | Sunrise | Sunset | Moon | Phase |
 |---|---|---|---|---|
@@ -225,15 +270,15 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 | Sept 26 | 07:28 | 19:22 | 100% | **FULL MOON** — silver fjord walls |
 | Sept 27 | 07:31 | 19:19 | 100% | Full — flex day, fjord-mouth night shoot |
 
-**Base 5 · Keflavík — the breather**
+**Base 6 · Keflavík — the breather**
 
 | Date | Sunrise | Sunset | Moon | Phase |
 |---|---|---|---|---|
 | Sept 28 | 07:31 | 19:13 | 98% | Waning gibbous — Kirkjufell sunset en route |
 | Sept 29 | 07:34 | 19:10 | 94% | Waning gibbous — departure |
 
-**How to read it:** Bases 1–2 are the true dark-sky window — thin/absent moon = maximum aurora contrast and Milky Way frames (Jökulsárlón, Stuðlagil, Seyðisfjörður). From Base 3 on, the waxing moon lights the landscape itself: aurora still shows on camera, but switch to moonlit foregrounds (glaciers, falls, Kirkjufell in silver) at ISO 400–800.
-- **Aurora:** new moon **Sept 11**, full moon **Sept 26** → darkest skies in Bases 1–2. Check vedur.is aurora + cloud map at 21:00 nightly; chase cloud gaps, not Kp. Pre-scouted foregrounds: Jökulsárlón (B1), Stuðlagil/Seyðisfjörður (B2), Goðafoss/Mývatn (B3), fjord mouth/Dynjandi (B4), Kirkjufell sunset + Garður lighthouse (Sept 28). Baseline: 14–20 mm, f/1.8–2.8, 5–10 s, ISO 1600–6400.
+**How to read it:** Bases 1–3 are the true dark-sky window — thin/absent moon = maximum aurora contrast and Milky Way frames (Jökulsárlón, Stuðlagil, Seyðisfjörður). From Base 4 on, the waxing moon lights the landscape itself: aurora still shows on camera, but switch to moonlit foregrounds (glaciers, falls, Kirkjufell in silver) at ISO 400–800.
+- **Aurora:** new moon **Sept 11**, full moon **Sept 26** → darkest skies in Bases 1–3. Check vedur.is aurora + cloud map at 21:00 nightly; chase cloud gaps, not Kp. Pre-scouted foregrounds: Jökulsárlón/Diamond Beach (B2), Stuðlagil/Seyðisfjörður (B3), Goðafoss/Mývatn (B4), fjord mouth/Dynjandi (B5), Kirkjufell sunset + Garður lighthouse (Sept 28). Baseline: 14–20 mm, f/1.8–2.8, 5–10 s, ISO 1600–6400.
 - **a7RV notes:** microfiber cloths ×3 + rain cover (spray at Skógafoss/Dettifoss), polarizer for moss/canyons, 6-stop ND for silky water, spare batteries warm, double cards.
 
 **Weather-flex doctrine:** every base has a flex day; every hard hike a swap partner. Rank days by forecast, not by schedule — the plan is a menu, the sky is the boss.
@@ -247,10 +292,10 @@ Long-range daily forecasts for Sept 2026 don't exist yet (Iceland is only skillf
 - **Sept 12:** [Hella → Kerið → Reykjadalur → Urriðafoss → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Kerid+Crater%2C+Iceland/Reykjadalur+Car+Park%2C+Iceland/Urridafoss%2C+Iceland/Hella%2C+Iceland)
 - **Sept 13:** [Hella → Vík → Þakgil → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Vik+i+Myrdal%2C+Iceland/Thakgil%2C+Iceland/Hella%2C+Iceland)
 - **Sept 14:** [Hella → Landmannalaugar → back](https://www.google.com/maps/dir/Hella%2C+Iceland/Landmannalaugar%2C+Iceland/Hella%2C+Iceland)
-- **Sept 15:** [Hella → Seljalandsfoss → Reynisfjara → Fjaðrárgljúfur → Múlagljúfur → Jökulsárlón → Egilsstaðir](https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Egilsstadir%2C+Iceland)
-- **Sept 16:** [Egilsstaðir → Stórurð → Vök Baths → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Storurd+Trailhead%2C+Iceland/Vok+Baths%2C+Iceland/Egilsstadir%2C+Iceland)
-- **Sept 17:** [Egilsstaðir → Stuðlagil east → Hengifoss → Seyðisfjörður → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Studlagil+Canyon+East+Side+Parking%2C+Iceland/Hengifoss+Parking%2C+Iceland/Seydisfjordur%2C+Iceland/Egilsstadir%2C+Iceland)
-- **Sept 18:** [Egilsstaðir → Borgarfjörður eystri → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Borgarfjordur+Eystri%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 15:** [Hella → Seljalandsfoss → Reynisfjara → Fjaðrárgljúfur → Svínafell/Skaftafell](https://www.google.com/maps/dir/Hella%2C+Iceland/Seljalandsfoss%2C+Iceland/Reynisfjara+Beach%2C+Iceland/Fjadrargljufur%2C+Iceland/Svinafell%2C+Iceland)
+- **Sept 16:** [Svínafell → Skaftafell (Svartifoss/Kristínartindar) → Jökulsárlón/Diamond Beach → back](https://www.google.com/maps/dir/Svinafell%2C+Iceland/Skaftafell+Visitor+Center%2C+Iceland/Jokulsarlon%2C+Iceland/Diamond+Beach%2C+Iceland/Svinafell%2C+Iceland)
+- **Sept 17 (transfer to Base 3):** [Svínafell → Múlagljúfur → Jökulsárlón → Höfn → Stokksnes → Egilsstaðir](https://www.google.com/maps/dir/Svinafell%2C+Iceland/Mulagljufur%2C+Iceland/Jokulsarlon%2C+Iceland/Hofn%2C+Iceland/Stokksnes%2C+Iceland/Egilsstadir%2C+Iceland)
+- **Sept 18:** [Egilsstaðir → Stórurð (Vatnsskarð, bonus) → Brúnavík (Bakkagerði) → Vök Baths → back](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Storurd+Trailhead+Vatnsskard%2C+Iceland/Borgarfjordur+Eystri%2C+Iceland/Vok+Baths%2C+Iceland/Egilsstadir%2C+Iceland)
 - **Sept 19:** [Egilsstaðir → Dettifoss W → Ásbyrgi → Hverir → Goðafoss → Akureyri](https://www.google.com/maps/dir/Egilsstadir%2C+Iceland/Dettifoss+West+Parking%2C+Iceland/Asbyrgi%2C+Iceland/Hverir%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
 - **Sept 20:** [Akureyri → Forest Lagoon → Goðafoss night → back](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Forest+Lagoon%2C+Iceland/Godafoss+Waterfall%2C+Iceland/Akureyri%2C+Iceland)
 - **Sept 21:** [Base → Kerling trailhead (Finnastaðir) → back](https://www.google.com/maps/dir/Akureyri%2C+Iceland/Finnastadir%2C+Iceland/Akureyri%2C+Iceland)
