@@ -53,10 +53,11 @@ Hikes are maintained in `iceland/hikes-data.js`. Each entry should include:
 - grade or difficulty
 - region and trip base
 - rating and rating count when available
+- trail references with provider and route-match confidence (`high`, `medium`, or `low`)
 - driving distance from the base
 - status: `confirmed`, `planned`, or `alternative`
 
-Prefer the official trail page or AllTrails route that matches the actual trail, not merely a similarly named nearby attraction. Recheck externally sourced trail statistics before the trip because routes and access conditions can change.
+Prefer the official trail page or AllTrails route that matches the actual trail, not merely a similarly named nearby attraction. Use Wikiloc for clearly labelled community GPS variants when no authoritative track exists. Confidence describes how closely the reference matches the planned route: `high` for the named route, `medium` for a matching variant or community track, and `low` for a nearby area reference. It never guarantees safety, legality, access, or current conditions. Recheck every external reference before the trip.
 
 ## Publish with GitHub Pages
 

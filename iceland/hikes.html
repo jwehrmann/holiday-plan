@@ -26,7 +26,7 @@
   td{padding:13px 10px;border-bottom:1px solid rgba(38,57,76,.7);vertical-align:top;background:var(--bg)}tbody tr:hover td{background:#0d151d}.is-hidden{display:none!important}
   .name{font-weight:750;color:var(--ink)}.sub{display:block;color:var(--faint);font-size:.76rem;max-width:380px;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.date,.period{white-space:nowrap}
   .status{display:inline-block;padding:4px 8px;border-radius:999px;font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.confirmed{background:rgba(86,216,155,.14);color:var(--green)}.planned{background:rgba(122,183,255,.14);color:var(--blue)}.alternative{background:rgba(245,197,99,.14);color:var(--gold)}
-  .trail-links{display:flex;flex-wrap:wrap;gap:4px 8px;min-width:145px}.trail-links a{white-space:nowrap}.rating{white-space:nowrap;color:var(--gold);font-weight:700}.route-note{display:block;width:100%;color:var(--rose);font-size:.7rem;line-height:1.25}.empty{color:var(--faint)}.foot{margin-top:18px;color:var(--faint);font-size:.85rem}.foot b{color:var(--muted)}
+  .rating{white-space:nowrap;color:var(--gold);font-weight:700}.trail-refs{display:flex;flex-direction:column;gap:6px;min-width:230px}.ref-row{display:flex;align-items:center;gap:6px;line-height:1.2}.ref-row a{white-space:nowrap}.ref-provider{color:var(--faint);font-size:.68rem}.confidence{display:inline-flex;padding:2px 5px;border:1px solid;border-radius:999px;font-size:.58rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}.confidence.high{color:var(--green);border-color:rgba(86,216,155,.45);background:rgba(86,216,155,.08)}.confidence.medium{color:var(--gold);border-color:rgba(245,197,99,.45);background:rgba(245,197,99,.08)}.confidence.low{color:var(--rose);border-color:rgba(255,140,158,.45);background:rgba(255,140,158,.08)}.route-note{display:block;width:100%;color:var(--rose);font-size:.7rem;line-height:1.25}.empty{color:var(--faint)}.foot{margin-top:18px;color:var(--faint);font-size:.85rem}.foot b{color:var(--muted)}
   @media(max-width:760px){header{padding-top:36px}.summary{grid-template-columns:1fr 1fr}.metric b{font-size:1.45rem}.controls>*{width:100%}.controls input{min-width:0}.column-menu{left:0;right:auto}.column-options{grid-template-columns:1fr}.tablewrap{max-height:none}}
 </style>
 </head>
@@ -34,7 +34,7 @@
 <header><div class="wrap">
   <div class="eyebrow">Iceland · Sept 10–29, 2026</div>
   <h1>Hikes database</h1>
-  <p class="intro">One local source of truth for the route: estimated trip date, recommended time of day and time commitment, itinerary distance and gain, base, drive distance, status, and direct AllTrails route. Dates remain weather-adjustable; “confirmed” means part of the core plan, not guaranteed access.</p>
+  <p class="intro">One local source of truth for the route: estimated trip date, recommended timing, itinerary distance and gain, base, status, rating, and confidence-labelled trail references from AllTrails and Wikiloc. Dates remain weather-adjustable; “confirmed” means part of the core plan, not guaranteed access.</p>
   <a class="back" href="index.html">← Back to the itinerary</a>
 </div></header>
 <main>
@@ -57,7 +57,7 @@
     <thead id="head"></thead>
     <tbody id="rows"></tbody>
   </table></div>
-  <p class="foot"><b>How to use the table:</b> select a heading to sort; use the second header row to filter any column. Numeric filters accept expressions such as <code>&gt;10</code> or <code>&lt;=500</code>. The estimated date is the current itinerary slot and can move with weather. Recommended timing shows when to leave and whether to reserve a short window, half day, or full day. Distances and gain describe the itinerary variant, which can differ from the linked AllTrails route. Ratings were checked in July 2026. Recheck road.is, safetravel.is, weather, closures, and each live trail page before setting out.</p>
+  <p class="foot"><b>How to use the table:</b> select a heading to sort; use the second header row to filter any column. Numeric filters accept expressions such as <code>&gt;10</code> or <code>&lt;=500</code>. Trail-reference confidence describes route matching only: <b>high</b> is the named route, <b>medium</b> is a matching variant or community GPS track, and <b>low</b> is a nearby area reference. It does not certify safety, legality, access, or current conditions. Distances and gain describe the itinerary variant, which can differ from a linked reference. Ratings were checked in July 2026. Recheck road.is, safetravel.is, weather, closures, and each live trail page before setting out.</p>
 </main>
 <script src="hikes-data.js"></script>
 <script>
@@ -65,9 +65,21 @@ const hikes=(window.ICELAND_HIKES||[]).map((h,index)=>({...h,_index:index}));
 const STORAGE_KEY='iceland-hikes-table-preferences-v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(1);
-const trailLinks=h=>h.allTrails||(h.url?[{label:'Route',url:h.url}]:[]);
+const confidenceScore={low:1,medium:2,high:3};
+const trailRefs=h=>{
+  const allTrails=h.allTrails
+    ?h.allTrails.map(link=>({provider:'AllTrails',label:link.label,url:link.url,confidence:link.confidence||h.linkConfidence||'high'}))
+    :(h.url?[{provider:'AllTrails',label:h.urlLabel||'Route',url:h.url,confidence:h.linkConfidence||'high'}]:[]);
+  return [...allTrails,...(h.refs||[])];
+};
 const columns=[
   {key:'name',label:'Hike / route',filter:'text',value:h=>h.name,render:h=>`<span class="name">${esc(h.name)}</span>${h.note?`<span class="sub">${esc(h.note)}</span>`:''}`},
+  {key:'refs',label:'Trail refs',filter:'refs',value:h=>Math.max(0,...trailRefs(h).map(ref=>confidenceScore[ref.confidence]||0)),render:h=>{
+    const refs=trailRefs(h), message=h.allTrailsNote?`<span class="route-note">${esc(h.allTrailsNote)}</span>`:'';
+    const links=refs.map(ref=>`<span class="ref-row"><span class="ref-provider">${esc(ref.provider)}</span><a target="_blank" rel="noopener" href="${esc(ref.url)}">${esc(ref.label)} ↗</a><span class="confidence ${esc(ref.confidence)}" title="${esc(ref.confidence)} confidence route match">${esc(ref.confidence)}</span></span>`).join('');
+    return refs.length?`<span class="trail-refs">${links}${message}</span>`:'<span class="empty">No reference found</span>';
+  }},
+  {key:'rating',label:'Rating',filter:'number',value:h=>h.rating,render:h=>h.rating!=null?`<span class="rating">★ ${h.rating.toFixed(1)}</span>`:'<span class="empty">—</span>'},
   {key:'date',label:'Estimated date',filter:'select',value:h=>h.dateSort,filterValue:h=>h.date,render:h=>`<span class="date">${esc(h.date)}</span>`},
   {key:'period',label:'Recommended timing',filter:'select',value:h=>h.period,render:h=>`<span class="period">${esc(h.period)}</span>`},
   {key:'km',label:'Length',filter:'number',value:h=>h.km,render:h=>`<span class="num">${fmt(h.km)} km</span>`},
@@ -76,12 +88,6 @@ const columns=[
   {key:'region',label:'Region',filter:'select',value:h=>h.region,render:h=>esc(h.region)},
   {key:'base',label:'Base',filter:'select',value:h=>h.base,render:h=>esc(h.base)},
   {key:'fromBase',label:'From base',filter:'text',value:h=>h.fromBase,render:h=>esc(h.fromBase)},
-  {key:'allTrails',label:'AllTrails',filter:'links',value:h=>h.rating??(trailLinks(h).length?0:-1),filterValue:h=>trailLinks(h).length?'linked':'missing',render:h=>{
-    const links=trailLinks(h), rating=h.rating?`<span class="rating">★ ${h.rating.toFixed(1)}</span>`:'';
-    const anchors=links.map(link=>`<a target="_blank" rel="noopener" href="${esc(link.url)}">${esc(link.label)} ↗</a>`).join('');
-    const message=h.allTrailsNote?`<span class="route-note">${esc(h.allTrailsNote)}</span>`:'';
-    return links.length?`<span class="trail-links">${rating}${anchors}${message}</span>`:`<span class="empty">${esc(h.allTrailsNote||'No reliable route')}</span>`;
-  }},
   {key:'status',label:'Status',filter:'select',value:h=>h.status,render:h=>`<span class="status ${esc(h.status)}">${esc(h.status)}</span>`}
 ];
 const defaults={hiddenColumns:[],sortKey:'date',sortDirection:'asc'};
@@ -107,7 +113,7 @@ function uniqueValues(column){
 function filterControl(column){
   const label=`Filter ${column.label}`;
   if(column.filter==='select') return `<select class="column-filter" data-filter="${column.key}" aria-label="${esc(label)}"><option value="">All</option>${uniqueValues(column).map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}</select>`;
-  if(column.filter==='links') return `<select class="column-filter" data-filter="${column.key}" aria-label="${esc(label)}"><option value="">All</option><option value="linked">Linked</option><option value="missing">No reliable route</option></select>`;
+  if(column.filter==='refs') return `<select class="column-filter" data-filter="${column.key}" aria-label="${esc(label)}"><option value="">All</option><option value="high">High confidence</option><option value="medium">Medium confidence</option><option value="low">Low confidence</option><option value="provider:alltrails">AllTrails</option><option value="provider:wikiloc">Wikiloc</option><option value="missing">No reference</option></select>`;
   const placeholder=column.filter==='number'?'e.g. >=10':'Filter…';
   return `<input class="column-filter" data-filter="${column.key}" aria-label="${esc(label)}" placeholder="${esc(placeholder)}">`;
 }
@@ -132,6 +138,12 @@ function matchesNumber(value,query){
 }
 function matchesColumn(h,column,query){
   if(!query)return true;
+  if(column.filter==='refs'){
+    const refs=trailRefs(h);
+    if(query==='missing')return refs.length===0;
+    if(query.startsWith('provider:'))return refs.some(ref=>ref.provider.toLowerCase()===query.slice(9));
+    return refs.some(ref=>ref.confidence===query);
+  }
   const value=column.filterValue?column.filterValue(h):column.value(h);
   if(column.filter==='number')return matchesNumber(value,query);
   return String(value??'').toLowerCase().includes(query.toLowerCase());
@@ -149,7 +161,8 @@ function compareRows(a,b){
 function render(){
   const q=document.getElementById('search').value.trim().toLowerCase();
   const list=hikes.filter(h=>{
-    const haystack=[h.name,h.date,h.period,h.grade,h.region,h.base,h.fromBase,h.status,h.note,h.allTrailsNote].join(' ').toLowerCase();
+    const referenceText=trailRefs(h).map(ref=>[ref.provider,ref.label,ref.confidence].join(' ')).join(' ');
+    const haystack=[h.name,h.date,h.period,h.grade,h.region,h.base,h.fromBase,h.status,h.note,h.allTrailsNote,referenceText].join(' ').toLowerCase();
     return (!q||haystack.includes(q))&&columns.every(column=>matchesColumn(h,column,filters[column.key]));
   }).sort(compareRows);
   const visibleCount=columns.length-hiddenColumns.size;
