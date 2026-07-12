@@ -31,6 +31,7 @@ The following location-specific images were added or replaced during the attract
 - `skogafoss.jpg` — “Skógafoss - Iceland” by benfff85, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), via [Flickr](https://www.flickr.com/photos/22131576@N04/5886926366).
 - `aldeyjarfoss.jpg` — “Aldeyjarfoss, Iceland” by Sitoo, [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/), via [Flickr](https://www.flickr.com/photos/7470842@N04/48905454937).
 - `skalafellsjokull.jpg` — “Skálafell” by herbraab, [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/), via [Flickr](https://www.flickr.com/photos/55276107@N00/52377117248).
+- `mulagljufur.jpg` — “The not so secret canyon” by Modes Rodríguez, [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/), via [Flickr](https://www.flickr.com/photos/modesrodriguez/53422936572).
 
 ## Additional gallery images
 
