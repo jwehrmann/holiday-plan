@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iceland hikes database · September 2026</title>
+<style>
+  :root{--bg:#0b0f14;--panel:#121a25;--panel2:#172231;--ink:#edf3fa;--muted:#a8bacd;--faint:#73869b;--line:#26394c;--aqua:#63ddcf;--blue:#7ab7ff;--gold:#f5c563;--rose:#ff8c9e;--green:#56d89b}
+  *{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  a{color:var(--aqua);text-decoration:none}a:hover{text-decoration:underline}
+  header{padding:54px 22px 32px;background:radial-gradient(circle at 80% 0,rgba(99,221,207,.14),transparent 38%),linear-gradient(180deg,#111a25,var(--bg))}
+  .wrap{max-width:1320px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--aqua);font-size:.75rem;font-weight:800}
+  h1{font-size:clamp(2.2rem,6vw,5rem);line-height:.95;letter-spacing:-.055em;margin:.25em 0}.intro{max-width:800px;color:var(--muted);font-size:1.05rem}
+  .back{display:inline-flex;margin-top:16px;padding:9px 13px;border:1px solid var(--line);border-radius:9px;color:var(--ink)}
+  main{max-width:1320px;margin:auto;padding:0 22px 70px}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:26px 0}
+  .metric{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.metric b{display:block;font-size:1.8rem;letter-spacing:-.04em}.metric span{color:var(--faint);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px 14px 0 0}
+  input,select{background:#0d141d;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px 12px;font:inherit}input{min-width:250px;flex:1}label{color:var(--faint);font-size:.82rem}
+  .tablewrap{overflow:auto;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px}table{width:100%;border-collapse:collapse;min-width:1080px}
+  th{position:sticky;top:0;text-align:left;background:#101823;color:var(--faint);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;padding:12px 11px;border-bottom:1px solid var(--line)}
+  td{padding:13px 11px;border-bottom:1px solid rgba(38,57,76,.7);vertical-align:top}tbody tr:hover{background:rgba(99,221,207,.035)}
+  .name{font-weight:750;color:var(--ink)}.sub{display:block;color:var(--faint);font-size:.76rem;max-width:330px;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .status{display:inline-block;padding:4px 8px;border-radius:999px;font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.confirmed{background:rgba(86,216,155,.14);color:var(--green)}.planned{background:rgba(122,183,255,.14);color:var(--blue)}.alternative{background:rgba(245,197,99,.14);color:var(--gold)}
+  .rating{white-space:nowrap;color:var(--gold)}.empty{color:var(--faint)}.foot{margin-top:18px;color:var(--faint);font-size:.85rem}.foot b{color:var(--muted)}
+  @media(max-width:760px){header{padding-top:36px}.summary{grid-template-columns:1fr 1fr}.metric b{font-size:1.45rem}.controls>*{width:100%}input{min-width:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Iceland · Sept 10–29, 2026</div>
+  <h1>Hikes database</h1>
+  <p class="intro">One local source of truth for the route: exact itinerary distance, elevation gain, grade, base, drive distance, current status, and direct AllTrails route. “Confirmed” means part of the current core plan—not that weather, roads, or access are guaranteed.</p>
+  <a class="back" href="index.html">← Back to the itinerary</a>
+</div></header>
+<main>
+  <div class="summary" id="summary"></div>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search trail, region or base…" aria-label="Search hikes">
+    <label>Status <select id="status"><option value="">All statuses</option><option value="confirmed">Confirmed</option><option value="planned">Planned</option><option value="alternative">Alternative</option></select></label>
+    <label>Base <select id="base"><option value="">All bases</option></select></label>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Hike / route</th><th>Length</th><th>Gain</th><th>Grade</th><th>Region</th><th>Base</th><th>From base</th><th>AllTrails</th><th>Status</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <p class="foot"><b>Reading the totals:</b> confirmed is the 121.2 km default/core route; planned is 31.9 km of short walks and scheduled supporting trails; alternatives are mutually exclusive weather, access, or energy swaps and must not be added to the trip total. Distances and gain describe the itinerary variant, which can differ from the full linked AllTrails route. Ratings were checked in July 2026; an em dash means no dependable current trail-specific rating was captured. Always recheck road.is, safetravel.is, weather, closures, and the live trail page.</p>
+</main>
+<script src="hikes-data.js"></script>
+<script>
+const hikes=window.ICELAND_HIKES||[];
+const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(1);
+const sum=status=>hikes.filter(h=>h.status===status).reduce((n,h)=>n+h.km,0);
+document.getElementById('summary').innerHTML=[
+  [hikes.length,'routes catalogued'],[sum('confirmed'),'km confirmed'],[sum('planned'),'km planned'],[sum('alternative'),'km alternatives']
+].map(([n,label])=>`<div class="metric"><b>${typeof n==='number'?fmt(n):n}</b><span>${label}</span></div>`).join('');
+const base=document.getElementById('base');
+[...new Set(hikes.map(h=>h.base))].forEach(v=>base.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(){
+  const q=document.getElementById('search').value.trim().toLowerCase(), status=document.getElementById('status').value, b=base.value;
+  const list=hikes.filter(h=>(!status||h.status===status)&&(!b||h.base===b)&&(!q||[h.name,h.region,h.base,h.grade,h.note].join(' ').toLowerCase().includes(q)));
+  document.getElementById('rows').innerHTML=list.map(h=>`<tr>
+    <td>${h.url?`<a class="name" target="_blank" rel="noopener" href="${h.url}">${esc(h.name)} ↗</a>`:`<span class="name">${esc(h.name)}</span>`}${h.note?`<span class="sub">${esc(h.note)}</span>`:''}</td>
+    <td class="num">${fmt(h.km)} km</td><td class="num">${h.gain==null?'—':h.gain.toLocaleString()+' m'}</td><td>${esc(h.grade)}</td><td>${esc(h.region)}</td><td>${esc(h.base)}</td><td>${esc(h.fromBase)}</td>
+    <td>${h.rating?`<span class="rating">★ ${h.rating.toFixed(1)}</span>`:`<span class="empty">—</span>`}</td><td><span class="status ${h.status}">${h.status}</span></td></tr>`).join('')||'<tr><td colspan="9" class="empty">No hikes match these filters.</td></tr>';
+}
+['search','status','base'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));render();
+</script>
+</body>
+</html>

@@ -7,16 +7,16 @@
 <style>
   :root{--bg:#0b0f14;--card:#121822;--ink:#eef2f7;--muted:#9fb0c3;--accent:#5ec5c9;--accent2:#7bd88f;--gold:#e6b453;--line:#1e2836}
   *{box-sizing:border-box}
-  body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#16202c 0,var(--bg) 60%);color:var(--ink);
+  body{margin:0;background:linear-gradient(180deg,rgba(11,15,20,.36),rgba(11,15,20,.96)),url("iceland/assets/images/aurora.jpg") center/cover fixed;color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;min-height:100vh}
   .wrap{max-width:900px;margin:0 auto;padding:64px 20px 80px}
-  h1{font-size:2.2rem;margin:0 0 6px;letter-spacing:-.01em}
+  h1{font-size:2.2rem;margin:0 0 6px;letter-spacing:0}
   .sub{color:var(--muted);margin:0 0 40px;font-size:1.05rem}
   .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;max-width:560px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;
     transition:transform .15s ease,border-color .15s ease}
   .card:hover{transform:translateY(-3px);border-color:#2c3a4c}
-  .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .tag{font-size:.72rem;letter-spacing:0;text-transform:uppercase;font-weight:700}
   .ice .tag{color:var(--accent)}
   .card h2{margin:2px 0 0;font-size:1.5rem}
   .dates{color:var(--muted);font-size:.92rem}
@@ -37,17 +37,17 @@
   <div class="grid">
     <div class="card ice">
       <span class="tag">Iceland · Holiday</span>
-      <h2>4-Base + KEF Safety Stop</h2>
+      <h2>5 Bases + KEF Safety Stop</h2>
       <span class="dates">Sept 10 – 29, 2026 · 19 nights · 4x4</span>
       <p class="desc">South Coast → Skaftafell → Eastfjords → the North → Westfjords → KEF. Hard trails, empty fjords, aurora, a Sony a7RV.</p>
       <div class="btns">
         <a class="btn primary" href="iceland/index.html">Open the interactive site →</a>
-        <a class="btn ghost" href="https://github.com/jwehrmann/holiday-plan/blob/main/iceland/itinerary.md">Itinerary (md)</a>
+        <a class="btn ghost" href="iceland/itinerary.md">Itinerary (md)</a>
       </div>
     </div>
   </div>
 
-  <footer>Built for hard trails, empty fjords, challenging summits, and a 4x4. · Verify roads &amp; weather before every hike.</footer>
+  <footer>Built for hard trails, empty fjords, weather swaps, and a 4x4. · Verify roads &amp; weather before every hike.</footer>
 </div>
 </body>
 </html>
