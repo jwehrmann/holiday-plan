@@ -1,11 +1,12 @@
-/* Local, file:// friendly trail database. Distances/elevation follow the exact itinerary route
-   unless notes say the linked AllTrails route differs. Ratings are a July 2026 snapshot.
+/* Local, file:// friendly trail database. Each entry retains the itinerary plan; the separate
+   ALLTRAILS_SOURCES map stores exact source titles and audited route figures. The table uses
+   source stats by default while preserving shorter/custom itinerary variants in notes.
    Dates are weather-adjustable estimates for the Sept 10–29, 2026 trip. */
 window.ICELAND_HIKES = [
-  {name:"Gullfoss Waterfall + Geysir–Strokkur–Blesi",allTrails:[{label:"Gullfoss",url:"https://www.alltrails.com/trail/iceland/southern/gullfoss-waterfall"},{label:"Geysir",url:"https://www.alltrails.com/trail/iceland/southern/strokkur-geysir-blesi"}],km:2,gain:20,grade:"Easy",region:"Southern",base:"1 · Hella",fromBase:"~72 km · 1 h",rating:null,status:"planned",date:"Sep 12",dateSort:20260912,period:"Morning · half-day loop",note:"Two separate attraction paths; the itinerary uses the shorter viewpoint portions."},
+  {name:"Gullfoss Waterfall + Geysir–Strokkur–Blesi",allTrails:[{label:"Gullfoss",url:"https://www.alltrails.com/trail/iceland/southern/gullfoss-waterfall"},{label:"Geysir",url:"https://www.alltrails.com/trail/iceland/southern/strokkur-geysir-blesi"}],km:2,gain:20,grade:"Easy",region:"Southern",base:"1 · Hella",fromBase:"~72 km · 1 h",rating:null,status:"planned",date:"Sep 12",dateSort:20260912,period:"Morning · half-day loop",sourceDuration:"1.5–2.5 h total",note:"Two separate attraction paths; the itinerary may use only the shorter viewpoint portions."},
   {name:"Hlauptungufoss, Miðfoss and Brúarfoss",url:"https://www.alltrails.com/trail/iceland/southern/hlauptungufoss-midfoss-and-bruarfoss-waterfalls",km:7.1,gain:70,grade:"Easy",region:"Southern",base:"1 · Hella",fromBase:"~83 km · 1 h 10",rating:4.7,status:"alternative",date:"Sep 12",dateSort:20260912,period:"Late morning · 2–3 h",note:"AllTrails elevation profile is anomalous; its own page notes roughly 20–100 m actual gain."},
   {name:"Seljalandsfoss + Gljúfrabúi Waterfalls",url:"https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls",km:1.9,gain:75,grade:"Easy",region:"Southern",base:"1 · Hella",fromBase:"~65 km · 50 min",rating:4.8,status:"planned",date:"Sep 10",dateSort:20260910,period:"Late afternoon · 1 h"},
-  {name:"Skógafoss Waterfall Way (turnaround)",url:"https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls",linkConfidence:"medium",km:16,gain:500,grade:"Hard",region:"Southern",base:"1 · Hella",fromBase:"~95 km · 1 h 15",rating:4.9,status:"confirmed",date:"Sep 11",dateSort:20260911,period:"Leave 05:40 · 4–6 h",note:"Itinerary turnaround route. Full linked AllTrails out-and-back is 26.2 km / 1,131 m."},
+  {name:"Skógafoss Waterfall Way (turnaround)",url:"https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls",linkConfidence:"medium",km:16,gain:500,grade:"Hard",region:"Southern",base:"1 · Hella",fromBase:"~95 km · 1 h 15",rating:4.9,status:"confirmed",date:"Sep 11",dateSort:20260911,period:"Leave 05:40 · 4–6 h turnaround",note:"Source stats show the full AllTrails route: 26.2 km / 1,131 m. The planned turnaround remains 16 km / 500 m / 4–6 h."},
   {name:"Reykjadalur Hot Spring Thermal River",url:"https://www.alltrails.com/trail/iceland/southern/reykjadalur-hot-spring-thermal-river",km:9.2,gain:379,grade:"Moderate",region:"Southern",base:"1 · Hella",fromBase:"~75 km · 55 min",rating:4.7,status:"alternative",date:"Sep 12",dateSort:20260912,period:"Morning · 3–4 h"},
   {name:"Þakgil Loop",url:"https://www.alltrails.com/trail/iceland/southern/thakgil-loop",km:19,gain:800,grade:"Hard",region:"Southern",base:"1 · Hella",fromBase:"~125 km · 2 h",rating:null,status:"confirmed",date:"Sep 13",dateSort:20260913,period:"Leave 06:00 · all day",note:"Late-season road and trail conditions decide access."},
   {name:"Bláhnúkur + Brennisteinsalda",url:"https://www.alltrails.com/trail/iceland/southern/landmannalaugar-blahnukur-brennisteinsalda",km:10.5,gain:700,grade:"Hard",region:"Southern Highlands",base:"1 · Hella",fromBase:"~105 km · 2 h 15",rating:null,status:"alternative",date:"Sep 14",dateSort:20260914,period:"Leave 05:30 · all day",note:"F-road access and September conditions can close this option."},
@@ -13,6 +14,7 @@ window.ICELAND_HIKES = [
   {name:"Reynisfjara Beach + Reynisdrangar Sea Stacks",url:"https://www.alltrails.com/trail/iceland/southern/reynisfjara-black-sand-beach",km:1.1,gain:9,grade:"Easy",region:"Southern",base:"Transfer 1 → 2",fromBase:"En route · ~105 km from Hella",rating:4.6,status:"planned",date:"Sep 15",dateSort:20260915,period:"Morning · 45–60 min",note:"Reynisdrangar is the sea-stack view from Reynisfjara. Obey the beach warning lights and stay far above sneaker waves."},
   {name:"Fjaðrárgljúfur Canyon",url:"https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon",km:3.4,gain:121,grade:"Easy",region:"Southern",base:"Transfer 1 → 2",fromBase:"En route · ~165 km from Hella",rating:4.7,status:"planned",date:"Sep 15",dateSort:20260915,period:"Early afternoon · 1 h"},
   {name:"Kristínartindar via Svartifoss",url:"https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi",km:18.7,gain:1065,grade:"Hard",region:"Vatnajökull NP",base:"2 · Svínafell",fromBase:"~5 km · 5 min",rating:4.8,status:"confirmed",date:"Sep 16",dateSort:20260916,period:"Leave 07:00 · all day"},
+  {name:"Hvannadalshnjúkur guided summit",url:"https://www.alltrails.com/pt-br/trilha/iceland/eastern/hvannadalshnjukur",km:22.7,gain:2133,grade:"Hard · glacier mountaineering",region:"Vatnajökull NP",base:"2 · Svínafell",fromBase:"~9 km · 10 min to Sandfell",rating:4.5,status:"alternative",date:"Sep 16 only",dateSort:20260916,period:"Guide briefing previous day · alpine start · 10–15 h",durationEstimate:"10–15 h",durationKind:"Guide",allTrailsNote:"Guide-only glacier mountaineering; normal commercial season is April–July, not September",note:"Geographically fits Base 2, but it replaces the entire Kristínartindar/Skaftafell day and likely the Jökulsárlón evening. This is a roped glacier ascent, not a normal hike. Standard guided availability is April–July; the September itinerary is outside the normal season, so keep it only as a reference unless a qualified local guide explicitly accepts the date, conditions and team."},
   {name:"Sjónarnípa + Svartifoss via Austurbrekkur",url:"https://www.alltrails.com/trail/iceland/southern/sjonarnipa-svartifoss-magnusafoss-hundafoss-via-austurbrekkur",km:7.4,gain:380,grade:"Moderate",region:"Vatnajökull NP",base:"2 · Svínafell",fromBase:"~5 km · 5 min",rating:4.8,status:"alternative",date:"Sep 16",dateSort:20260916,period:"Morning · 3–4 h",note:"Bad-weather substitute for Kristínartindar."},
   {name:"Skaftafellsjökull Glacier Trail",url:"https://www.alltrails.com/trail/iceland/southern/skaftafellsjokull-glacier-trail",km:4.8,gain:129,grade:"Easy",region:"Vatnajökull NP",base:"2 · Svínafell",fromBase:"~5 km · 5 min",rating:4.6,status:"confirmed",date:"Sep 15–16",dateSort:20260915,period:"Dusk or backup morning · 1.5 h"},
   {name:"Jökulsárlón + Diamond Beach",url:"https://www.alltrails.com/trail/iceland/eastern/jokulsarlon-and-diamond-beach",km:2.1,gain:10,grade:"Easy",region:"Eastern",base:"2 · Svínafell",fromBase:"~60 km · 50 min",rating:4.7,status:"planned",date:"Sep 16",dateSort:20260916,period:"Evening / blue hour · 2 h"},
@@ -36,9 +38,120 @@ window.ICELAND_HIKES = [
   {name:"Snæfellsjökull Glacier",url:"https://www.alltrails.com/trail/iceland/western/snaefellsjokull-glacier",km:10.9,gain:906,grade:"Hard · guided",region:"Western",base:"5 · Arnarstapi",fromBase:"~35 km · 45 min",rating:4.7,status:"alternative",date:"Sep 25",dateSort:20260925,period:"Pre-dawn start · full day",note:"Glacier equipment and a qualified guide required."},
   {name:"Arnarstapi–Gatklettur–Hellnar Coast",url:"https://www.alltrails.com/trail/iceland/western/arnarstapi-gatklettur-hellnar",km:5,gain:30,grade:"Easy",region:"Western",base:"5 · Arnarstapi",fromBase:"At base",rating:null,status:"confirmed",date:"Sep 24",dateSort:20260924,period:"Late morning · 1.5–2 h"},
   {name:"Rauðfeldsgjá Gorge",url:"https://www.alltrails.com/trail/iceland/western/raudfeldsgja-gorge",km:1.1,gain:83,grade:"Moderate",region:"Western",base:"5 · Arnarstapi",fromBase:"~6 km · 8 min",rating:null,status:"planned",date:"Sep 24",dateSort:20260924,period:"Morning · 1 h"},
-  {name:"Djúpalónssandur + Lóndrangar + Saxhóll",allTrails:[{label:"Djúpalón",url:"https://www.alltrails.com/trail/iceland/western/djupalonssandur-dritvik-aflraunasteinar"},{label:"Lóndrangar",url:"https://www.alltrails.com/trail/iceland/western/londrangar-cliffs"},{label:"Saxhóll",url:"https://www.alltrails.com/trail/iceland/western/saxholl-crater"}],km:5,gain:150,grade:"Moderate",region:"Western",base:"5 · Arnarstapi",fromBase:"~35 km · 45 min",rating:null,status:"planned",date:"Sep 24",dateSort:20260924,period:"Early afternoon · 3–4 h",note:"A driving loop joining three separate short walks; the links are the individual AllTrails routes."},
-  {name:"Kirkjufellsfoss Viewpoint (Kirkjufell)",url:"https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss",km:3.5,gain:16,grade:"Easy",region:"Western",base:"5 · Arnarstapi",fromBase:"~55 km · 55 min",rating:null,status:"confirmed",date:"Sep 26",dateSort:20260926,period:"Sunrise or sunset · 1 h",allTrailsNote:"Linked route currently marked closed",note:"Photo/viewpoint stop only; AllTrails currently marks the linked walking route closed. Obey local barriers and never attempt the closed Kirkjufell mountain climb."},
+  {name:"Djúpalónssandur + Lóndrangar + Saxhóll",allTrails:[{label:"Djúpalón",url:"https://www.alltrails.com/trail/iceland/western/djupalonssandur-dritvik-aflraunasteinar"},{label:"Lóndrangar",url:"https://www.alltrails.com/trail/iceland/western/londrangar-cliffs"},{label:"Saxhóll",url:"https://www.alltrails.com/trail/iceland/western/saxholl-crater"}],km:5,gain:150,grade:"Moderate",region:"Western",base:"5 · Arnarstapi",fromBase:"~35 km · 45 min",rating:null,status:"planned",date:"Sep 24",dateSort:20260924,period:"Early afternoon · 3–4 h",sourceDuration:"2–3.5 h total",note:"A driving loop joining three separate short walks; source length/gain totals all three complete linked routes."},
+  {name:"Kirkjufellsfoss Viewpoint (Kirkjufell)",url:"https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss",km:3.5,gain:16,grade:"Easy",region:"Western",base:"5 · Arnarstapi",fromBase:"~55 km · 55 min",rating:null,status:"confirmed",date:"Sep 26",dateSort:20260926,period:"Sunrise or sunset · 1 h",allTrailsNote:"Bridge crossing closed for works; waterfall viewpoints remain accessible",note:"The closure affects only the bridge to the opposite side of the falls. View Kirkjufellsfoss from the north/west side, obey local barriers, and keep the scenic stop as planned. The separate Kirkjufell mountain climb is not part of this route."},
   {name:"Glymur Waterfall Trail",url:"https://www.alltrails.com/trail/iceland/capital/glymur-waterfall-trail",km:7.2,gain:430,grade:"Hard",region:"Capital",base:"Transfer 4 → 5",fromBase:"Detour · ~50 km",rating:null,status:"alternative",date:"Sep 23",dateSort:20260923,period:"Leave before 08:00 · 4 h"},
-  {name:"Keilir",url:"https://www.alltrails.com/trail/iceland/southern/keilir",km:10,gain:380,grade:"Moderate",region:"Southern Peninsula",base:"6 · Keflavík",fromBase:"~35 km · 35 min",rating:null,status:"confirmed",date:"Sep 28",dateSort:20260928,period:"Morning · 3–4 h"},
+  {name:"Keilir",url:"https://www.alltrails.com/trail/iceland/southern-peninsula/keilir",km:10,gain:380,grade:"Moderate",region:"Southern Peninsula",base:"6 · Keflavík",fromBase:"~35 km · 35 min",rating:null,status:"confirmed",date:"Sep 28",dateSort:20260928,period:"Morning · 3–4 h"},
   {name:"Fagradalsfjall / Geldingadalir Eruption Area",url:"https://www.alltrails.com/trail/iceland/southern-peninsula/geldingadalsgos-volcano",km:5.3,gain:250,grade:"Moderate",region:"Southern Peninsula",base:"6 · Keflavík",fromBase:"~45 km · 45 min",rating:null,status:"alternative",date:"Sep 28",dateSort:20260928,period:"Morning · 3–5 h",note:"Access changes with volcanic activity; use the currently open marked route, not the old card range."}
+];
+
+/* Exact AllTrails titles and source-page figures, captured separately so the UI can switch
+   between itinerary names and source names without losing either. Metric values are converted
+   from the displayed imperial figures where needed. Checked 2026-07-11. */
+window.ALLTRAILS_SOURCES = {
+  "https://www.alltrails.com/trail/iceland/southern/gullfoss-waterfall":{title:"Gullfoss Waterfall",km:1.8,gain:40,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:1600},
+  "https://www.alltrails.com/trail/iceland/southern/strokkur-geysir-blesi":{title:"Geysir - Strokkur - Blesi",km:2.7,gain:130,duration:"1–1.5 h",grade:"Easy",rating:4.5,reviews:1527},
+  "https://www.alltrails.com/trail/iceland/southern/hlauptungufoss-midfoss-and-bruarfoss-waterfalls":{title:"Hlauptungufoss, Midfoss and Brúarfoss Waterfalls",km:7.1,gain:70,reportedGain:551,duration:"3–3.5 h",grade:"Easy",rating:4.7,reviews:1473,note:"AllTrails displays 551 m from an anomalous profile but states roughly 20–100 m actual gain; 70 m is used in the table."},
+  "https://www.alltrails.com/trail/iceland/southern/seljalandsfoss-and-gljufrafoss-waterfalls":{title:"Seljalandsfoss - Gljúfrabúi Waterfalls",km:1.9,gain:75,duration:"0.5–1 h",grade:"Easy",rating:4.8,reviews:1882},
+  "https://www.alltrails.com/trail/iceland/southern/skogafoss-skalabrekkufoss-waterfalls":{title:"Skógafoss, Steinbogafoss and Skálabrekkufoss via Fimmvörðuháls Trail",km:26.2,gain:1131,duration:null,grade:"Hard",rating:4.9,reviews:1258},
+  "https://www.alltrails.com/trail/iceland/southern/reykjadalur-hot-spring-thermal-river":{title:"Reykjadalur Hot Spring Thermal River",km:9.2,gain:379,duration:"3–3.5 h",grade:"Moderate",rating:4.7,reviews:3557},
+  "https://www.alltrails.com/trail/iceland/southern/thakgil-loop":{title:"Thakgil Loop",km:19.6,gain:825,duration:"6.5–7 h",grade:"Hard",rating:4.7,reviews:25},
+  "https://www.alltrails.com/trail/iceland/southern/landmannalaugar-blahnukur-brennisteinsalda":{title:"Bláhnúkur and Brennisteinsalda",km:10.6,gain:642,duration:"4.5–5 h",grade:"Hard",rating:4.9,reviews:808},
+  "https://www.alltrails.com/trail/iceland/southern/graenihryggur-3":{title:"Grænihryggur via Halldórsgil Trail",km:16.3,gain:821,duration:"6–6.5 h",grade:"Hard",rating:4.8,reviews:27},
+  "https://www.alltrails.com/trail/iceland/southern/reynisfjara-black-sand-beach":{title:"Reynisfjara Black Sand Beach",km:1.3,gain:16,duration:"0.5–1 h",grade:"Easy",rating:4.5,reviews:616},
+  "https://www.alltrails.com/trail/iceland/southern/fjadrargljufur-canyon":{title:"Fjaðrárgljúfur Canyon",km:2.4,gain:86,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:2616},
+  "https://www.alltrails.com/trail/iceland/southern/kristinartindar-via-svartifoss-skaftafellsheidi":{title:"Kristínartindar via Svartifoss - Skaftafellsheiði",km:18.7,gain:1065,duration:"7.5–8 h",grade:"Hard",rating:4.8,reviews:386},
+  "https://www.alltrails.com/pt-br/trilha/iceland/eastern/hvannadalshnjukur":{title:"Hvannadalshnjúkur",km:22.7,gain:2133,duration:"11 h 28 min",grade:"Hard",rating:4.5,reviews:26,note:"AllTrails line is a glacier mountaineering route. A qualified guide, rope team and glacier equipment are required."},
+  "https://www.alltrails.com/trail/iceland/southern/sjonarnipa-svartifoss-magnusafoss-hundafoss-via-austurbrekkur":{title:"Sjónarnípa - Svartifoss Waterfall - Magnúsafoss Waterfall - Hundafoss Waterfall via Austurbrekkur",km:7.6,gain:270,duration:"2–2.5 h",grade:"Moderate",rating:4.8,reviews:1632},
+  "https://www.alltrails.com/trail/iceland/southern/skaftafellsjokull-glacier-trail":{title:"Skaftafellsjökull Glacier Trail",km:4.8,gain:129,duration:"1–1.5 h",grade:"Easy",rating:4.6,reviews:888},
+  "https://www.alltrails.com/trail/iceland/eastern/jokulsarlon-and-diamond-beach":{title:"Jökulsárlón and Diamond Beach",km:2.1,gain:12,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:362},
+  "https://www.alltrails.com/trail/iceland/eastern/hangandifoss-waterfall-mulagljufur-canyon":{title:"Hangandifoss Waterfall - Múlagljúfur Canyon",km:7.1,gain:381,duration:"2.5–3 h",grade:"Moderate",rating:4.9,reviews:3070},
+  "https://www.alltrails.com/trail/iceland/eastern/vestrahorn-yellow-path":{title:"Vestrahorn - Yellow Path",km:6.1,gain:73,duration:"1–1.5 h",grade:"Easy",rating:4.4,reviews:119},
+  "https://www.alltrails.com/trail/iceland/eastern/hijallanes":{title:"Hijallanes - Skálafellsjökull",km:8.5,gain:256,duration:null,grade:"Moderate",rating:4.8,reviews:375},
+  "https://www.alltrails.com/trail/iceland/eastern/storurd-via-borgarfjardarvegur":{title:"Stórurð via Borgarfjardarvegur",km:10.9,gain:609,duration:"4–4.5 h",grade:"Moderate",rating:4.8,reviews:212},
+  "https://www.alltrails.com/trail/iceland/eastern/studlagil-canyon--2":{title:"Stuðlagil Canyon",km:9.7,gain:175,duration:null,grade:"Moderate",rating:4.6,reviews:1655},
+  "https://www.alltrails.com/trail/iceland/eastern/hengifoss-waterfall":{title:"Hengifoss Waterfall via Litlanesfoss Waterfall",km:5.1,gain:264,duration:"1.5–2 h",grade:"Moderate",rating:4.8,reviews:1764},
+  "https://www.alltrails.com/trail/iceland/eastern/borgarfjordur-eystri-brunavik":{title:"Borgarfjörður Eystri - Brúnavík",km:13.8,gain:696,duration:"5–5.5 h",grade:"Moderate",rating:4.7,reviews:61},
+  "https://www.alltrails.com/trail/iceland/eastern/vestdalsfossar-loop":{title:"Vestdalsfossar Loop",km:5.5,gain:165,duration:"1.5–2 h",grade:"Easy",rating:4.8,reviews:110},
+  "https://www.alltrails.com/trail/iceland/northeastern/raudholar-circle":{title:"Rauðhólar Circle",km:5.3,gain:129,duration:"1.5–2 h",grade:"Moderate",rating:4.8,reviews:140},
+  "https://www.alltrails.com/trail/iceland/northeastern/kerling":{title:"Kerling",km:12.9,gain:1416,duration:"7.5–8 h",grade:"Hard",rating:3.7,reviews:9},
+  "https://www.alltrails.com/trail/iceland/northeastern/sulur-mountain":{title:"Súlur Mountain",km:11.6,gain:897,duration:null,grade:"Hard",rating:4.6,reviews:191},
+  "https://www.alltrails.com/trail/iceland/northwestern-region/hraunsvatn":{title:"Hraunsvatn",km:8.5,gain:428,duration:"3–3.5 h",grade:"Moderate",rating:4.7,reviews:340},
+  "https://www.alltrails.com/trail/iceland/northeastern/aldeyjarfoss-waterfall":{title:"Aldeyjarfoss Waterfall",km:2.4,gain:77,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:103},
+  "https://www.alltrails.com/trail/iceland/northeastern/dettifoss-and-selfoss":{title:"Dettifoss Waterfall - West Side",km:3.9,gain:78,duration:"1–1.5 h",grade:"Easy",rating:4.6,reviews:1153},
+  "https://www.alltrails.com/trail/iceland/northeastern/godafoss-waterfall":{title:"Goðafoss Waterfall",km:2.9,gain:89,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:801},
+  "https://www.alltrails.com/trail/iceland/northeastern/eyjan-hill-trail":{title:"Eyjan Hill Trail",km:4.8,gain:111,duration:"1–1.5 h",grade:"Easy",rating:4.4,reviews:146},
+  "https://www.alltrails.com/trail/iceland/western/snaefellsjokull-glacier":{title:"Snæfellsjökull Glacier",km:11.1,gain:897,duration:null,grade:"Hard",rating:4.5,reviews:31},
+  "https://www.alltrails.com/trail/iceland/western/arnarstapi-gatklettur-hellnar":{title:"Arnarstapi - Gatklettur - Hellnar",km:3.4,gain:54,duration:"0.5–1 h",grade:"Easy",rating:4.7,reviews:1128},
+  "https://www.alltrails.com/trail/iceland/western/raudfeldsgja-gorge":{title:"Rauðfeldsgjá Gorge",km:1.1,gain:83,duration:"0.5–1 h",grade:"Moderate",rating:4.7,reviews:526},
+  "https://www.alltrails.com/trail/iceland/western/djupalonssandur-dritvik-aflraunasteinar":{title:"Djúpalónssandur - Dritvík - Aflraunasteinar",km:2.9,gain:52,duration:"0.5–1 h",grade:"Moderate",rating:4.7,reviews:628},
+  "https://www.alltrails.com/trail/iceland/western/londrangar-cliffs":{title:"Lóndrangar Cliffs",km:4.3,gain:63,duration:"1–1.5 h",grade:"Easy",rating:4.6,reviews:464},
+  "https://www.alltrails.com/trail/iceland/western/saxholl-crater":{title:"Saxhóll Crater",km:0.6,gain:15,duration:"0.5–1 h",grade:"Easy",rating:4.5,reviews:277},
+  "https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss":{title:"Kirkjufellsfoss Waterfall",km:3.5,gain:16,duration:"0.5–1 h",grade:"Easy",rating:4.4,reviews:512},
+  "https://www.alltrails.com/trail/iceland/capital/glymur-waterfall-trail":{title:"Glymur Waterfall Trail",km:7.2,gain:429,duration:null,grade:"Hard",rating:4.8,reviews:2505},
+  "https://www.alltrails.com/trail/iceland/southern-peninsula/keilir":{title:"Keilir",km:9.0,gain:515,duration:"3–3.5 h",grade:"Moderate",rating:4.5,reviews:9},
+  "https://www.alltrails.com/trail/iceland/southern-peninsula/geldingadalsgos-volcano":{title:"Geldingadalsgos Volcano via Suðurstrandarvegur",km:5.3,gain:269,duration:null,grade:"Moderate",rating:4.6,reviews:663}
+};
+
+/* Trailhead/start-area coordinates for the hikes map. A route can have more than one start
+   when an itinerary row combines separate walks. `mapped` means a recognisable parking area,
+   visitor centre or signed trailhead; `approximate` is deliberately shown differently in the
+   UI and must be checked against the live route/access information before driving there. */
+window.ICELAND_TRAILHEADS = {
+  "Gullfoss Waterfall + Geysir–Strokkur–Blesi":[
+    {label:"Gullfoss upper parking",lat:64.3271,lng:-20.1199,precision:"mapped"},
+    {label:"Geysir visitor parking",lat:64.3104,lng:-20.3024,precision:"mapped"}
+  ],
+  "Hlauptungufoss, Miðfoss and Brúarfoss":[{label:"Brúarfoss route start area",lat:64.2570,lng:-20.5290,precision:"approximate",note:"Confirm whether the linked longer route or the newer direct parking is intended."}],
+  "Seljalandsfoss + Gljúfrabúi Waterfalls":[{label:"Seljalandsfoss parking",lat:63.6156,lng:-19.9925,precision:"mapped"}],
+  "Skógafoss Waterfall Way (turnaround)":[{label:"Skógar campsite / trail start",lat:63.5290,lng:-19.5133,precision:"mapped"}],
+  "Reykjadalur Hot Spring Thermal River":[{label:"Reykjadalur trail parking",lat:64.0244,lng:-21.2117,precision:"mapped"}],
+  "Þakgil Loop":[{label:"Þakgil campsite trailhead",lat:63.5290,lng:-18.8880,precision:"mapped"}],
+  "Bláhnúkur + Brennisteinsalda":[{label:"Landmannalaugar hut / trailhead",lat:63.9925,lng:-19.0614,precision:"mapped"}],
+  "Grænihryggur via Halldórsgil":[{label:"Landmannalaugar start area",lat:63.9925,lng:-19.0614,precision:"approximate",note:"Use the live AllTrails line to confirm the Halldórsgil variant start."}],
+  "Reynisfjara Beach + Reynisdrangar Sea Stacks":[{label:"Reynisfjara parking",lat:63.4042,lng:-19.0447,precision:"mapped"}],
+  "Fjaðrárgljúfur Canyon":[{label:"Fjaðrárgljúfur lower parking",lat:63.7718,lng:-18.1725,precision:"mapped"}],
+  "Kristínartindar via Svartifoss":[{label:"Skaftafell Visitor Centre",lat:64.0166,lng:-16.9662,precision:"mapped"}],
+  "Hvannadalshnjúkur guided summit":[{label:"Sandfell car park / normal-route start",lat:63.9388,lng:-16.7954,precision:"approximate",note:"Published guided ascents use the Sandfell route. Confirm the exact meeting point and start with the guide."}],
+  "Sjónarnípa + Svartifoss via Austurbrekkur":[{label:"Skaftafell Visitor Centre",lat:64.0166,lng:-16.9662,precision:"mapped"}],
+  "Skaftafellsjökull Glacier Trail":[{label:"Skaftafell Visitor Centre",lat:64.0166,lng:-16.9662,precision:"mapped"}],
+  "Jökulsárlón + Diamond Beach":[{label:"Jökulsárlón main parking",lat:64.0483,lng:-16.1798,precision:"mapped"}],
+  "Hangandifoss + Múlagljúfur Canyon":[{label:"Múlagljúfur trail parking",lat:63.993021,lng:-16.436285,precision:"mapped"}],
+  "Vestrahorn Yellow Path":[{label:"Viking Café / Stokksnes start",lat:64.2539,lng:-14.9928,precision:"mapped"}],
+  "Hjallanes – Skálafellsjökull":[{label:"Skálafell / Hjallanes start area",lat:64.2404,lng:-15.7170,precision:"approximate"}],
+  "Stórurð via Vatnsskarð":[{label:"Vatnsskarð trailhead",lat:65.5618,lng:-13.9927,precision:"mapped"}],
+  "Stuðlagil Canyon — East Bank":[{label:"Klaustursel east-bank parking",lat:65.1317,lng:-15.3044,precision:"mapped"}],
+  "Hengifoss + Litlanesfoss":[{label:"Hengifoss parking",lat:65.0738,lng:-14.8838,precision:"mapped"}],
+  "Brúnavík from Borgarfjörður Eystri":[{label:"Brúnavík route start area",lat:65.5430,lng:-13.7540,precision:"approximate",note:"Confirm the live route line in Borgarfjörður Eystri before departure."}],
+  "Vestdalsfossar Loop":[{label:"Vestdalur trail start",lat:65.2760,lng:-14.0050,precision:"approximate"}],
+  "Rauðhólar Circle + Hljóðaklettar":[{label:"Vesturdalur / Hljóðaklettar parking",lat:65.9430,lng:-16.5150,precision:"mapped"}],
+  "Kerling Summit (guided)":[{label:"Finnastaðir start area",lat:65.5191,lng:-18.1808,precision:"approximate",note:"Published guided routes begin at Finnastaðir; use the guide's meeting point and track."}],
+  "Súlur Mountain (Ytri-Súlur)":[{label:"Súlur trailhead",lat:65.653451,lng:-18.172670,precision:"mapped"}],
+  "Hraunsvatn":[{label:"Hraun farm start area",lat:65.5600,lng:-18.5900,precision:"approximate",note:"The official route starts at Hraun farm; confirm the pasture parking and farm access before driving."}],
+  "Aldeyjarfoss Waterfall":[{label:"Aldeyjarfoss official viewpoint",lat:65.364291,lng:-17.341099,precision:"mapped"}],
+  "Dettifoss + Selfoss — West Bank":[{label:"Dettifoss west-bank parking",lat:65.8129,lng:-16.3995,precision:"mapped"}],
+  "Goðafoss Waterfall Loop":[{label:"Goðafoss east parking",lat:65.6828,lng:-17.5502,precision:"mapped"}],
+  "Eyjan Hill Trail — Ásbyrgi":[{label:"Ásbyrgi visitor area trailhead",lat:66.0170,lng:-16.5050,precision:"mapped"}],
+  "Helgrindur Ridge":[{label:"Helgrindur / Lýsuhóll approach",lat:64.8000,lng:-23.2460,precision:"approximate",note:"Unmarked mountain route; use the guide or downloaded route track, not this area pin, for navigation."}],
+  "Snæfellsjökull Glacier":[{label:"Snæfellsjökull guided-route start area",lat:64.8100,lng:-23.7900,precision:"approximate",note:"The guide determines the meeting point and safe glacier approach."}],
+  "Arnarstapi–Gatklettur–Hellnar Coast":[{label:"Arnarstapi harbour trail start",lat:64.7700,lng:-23.6180,precision:"mapped"}],
+  "Rauðfeldsgjá Gorge":[{label:"Rauðfeldsgjá parking",lat:64.7780,lng:-23.5470,precision:"mapped"}],
+  "Djúpalónssandur + Lóndrangar + Saxhóll":[
+    {label:"Djúpalónssandur parking",lat:64.7520,lng:-23.9020,precision:"mapped"},
+    {label:"Lóndrangar viewpoint parking",lat:64.7350,lng:-23.7880,precision:"mapped"},
+    {label:"Saxhóll crater parking",lat:64.8080,lng:-23.7950,precision:"mapped"}
+  ],
+  "Kirkjufellsfoss Viewpoint (Kirkjufell)":[{label:"Kirkjufellsfoss parking / viewpoint",lat:64.9270,lng:-23.3060,precision:"mapped"}],
+  "Glymur Waterfall Trail":[{label:"Botnsdalur / Glymur parking",lat:64.3910,lng:-21.2500,precision:"mapped"}],
+  "Keilir":[{label:"Keilir trail parking",lat:63.9390,lng:-22.1730,precision:"approximate",note:"Rough-road access; confirm the exact parking from the live route before driving."}],
+  "Fagradalsfjall / Geldingadalir Eruption Area":[{label:"Suðurstrandarvegur volcano parking",lat:63.8660,lng:-22.3160,precision:"approximate",note:"Volcano routes and parking access can change; follow current official signs and closures."}]
+};
+
+window.ICELAND_HIKE_BASES = [
+  {label:"Base 1 · Hella",lat:63.835,lng:-20.400},
+  {label:"Base 2 · Svínafell",lat:63.994,lng:-16.873},
+  {label:"Base 3 · Egilsstaðir",lat:65.264,lng:-14.395},
+  {label:"Base 4 · Akureyri",lat:65.688,lng:-18.090},
+  {label:"Base 5 · Arnarstapi",lat:64.770,lng:-23.618},
+  {label:"Base 6 · Keflavík",lat:64.000,lng:-22.558}
 ];

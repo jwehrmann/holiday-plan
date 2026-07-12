@@ -226,6 +226,9 @@
   .leaflet-container{font-family:inherit}
   .basepin{background:var(--accent);color:#062024;font-weight:700;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:13px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)}
   .stoppin{background:var(--gold);color:#2a1e05;font-weight:700;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.5)}
+  .leaflet-marker-icon{transition:opacity .2s ease}
+  .leaflet-marker-icon.map-day-active .stoppin{background:var(--accent);color:#062024;box-shadow:0 0 0 4px rgba(94,197,201,.28),0 0 18px rgba(94,197,201,.9),0 1px 3px rgba(0,0,0,.5)}
+  .leaflet-marker-icon.map-day-muted .stoppin{filter:saturate(.35)}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
@@ -874,7 +877,7 @@
       <img src="assets/images/kirkjufell.jpg" alt="Kirkjufell and Kirkjufellsfoss" loading="lazy"></div>
       <div class="body"><h3>Kirkjufell &amp; Kirkjufellsfoss<small>Iceland's most photographed mountain</small></h3>
       <div class="stats"><span class="chip">🚗 <b>~45 min</b> north (over the pass)</span><span class="chip">↔ <b>3.5 km</b></span><span class="chip">⛰ <b>16 m</b></span><span class="diff d-easy">Easy</span><span class="chip">⏱ 1 h · sunset ~19:15</span></div>
-      <p>Over Fróðárheiði to the north coast: the arrowhead peak with the Kirkjufellsfoss double-drop foreground. Best at golden hour; a clear night here or from the hot tub = aurora over the icon.</p>
+      <p>Over Fróðárheiði to the north coast: the arrowhead peak with the Kirkjufellsfoss double-drop foreground. Best at golden hour; a clear night here or from the hot tub = aurora over the icon. <b>Access note:</b> only the bridge crossing is closed for works—the falls remain viewable from the north/west side.</p>
       <div class="links"><a class="btn at" target="_blank" href="https://www.alltrails.com/trail/iceland/western/kirkjufellsfoss">AllTrails</a><a class="btn gm" target="_blank" href="https://www.google.com/maps/dir/Arnarstapi%2C+Iceland/Kirkjufellsfoss+Parking%2C+Iceland">Route</a></div></div></div>
 
     <div class="card" data-days="b5d4"><div class="imgwrap"><div class="badge"><span class="tag t-night">Night sky</span></div>
@@ -1219,7 +1222,7 @@ const T = {
 "Goðafoss": {s:"The 'Waterfall of the Gods' — where lawspeaker Þorgeir threw his pagan idols into the falls in the year 1000. A 30-minute hop from base, so treat it like a studio you revisit: sunset from the east bank, aurora overhead on clear nights, long-exposure work from the west-side spray zone.", h:["East bank classic horseshoe view","West bank close-up spray angle","Aurora overhead on clear nights"], g:[["Goðafoss July 2014.JPG","The horseshoe"],["Goðafoss Winter.jpg","Early-winter mood — late Sept can tease this"]]},
 "Tröllaskagi loop & Siglufjörður": {s:"A recovery-day road trip through Iceland's most alpine coastal scenery: one-lane fjord tunnels, the great Herring Era Museum in Siglufjörður (genuinely — it won the European museum prize), harbor fish soup, and the Hofsós infinity pool hanging over Skagafjörður on the return leg.", h:["Héðinsfjörður tunnel-window fjord","Siglufjörður harbor & museum","Hofsós infinity pool","Tröllaskagi coast road viewpoints"], g:[["Siglufjörður (2024).jpg","Siglufjörður"],["The village of Siglufjörður.jpg","Under the peaks"],["Mountains of Tröllaskagi in Northern Iceland, from the Stephan G. Stephansson monument, 20240715 1359 0872.jpg","Tröllaskagi"]]},
 "Mývatn & Ásbyrgi": {s:"The volcanic sampler, mostly banked on the Sept 20 transfer: Hverir's boiling mud and sulfur steam, Dimmuborgir's collapsed lava cathedral, Ásbyrgi's sheer horseshoe canyon with the Botnstjörn pond — plus Rauðhólar's red craters over the twisted basalt of Hljóðaklettar in Vesturdalur.", h:["Hverir mud pots & steam vents","Rauðhólar red craters ★","Hljóðaklettar 'Echo Rocks' & Kirkjan arch","Ásbyrgi Botnstjörn pond","Dimmuborgir 'Kirkjan' lava church"], g:[["Námafjall Hverir.jpg","Hverir"],["Raudholar.jpg","Rauðhólar — your red crater"],["Hljóðaklettar 01.jpg","Hljóðaklettar"],["Ásbyrgi Botnstjörn Panorama 01.jpg","Ásbyrgi's Botnstjörn"]]},
-"Kirkjufell & Kirkjufellsfoss": {s:"The arrowhead mountain is the single planned scenic stop on the September 28 drive from Ísafjörður to Keflavík. Park at Kirkjufellsfoss, shoot the classic double-drop foreground, then continue south; bad weather or fatigue cancels the stop.", h:["Kirkjufellsfoss designated parking","45–60 minute time box","Sunset only if the exit drive remains safe"], g:[["Kirkjufellsfoss, Iceland, 20230505 1402 5192.jpg","The classic"]]},
+"Kirkjufell & Kirkjufellsfoss": {s:"The arrowhead mountain and its double-drop waterfall foreground are planned for September 26 from Arnarstapi. The current construction alert closes only the bridge crossing to the opposite side: Kirkjufellsfoss remains viewable from the north/west side. Use the designated parking and obey the barrier.", h:["Kirkjufellsfoss designated parking","North/west viewpoint remains accessible","Closed bridge crossing is not needed for the scenic stop","Full-moon light around sunset"], g:[["Kirkjufellsfoss, Iceland, 20230505 1402 5192.jpg","The classic"]]},
 "Helgrindur (Lýsuhyrna approach)": {s:"The serrated spine that walls Grundarfjörður from the south — unmarked, unranked, unpeopled. Route-find up grassy ramps and scree to the ridge; the reward is ocean on both sides of the peninsula at once. GPS track from Wikiloc, calm clear day only, and tell someone your plan.", h:["The ridge line — ocean both sides","Grundarfjörður + Kirkjufell from above","Lýsuhyrna shoulder views south"], g:[["Helgrindur 2012-08.JPG","The Helgrindur ridge"],["Grundarfjörður from Kirkjufell.jpg","What you'll tower over"],["1 grundarfjörður 2017 aerial pano.jpg","The fjord from above"]]},
 "Arnarstapi → Hellnar coastal walk": {s:"A cliff-top path through a protected lava coast: Gatklettur's perfect circle arch, thundering blowholes, basalt stacks full of fulmars, and Snæfellsjökull glowing overhead. Coffee at the Hellnar cliff café is mandatory; the return walk doubles every composition in reverse light.", h:["Gatklettur arch","Hundagjá & Miðgjá blowholes","Hellnar cove café","Bárður Snæfellsás stone troll statue"], g:[["Gatklettur, Arnarstapi, Iceland, 20240714 1334 0646.jpg","Gatklettur"],["Arnarstapi (9).jpg","The basalt coast"]]},
 "Rauðfeldsgjá Gorge": {s:"A crack in the Botnsfjall wall named for a boy pushed into it by his uncle Bárður (Snæfellsnes' half-troll guardian — long story). Slip through the entrance and follow the stream into the mountain's green half-light. Short, weird, wonderful — and skipped by nearly everyone racing between photo stops.", h:["The entrance slot","Inside the mossy chamber","Optional waterfall scramble (wet!)"], g:[["Iceland (19387840494).jpg","The gorge entrance"]]},
@@ -1337,12 +1340,14 @@ document.querySelectorAll('.card').forEach(card=>{
       var g = card.closest('.grid'); if(g) grids.add(g);
     });
     grids.forEach(function(g){ g.classList.toggle('has-hl', g.querySelector('.card.hl')!==null); });
+    if(window.applyMapDayHighlight) window.applyMapDayHighlight(section, day);
   }
   function clearDayHl(section){
     section.querySelectorAll('.card[data-days]').forEach(c=>c.classList.remove('hl'));
     section.querySelectorAll('.grid').forEach(g=>g.classList.remove('has-hl'));
     section.querySelectorAll('.tabs .tabbtn').forEach(b=>b.classList.remove('day-on'));
     section.dataset.hlday='';
+    if(window.clearMapDayHighlight) window.clearMapDayHighlight(section);
   }
   document.querySelectorAll('.tabs .tabbtn').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -1364,7 +1369,7 @@ document.querySelectorAll('.card').forEach(card=>{
   document.querySelectorAll('.tabs').forEach(function(t){
     if(t.parentElement.querySelector('.dayhint')) return;
     var h=document.createElement('div'); h.className='dayhint';
-    h.textContent='Tip: tap a day to spotlight its attractions below — tap it again to show them all.';
+    h.textContent='Tip: tap a day to spotlight its attraction cards and map pins — tap it again to show them all.';
     t.parentNode.insertBefore(h, t.nextSibling);
   });
 </script>
@@ -1374,22 +1379,54 @@ document.querySelectorAll('.card').forEach(card=>{
 <script>
   (function(){
     if(!window.L) return;
+    var itineraryMaps=window.itineraryMaps={};
     function buildMap(id, pts, routeCoords){
       var el=document.getElementById(id); if(!el) return;
       var map=L.map(id,{scrollWheelZoom:false});
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
         {attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:18}).addTo(map);
-      var bounds=[];
+      var bounds=[], markers=[];
       pts.forEach(function(p){
         var cls=p[3]==='base'?'basepin':'stoppin', sz=cls==='basepin'?26:20;
         var icon=L.divIcon({html:'<div class="'+cls+'">'+(p[4]||'')+'</div>',className:'',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
-        L.marker([p[1],p[2]],{icon:icon}).addTo(map).bindPopup('<b>'+p[0]+'</b>');
+        var marker=L.marker([p[1],p[2]],{icon:icon}).addTo(map).bindPopup('<b>'+p[0]+'</b>');
+        marker.itineraryDays=(p[5]||'').split(/\s+/).filter(Boolean);
+        marker.itineraryKind=p[3];
+        markers.push(marker);
         bounds.push([p[1],p[2]]);
       });
       if(routeCoords) L.polyline(routeCoords,{color:'#5ec5c9',weight:3,opacity:.85,dashArray:'6 6'}).addTo(map);
       map.fitBounds(bounds,{padding:[28,28]});
       setTimeout(function(){map.invalidateSize();map.fitBounds(bounds,{padding:[28,28]});},250);
+      itineraryMaps[id]={map:map,markers:markers,bounds:bounds};
     }
+
+    function markerElement(marker){ return marker.getElement && marker.getElement(); }
+    window.applyMapDayHighlight=function(section, day){
+      var entry=itineraryMaps['map-'+section.id]; if(!entry) return;
+      var active=entry.markers.filter(function(marker){ return marker.itineraryDays.indexOf(day)!==-1; });
+      if(!active.length){ window.clearMapDayHighlight(section); return; }
+      entry.map.closePopup();
+      entry.markers.forEach(function(marker){
+        var isBase=marker.itineraryKind==='base';
+        var isActive=marker.itineraryDays.indexOf(day)!==-1;
+        marker.setOpacity(isBase||isActive?1:.2);
+        var el=markerElement(marker); if(!el) return;
+        el.classList.toggle('map-day-active',isActive);
+        el.classList.toggle('map-day-muted',!isBase&&!isActive);
+      });
+      var focus=entry.markers.filter(function(marker){ return marker.itineraryKind==='base'; }).concat(active).map(function(marker){ return marker.getLatLng(); });
+      entry.map.fitBounds(focus,{padding:[40,40],maxZoom:10});
+    };
+    window.clearMapDayHighlight=function(section){
+      var entry=itineraryMaps['map-'+section.id]; if(!entry) return;
+      entry.map.closePopup();
+      entry.markers.forEach(function(marker){
+        marker.setOpacity(1);
+        var el=markerElement(marker); if(el) el.classList.remove('map-day-active','map-day-muted');
+      });
+      entry.map.fitBounds(entry.bounds,{padding:[28,28]});
+    };
 
     // Overview — all bases + the clockwise loop (Snæfellsnes finish, Reykjanes = KEF)
     buildMap('map-overview',[
@@ -1407,72 +1444,72 @@ document.querySelectorAll('.card').forEach(card=>{
     // Base 1 — Hella + its attractions
     buildMap('map-base1',[
       ['Hella · Base 1',63.833,-20.400,'base','★'],
-      ['Brúarfoss',64.264,-20.513,'stop',''],['Gullfoss',64.327,-20.121,'stop',''],
-      ['Geysir',64.310,-20.302,'stop',''],['Kerið',64.041,-20.885,'stop',''],
-      ['Reykjadalur',64.022,-21.211,'stop',''],['Seljalandsfoss',63.615,-19.989,'stop',''],
-      ['Skógafoss',63.532,-19.511,'stop',''],['Þakgil',63.550,-18.830,'stop',''],
-      ['Landmannalaugar',63.984,-19.061,'stop','']
+      ['Brúarfoss',64.264,-20.513,'stop','', 'd3'],['Gullfoss',64.327,-20.121,'stop','', 'd3'],
+      ['Geysir',64.310,-20.302,'stop','', 'd3'],['Kerið',64.041,-20.885,'stop','', 'd3'],
+      ['Reykjadalur',64.022,-21.211,'stop','', 'd3'],['Seljalandsfoss',63.615,-19.989,'stop','', 'd1'],
+      ['Skógafoss',63.532,-19.511,'stop','', 'd2'],['Þakgil',63.550,-18.830,'stop','', 'd4'],
+      ['Landmannalaugar',63.984,-19.061,'stop','', 'd5']
     ]);
 
     // Base 2 — Svínafell / Skaftafell + glacier coast attractions
     buildMap('map-base2',[
       ['Svínafell · Base 2',63.994,-16.873,'base','★'],
-      ['Skaftafell Visitor Centre',64.016,-16.966,'stop',''],
-      ['Svartifoss / Kristínartindar trail system',64.028,-16.976,'stop',''],
-      ['Skaftafellsjökull viewpoint',64.008,-16.928,'stop',''],
-      ['Jökulsárlón main parking',64.048,-16.179,'stop',''],
-      ['Diamond Beach parking',64.044,-16.178,'stop',''],
-      ['Múlagljúfur parking',63.993021,-16.436285,'stop',''],
-      ['Stokksnes / Vestrahorn',64.244,-14.966,'stop','']
+      ['Skaftafell Visitor Centre',64.016,-16.966,'stop','', 'b2d2'],
+      ['Svartifoss / Kristínartindar trail system',64.028,-16.976,'stop','', 'b2d2'],
+      ['Skaftafellsjökull viewpoint',64.008,-16.928,'stop','', 'b2d1 b2d2'],
+      ['Jökulsárlón main parking',64.048,-16.179,'stop','', 'b2d2 b2d3'],
+      ['Diamond Beach parking',64.044,-16.178,'stop','', 'b2d2 b2d3'],
+      ['Múlagljúfur parking',63.993021,-16.436285,'stop','', 'b2d3'],
+      ['Stokksnes / Vestrahorn',64.244,-14.966,'stop','', 'b2d3']
     ]);
 
     // Base 3 — Egilsstaðir + Eastfjords attractions
     buildMap('map-base3',[
       ['Egilsstaðir · Base 3',65.264,-14.395,'base','★'],
-      ['Stuðlagil',65.109,-15.361,'stop',''],['Hengifoss',65.077,-14.885,'stop',''],
-      ['Seyðisfjörður',65.263,-14.009,'stop',''],['Stórurð',65.468,-13.986,'stop',''],
-      ['Borgarfjörður Eystri',65.526,-13.784,'stop','']
+      ['Stuðlagil',65.109,-15.361,'stop','', 'b3d3'],['Hengifoss',65.077,-14.885,'stop','', 'b3d2'],
+      ['Seyðisfjörður',65.263,-14.009,'stop','', 'b3d1'],['Stórurð',65.468,-13.986,'stop','', 'b3d2'],
+      ['Borgarfjörður Eystri',65.526,-13.784,'stop','', 'b3d2']
     ]);
 
     // Base 4 — Akureyri + North Iceland core and transfer stops
     buildMap('map-base4',[
       ['Akureyri · Base 4',65.688,-18.090,'base','★'],
-      ['Súlur trailhead parking',65.653451,-18.172670,'stop',''],
-      ['Forest Lagoon',65.680,-18.043,'stop',''],
-      ['Goðafoss',65.683,-17.550,'stop',''],
-      ['Aldeyjarfoss official viewpoint',65.364291,-17.341099,'stop',''],
-      ['Hverir / Námafjall',65.641,-16.808,'stop',''],
-      ['Dimmuborgir',65.590,-16.912,'stop',''],
-      ['Dettifoss west parking',65.814,-16.400,'stop',''],
-      ['Vesturdalur / Hljóðaklettar',65.943,-16.515,'stop',''],
-      ['Ásbyrgi',66.017,-16.505,'stop','']
+      ['Súlur trailhead parking',65.653451,-18.172670,'stop','', 'b4d3'],
+      ['Forest Lagoon',65.680,-18.043,'stop','', 'b4d2'],
+      ['Goðafoss',65.683,-17.550,'stop','', 'b4d1 b4d4'],
+      ['Aldeyjarfoss official viewpoint',65.364291,-17.341099,'stop','', 'b4d4'],
+      ['Hverir / Námafjall',65.641,-16.808,'stop','', 'b4d1'],
+      ['Dimmuborgir',65.590,-16.912,'stop','', 'b4d1'],
+      ['Dettifoss west parking',65.814,-16.400,'stop','', 'b4d1'],
+      ['Vesturdalur / Hljóðaklettar',65.943,-16.515,'stop','', 'b4d1'],
+      ['Ásbyrgi',66.017,-16.505,'stop','', 'b4d1']
     ]);
 
     // Base 5 — Arnarstapi + Snæfellsnes attractions
     buildMap('map-base5',[
       ['Arnarstapi · Base 5',64.770,-23.618,'base','★'],
-      ['Rauðfeldsgjá',64.778,-23.547,'stop',''],
-      ['Hellnar',64.760,-23.646,'stop',''],
-      ['Djúpalónssandur',64.752,-23.902,'stop',''],
-      ['Saxhóll crater',64.808,-23.795,'stop',''],
-      ['Lóndrangar',64.735,-23.788,'stop',''],
-      ['Helgrindur / Lýsuhóll',64.800,-23.246,'stop',''],
-      ['Búðakirkja',64.821,-23.384,'stop',''],
-      ['Kirkjufell',64.927,-23.306,'stop','']
+      ['Rauðfeldsgjá',64.778,-23.547,'stop','', 'b5d2'],
+      ['Hellnar',64.760,-23.646,'stop','', 'b5d2'],
+      ['Djúpalónssandur',64.752,-23.902,'stop','', 'b5d2'],
+      ['Saxhóll crater',64.808,-23.795,'stop','', 'b5d2'],
+      ['Lóndrangar',64.735,-23.788,'stop','', 'b5d2'],
+      ['Helgrindur / Lýsuhóll',64.800,-23.246,'stop','', 'b5d3'],
+      ['Búðakirkja',64.821,-23.384,'stop','', 'b5d4'],
+      ['Kirkjufell',64.927,-23.306,'stop','', 'b5d4']
     ]);
 
     // Base 6 — Keflavík + Reykjanes attractions
     buildMap('map-base6',[
       ['Keflavík · Base 6',64.000,-22.558,'base','★'],
-      ['Keilir',63.905,-22.104,'stop',''],
-      ['Kleifarvatn',63.917,-21.998,'stop',''],
-      ['Seltún / Krýsuvík',63.897,-22.055,'stop',''],
-      ['Fagradalsfjall',63.902,-22.273,'stop',''],
-      ['Bridge Between Continents',63.868,-22.676,'stop',''],
-      ['Gunnuhver',63.819,-22.687,'stop',''],
-      ['Reykjanesviti',63.812,-22.706,'stop',''],
-      ['Brimketill',63.827,-22.630,'stop',''],
-      ['Blue Lagoon · status-dependent',63.880,-22.449,'stop','']
+      ['Keilir',63.905,-22.104,'stop','', 'b6d2'],
+      ['Kleifarvatn',63.917,-21.998,'stop','', 'b6d1'],
+      ['Seltún / Krýsuvík',63.897,-22.055,'stop','', 'b6d1'],
+      ['Fagradalsfjall',63.902,-22.273,'stop','', 'b6d2'],
+      ['Bridge Between Continents',63.868,-22.676,'stop','', 'b6d1'],
+      ['Gunnuhver',63.819,-22.687,'stop','', 'b6d1'],
+      ['Reykjanesviti',63.812,-22.706,'stop','', 'b6d1'],
+      ['Brimketill',63.827,-22.630,'stop','', 'b6d1'],
+      ['Blue Lagoon · status-dependent',63.880,-22.449,'stop','', 'b6d2']
     ]);
   })();
 </script>

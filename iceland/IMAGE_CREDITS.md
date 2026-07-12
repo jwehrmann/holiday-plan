@@ -2,6 +2,7 @@
 
 The following location-specific images were added or replaced during the attraction-image audit. Images remain under their original licenses.
 
+- `fjadrargljufur.jpg` — Fjaðrárgljúfur canyon photograph supplied directly by the site owner for this itinerary.
 - `kerid.jpg` — “Crater volcánico Kerið, Suðurland, Islandia, 2014-08-16, DD 144-146 HDR” by Diego Delso, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crater_volc%C3%A1nico_Keri%C3%B0,_Su%C3%B0urland,_Islandia,_2014-08-16,_DD_144-146_HDR.JPG).
 - `graenihryggur.jpg` — “Green Ridge” by Simaron, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), via [Flickr](https://www.flickr.com/photos/29340537@N06/53951296336).
 - `storurd.jpg` — “Stórurd pond” by Syony, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:St%C3%B3rurd_pond.jpg).

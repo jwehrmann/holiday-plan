@@ -4,30 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Iceland hikes database · September 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
   :root{--bg:#0b0f14;--panel:#121a25;--panel2:#172231;--ink:#edf3fa;--muted:#a8bacd;--faint:#73869b;--line:#26394c;--aqua:#63ddcf;--blue:#7ab7ff;--gold:#f5c563;--rose:#ff8c9e;--green:#56d89b}
-  *{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  *{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.42 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
   a{color:var(--aqua);text-decoration:none}a:hover{text-decoration:underline}button,input,select{font:inherit}
   header{padding:54px 22px 32px;background:radial-gradient(circle at 80% 0,rgba(99,221,207,.14),transparent 38%),linear-gradient(180deg,#111a25,var(--bg))}
   .wrap{max-width:1500px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--aqua);font-size:.75rem;font-weight:800}
   h1{font-size:clamp(2.2rem,6vw,5rem);line-height:.95;letter-spacing:-.055em;margin:.25em 0}.intro{max-width:900px;color:var(--muted);font-size:1.05rem}
   .back{display:inline-flex;margin-top:16px;padding:9px 13px;border:1px solid var(--line);border-radius:9px;color:var(--ink)}
-  main{max-width:1500px;margin:auto;padding:0 22px 70px}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:26px 0}
+  main{max-width:1500px;margin:auto;padding:0 22px 70px}.summary-scope{display:flex;align-items:center;gap:8px;margin:26px 0 9px;color:var(--muted);font-size:.8rem}.summary-scope b{color:var(--aqua);text-transform:uppercase;letter-spacing:.08em}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 26px}
   .metric{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.metric b{display:block;font-size:1.8rem;letter-spacing:-.04em}.metric span{color:var(--faint);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
-  .controls{position:relative;display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px 14px 0 0}
-  input,select,.control-btn{background:#0d141d;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px 12px}.controls input{min-width:260px;flex:1}.control-btn{cursor:pointer;font-weight:700;white-space:nowrap}.control-btn:hover,.control-btn[aria-expanded="true"]{border-color:var(--aqua);color:var(--aqua)}
+  .controls{position:relative;display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px 14px 0 0}
+  input,select,.control-btn{background:#0d141d;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:8px 10px}.controls input{min-width:240px;flex:1}.control-btn{cursor:pointer;font-weight:700;white-space:nowrap}.control-btn:hover,.control-btn[aria-expanded="true"]{border-color:var(--aqua);color:var(--aqua)}
   .result-count{color:var(--faint);font-size:.82rem;white-space:nowrap}.column-picker{position:relative}.column-menu{position:absolute;z-index:30;right:0;top:calc(100% + 8px);display:none;width:min(360px,calc(100vw - 44px));padding:14px;background:#101823;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 55px rgba(0,0,0,.45)}
   .column-menu.open{display:block}.column-menu h2{margin:0 0 3px;font-size:1rem}.column-menu p{margin:0 0 10px;color:var(--faint);font-size:.78rem}.column-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px}.column-options label{display:flex;gap:8px;align-items:center;padding:5px 0;color:var(--muted);font-size:.84rem}.column-options input{min-width:0;flex:none;accent-color:var(--aqua)}
   .column-actions{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}.column-actions button{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:8px;cursor:pointer}
-  .tablewrap{overflow:auto;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;max-height:min(72vh,900px)}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1450px}
+  .tablewrap{overflow:auto;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;max-height:min(74vh,920px)}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1180px}
   th{position:sticky;text-align:left;background:#101823;color:var(--faint);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--line);z-index:5}thead tr:first-child th{top:0;padding:0}thead tr.filters th{top:42px;padding:7px 6px;background:#0e1620;z-index:6}
-  .sort-btn{display:flex;width:100%;align-items:center;justify-content:space-between;gap:7px;padding:12px 10px;border:0;background:transparent;color:inherit;text-align:left;text-transform:inherit;letter-spacing:inherit;font-weight:800;cursor:pointer}.sort-btn:hover,.sort-btn:focus-visible{color:var(--aqua);outline:none}.sort-mark{color:var(--aqua);font-size:.8rem;min-width:1em}
+  .sort-btn{display:flex;width:100%;align-items:center;justify-content:space-between;gap:6px;padding:10px 8px;border:0;background:transparent;color:inherit;text-align:left;text-transform:inherit;letter-spacing:inherit;font-weight:800;cursor:pointer}.sort-btn:hover,.sort-btn:focus-visible{color:var(--aqua);outline:none}.sort-mark{color:var(--aqua);font-size:.8rem;min-width:1em}
   .column-filter{width:100%;min-width:95px;padding:7px 8px;border-radius:7px;font-size:.72rem;color:var(--muted)}.column-filter::placeholder{color:#5f7185}.filters th:first-child .column-filter{min-width:190px}
-  td{padding:13px 10px;border-bottom:1px solid rgba(38,57,76,.7);vertical-align:top;background:var(--bg)}tbody tr:hover td{background:#0d151d}.is-hidden{display:none!important}
-  .name{font-weight:750;color:var(--ink)}.sub{display:block;color:var(--faint);font-size:.76rem;max-width:380px;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.date,.period{white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid rgba(38,57,76,.7);vertical-align:top;background:var(--bg)}tbody tr{cursor:pointer}tbody tr:hover td{background:#0d151d}tbody tr.row-selected td{background:rgba(99,221,207,.08);box-shadow:inset 0 1px rgba(99,221,207,.16),inset 0 -1px rgba(99,221,207,.16)}tbody tr.row-selected td:first-child{box-shadow:inset 3px 0 var(--aqua),inset 0 1px rgba(99,221,207,.16),inset 0 -1px rgba(99,221,207,.16)}.is-hidden{display:none!important}
+  .route-select{display:grid;grid-template-columns:22px minmax(0,1fr);gap:7px;align-items:start}.route-check{appearance:none;width:17px;height:17px;margin:1px 0 0;border:1px solid #51677c;border-radius:5px;background:#0d141d;cursor:pointer}.route-check:checked{border-color:var(--aqua);background:var(--aqua);box-shadow:inset 0 0 0 3px #0d141d}.route-check:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .name-line{display:flex;align-items:flex-start;gap:7px}.name{display:block;font-weight:750;color:var(--ink);line-height:1.3}.source-icons{display:inline-flex;flex:none;gap:4px;margin-top:0}.source-link{display:inline-flex;width:21px;height:21px;align-items:center;justify-content:center;border:2px solid var(--line);border-radius:6px;background:#fff;overflow:hidden;transition:transform .15s,border-color .15s}.source-link:hover{transform:translateY(-1px);text-decoration:none}.source-link.high{border-color:var(--green)}.source-link.medium{border-color:var(--gold)}.source-link.low{border-color:var(--rose)}.source-link img{display:block;width:100%;height:100%;object-fit:cover}.ref-letter{display:flex;width:100%;height:100%;align-items:center;justify-content:center;background:#ef5b2a;color:#fff;font-size:.67rem;font-weight:900}.sub{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:var(--faint);font-size:.72rem;max-width:330px;margin-top:3px;line-height:1.35}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.stack{display:flex;flex-direction:column;gap:1px;line-height:1.25}.cell-sub{color:var(--faint);font-size:.68rem;white-space:nowrap}.date{white-space:nowrap}
   .status{display:inline-block;padding:4px 8px;border-radius:999px;font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.confirmed{background:rgba(86,216,155,.14);color:var(--green)}.planned{background:rgba(122,183,255,.14);color:var(--blue)}.alternative{background:rgba(245,197,99,.14);color:var(--gold)}
-  .rating{white-space:nowrap;color:var(--gold);font-weight:700}.trail-refs{display:flex;flex-direction:column;gap:6px;min-width:230px}.ref-row{display:flex;align-items:center;gap:6px;line-height:1.2}.ref-row a{white-space:nowrap}.ref-provider{color:var(--faint);font-size:.68rem}.confidence{display:inline-flex;padding:2px 5px;border:1px solid;border-radius:999px;font-size:.58rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}.confidence.high{color:var(--green);border-color:rgba(86,216,155,.45);background:rgba(86,216,155,.08)}.confidence.medium{color:var(--gold);border-color:rgba(245,197,99,.45);background:rgba(245,197,99,.08)}.confidence.low{color:var(--rose);border-color:rgba(255,140,158,.45);background:rgba(255,140,158,.08)}.route-note{display:block;width:100%;color:var(--rose);font-size:.7rem;line-height:1.25}.empty{color:var(--faint)}.foot{margin-top:18px;color:var(--faint);font-size:.85rem}.foot b{color:var(--muted)}
-  @media(max-width:760px){header{padding-top:36px}.summary{grid-template-columns:1fr 1fr}.metric b{font-size:1.45rem}.controls>*{width:100%}.controls input{min-width:0}.column-menu{left:0;right:auto}.column-options{grid-template-columns:1fr}.tablewrap{max-height:none}}
+  .rating{white-space:nowrap;color:var(--gold);font-weight:700}.trail-refs{display:flex;flex-direction:column;gap:5px;min-width:190px}.ref-entry{display:block}.ref-row{display:flex;align-items:center;gap:5px;line-height:1.2}.ref-row a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:185px}.ref-provider{color:var(--faint);font-size:.64rem}.ref-stats{display:block;margin:2px 0 0 0;color:var(--faint);font-size:.65rem;white-space:nowrap}.confidence{display:inline-flex;padding:1px 4px;border:1px solid;border-radius:999px;font-size:.54rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}.confidence.high{color:var(--green);border-color:rgba(86,216,155,.45);background:rgba(86,216,155,.08)}.confidence.medium{color:var(--gold);border-color:rgba(245,197,99,.45);background:rgba(245,197,99,.08)}.confidence.low{color:var(--rose);border-color:rgba(255,140,158,.45);background:rgba(255,140,158,.08)}.route-note{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;width:100%;color:var(--rose);font-size:.66rem;line-height:1.25}.empty{color:var(--faint)}
+  .trail-map-panel{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.map-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px}.map-head h2{margin:0;font-size:1.25rem}.map-head p{margin:4px 0 0;color:var(--muted);font-size:.82rem}.map-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.map-selection{color:var(--aqua);font-size:.8rem;font-weight:800}.map-legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:.74rem}.legend-item{display:inline-flex;align-items:center;gap:6px}.legend-dot{width:11px;height:11px;border:2px solid var(--aqua);border-radius:50%;background:rgba(99,221,207,.55)}.legend-dot.approx{background:rgba(245,197,99,.25);border-style:dashed;border-color:var(--gold)}.legend-dot.base{border-color:var(--blue);background:var(--blue)}#trailheadMap{height:min(68vh,660px);min-height:460px;background:#0d141d}#trailheadMap.map-error::after{content:"The interactive map could not initialise. Reload after checking network access.";position:absolute;z-index:1000;left:50%;top:50%;width:min(420px,80%);transform:translate(-50%,-50%);padding:18px;border:1px solid var(--rose);border-radius:12px;background:#17121a;color:var(--ink);text-align:center}.leaflet-container{font:13px/1.35 Inter,ui-sans-serif,system-ui,sans-serif}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101823;color:var(--ink)}.leaflet-popup-content{margin:12px 14px}.map-popup-title{font-weight:800;color:var(--aqua);margin-bottom:4px}.map-popup-hikes{margin:6px 0 0;padding-left:18px}.map-popup-meta{color:var(--muted);font-size:.78rem}.foot{margin-top:18px;color:var(--faint);font-size:.82rem}.foot b{color:var(--muted)}
+  @media(max-width:760px){header{padding-top:36px}.summary{grid-template-columns:1fr 1fr}.metric b{font-size:1.45rem}.controls>*{width:100%}.controls input{min-width:0}.column-menu{left:0;right:auto}.column-options{grid-template-columns:1fr}.tablewrap{max-height:none}.map-head{align-items:flex-start;flex-direction:column}.map-actions{justify-content:flex-start}#trailheadMap{height:62vh;min-height:420px}}
 </style>
 </head>
 <body>
@@ -38,10 +41,12 @@
   <a class="back" href="index.html">← Back to the itinerary</a>
 </div></header>
 <main>
+  <div class="summary-scope" id="summaryScope" aria-live="polite"></div>
   <div class="summary" id="summary"></div>
   <div class="controls">
     <input id="search" type="search" placeholder="Search every column…" aria-label="Search all hike columns">
     <span class="result-count" id="resultCount" aria-live="polite"></span>
+    <button class="control-btn" id="nameModeButton" type="button">Names: AllTrails</button>
     <div class="column-picker">
       <button class="control-btn" id="columnsButton" type="button" aria-expanded="false" aria-controls="columnMenu">Columns <span id="columnCount"></span></button>
       <div class="column-menu" id="columnMenu" role="dialog" aria-label="Choose visible columns">
@@ -52,59 +57,139 @@
       </div>
     </div>
     <button class="control-btn" id="resetFilters" type="button">Reset filters</button>
+    <button class="control-btn" id="viewMap" type="button">Map · 0 selected</button>
   </div>
   <div class="tablewrap"><table id="hikesTable">
     <thead id="head"></thead>
     <tbody id="rows"></tbody>
   </table></div>
-  <p class="foot"><b>How to use the table:</b> select a heading to sort; use the second header row to filter any column. Numeric filters accept expressions such as <code>&gt;10</code> or <code>&lt;=500</code>. Trail-reference confidence describes route matching only: <b>high</b> is the named route, <b>medium</b> is a matching variant or community GPS track, and <b>low</b> is a nearby area reference. It does not certify safety, legality, access, or current conditions. Distances and gain describe the itinerary variant, which can differ from a linked reference. Ratings were checked in July 2026. Recheck road.is, safetravel.is, weather, closures, and each live trail page before setting out.</p>
+  <section class="trail-map-panel" id="trailMapPanel" aria-labelledby="trailMapTitle">
+    <div class="map-head">
+      <div><h2 id="trailMapTitle">Trailhead proximity map</h2><p>Select one or several table rows to compare their starts. Shared starts are combined into one marker.</p></div>
+      <div class="map-actions">
+        <span class="map-selection" id="mapSelection" aria-live="polite">All trailheads</span>
+        <button class="control-btn" id="selectVisible" type="button">Select visible rows</button>
+        <button class="control-btn" id="clearSelection" type="button">Clear selection</button>
+      </div>
+    </div>
+    <div id="trailheadMap" role="region" aria-label="Map of Iceland trail starts"></div>
+    <div class="map-legend">
+      <span class="legend-item"><span class="legend-dot"></span> mapped parking / trailhead</span>
+      <span class="legend-item"><span class="legend-dot approx"></span> approximate or access-dependent start</span>
+      <span class="legend-item"><span class="legend-dot base"></span> overnight base</span>
+    </div>
+  </section>
+  <p class="foot"><b>How to use the table:</b> tick a route (or select anywhere on its row) to compare its start on the map. The four live totals follow the selected rows; with no selection, they follow the currently visible filtered rows. Selections stay active even when filters hide a row. Select a heading to sort and use the second header row to filter any column. Numeric filters accept expressions such as <code>&gt;10</code> or <code>&lt;=500</code>; duration filtering and sorting use the midpoint of a displayed range. The name button switches between exact AllTrails titles and itinerary planning names, and that choice is saved locally. The small provider icons beside each title open its route references; green, amber and rose outlines mean high, medium and low route-match confidence. Hover or focus an icon for the exact source title and figures. Length, gain, grade and rating use the linked AllTrails route; multi-link rows total the complete source routes. Duration uses the AllTrails estimate when available, otherwise the itinerary estimate; “all day” is represented as 8–10 hours for aggregation and labelled as an itinerary estimate. Shorter itinerary turnarounds remain documented in the row note. Map pins marked approximate are for spatial planning only—not turn-by-turn navigation. Source figures and start pins were checked July 11, 2026. Recheck road.is, safetravel.is, weather, closures, and each live trail page before setting out.</p>
 </main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="hikes-data.js"></script>
 <script>
-const hikes=(window.ICELAND_HIKES||[]).map((h,index)=>({...h,_index:index}));
+const SOURCE_MAP=window.ALLTRAILS_SOURCES||{};
+const TRAILHEAD_MAP=window.ICELAND_TRAILHEADS||{};
+const HIKE_BASES=window.ICELAND_HIKE_BASES||[];
+const sourceLinks=h=>h.allTrails?h.allTrails.map(link=>link.url):(h.url&&SOURCE_MAP[h.url]?[h.url]:[]);
+const sourceRoutes=h=>sourceLinks(h).map(url=>({...SOURCE_MAP[url],url})).filter(source=>source.title);
+const parseDurationRange=text=>{
+  const normalized=String(text||'').replace(/,/g,'.');
+  const range=normalized.match(/(\d+(?:\.\d+)?)\s*[–—-]\s*(\d+(?:\.\d+)?)\s*h/i);
+  if(range)return {min:Number(range[1]),max:Number(range[2])};
+  const hoursMinutes=normalized.match(/(\d+(?:\.\d+)?)\s*h(?:ours?)?\s*(\d+)\s*m(?:in)?/i);
+  if(hoursMinutes){const hours=Number(hoursMinutes[1])+Number(hoursMinutes[2])/60;return {min:hours,max:hours}}
+  const single=normalized.match(/(\d+(?:\.\d+)?)\s*h/i);
+  if(single)return {min:Number(single[1]),max:Number(single[1])};
+  return null;
+};
+const durationFor=(sourceDuration,period,kindOverride)=>{
+  const sourceRange=parseDurationRange(sourceDuration);
+  if(sourceRange)return {...sourceRange,kind:kindOverride||'AllTrails'};
+  const itineraryRange=parseDurationRange(period);
+  if(itineraryRange)return {...itineraryRange,kind:'Itinerary'};
+  if(/all day|full day/i.test(period||''))return {min:8,max:10,kind:'Itinerary all-day'};
+  if(/half[ -]day/i.test(period||''))return {min:4,max:6,kind:'Itinerary half-day'};
+  return null;
+};
+const hikes=(window.ICELAND_HIKES||[]).map((h,index)=>{
+  const sources=sourceRoutes(h),single=sources.length===1?sources[0]:null;
+  const sourceKm=sources.length?sources.reduce((total,source)=>total+source.km,0):h.km;
+  const sourceGain=sources.length?sources.reduce((total,source)=>total+source.gain,0):h.gain;
+  const sourceDuration=h.sourceDuration||(single?single.duration:null);
+  const durationText=h.durationEstimate||sourceDuration;
+  return {...h,_index:index,_sources:sources,_starts:TRAILHEAD_MAP[h.name]||[],_planned:{km:h.km,gain:h.gain,grade:h.grade,rating:h.rating},
+    km:sources.length?Number(sourceKm.toFixed(1)):h.km,
+    gain:sources.length?Math.round(sourceGain):h.gain,
+    grade:single?single.grade:h.grade,
+    rating:single?single.rating:h.rating,
+    sourceDuration,duration:durationFor(durationText,h.period,h.durationKind)};
+});
 const STORAGE_KEY='iceland-hikes-table-preferences-v1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(1);
-const confidenceScore={low:1,medium:2,high:3};
+const fmtHours=duration=>duration?(duration.min===duration.max?`${fmt(duration.min)} h`:`${fmt(duration.min)}–${fmt(duration.max)} h`):'—';
+const stack=s=>`<span class="stack">${String(s??'').split(' · ').map((part,index)=>`<span class="${index?'cell-sub':''}">${esc(part)}</span>`).join('')}</span>`;
 const trailRefs=h=>{
   const allTrails=h.allTrails
-    ?h.allTrails.map(link=>({provider:'AllTrails',label:link.label,url:link.url,confidence:link.confidence||h.linkConfidence||'high'}))
-    :(h.url?[{provider:'AllTrails',label:h.urlLabel||'Route',url:h.url,confidence:h.linkConfidence||'high'}]:[]);
+    ?h.allTrails.map(link=>({provider:'AllTrails',label:SOURCE_MAP[link.url]?.title||link.label,url:link.url,confidence:link.confidence||h.linkConfidence||'high',source:SOURCE_MAP[link.url]}))
+    :(h.url?[{provider:'AllTrails',label:SOURCE_MAP[h.url]?.title||h.urlLabel||'Route',url:h.url,confidence:h.linkConfidence||'high',source:SOURCE_MAP[h.url]}]:[]);
   return [...allTrails,...(h.refs||[])];
 };
+const ALLTRAILS_ICON='https://www.alltrails.com/app-icon-32.png';
+const referenceIcons=h=>trailRefs(h).map(ref=>{
+  const confidence=ref.confidence||'medium';
+  const stats=ref.source?` · ★ ${ref.source.rating.toFixed(1)} · ${fmt(ref.source.km)} km · ${ref.source.gain.toLocaleString()} m${ref.source.duration?` · ${ref.source.duration}`:''}`:'';
+  const description=`${ref.provider}: ${ref.label} · ${confidence} confidence${stats}`;
+  const icon=ref.provider==='AllTrails'?`<img src="${ALLTRAILS_ICON}" alt="" width="21" height="21">`:`<span class="ref-letter">${esc(ref.provider.slice(0,1).toUpperCase())}</span>`;
+  return `<a class="source-link ${esc(confidence)}" target="_blank" rel="noopener" href="${esc(ref.url)}" title="${esc(description)}" aria-label="${esc(description)}">${icon}</a>`;
+}).join('');
+const sourceName=h=>h._sources.length?h._sources.map(source=>source.title).join(' + '):h.name;
+let nameMode='alltrails';
+const displayName=h=>nameMode==='alltrails'?sourceName(h):h.name;
 const columns=[
-  {key:'name',label:'Hike / route',filter:'text',value:h=>h.name,render:h=>`<span class="name">${esc(h.name)}</span>${h.note?`<span class="sub">${esc(h.note)}</span>`:''}`},
-  {key:'refs',label:'Trail refs',filter:'refs',value:h=>Math.max(0,...trailRefs(h).map(ref=>confidenceScore[ref.confidence]||0)),render:h=>{
-    const refs=trailRefs(h), message=h.allTrailsNote?`<span class="route-note">${esc(h.allTrailsNote)}</span>`:'';
-    const links=refs.map(ref=>`<span class="ref-row"><span class="ref-provider">${esc(ref.provider)}</span><a target="_blank" rel="noopener" href="${esc(ref.url)}">${esc(ref.label)} ↗</a><span class="confidence ${esc(ref.confidence)}" title="${esc(ref.confidence)} confidence route match">${esc(ref.confidence)}</span></span>`).join('');
-    return refs.length?`<span class="trail-refs">${links}${message}</span>`:'<span class="empty">No reference found</span>';
-  }},
+  {key:'name',label:'Hike / route',filter:'text',value:h=>displayName(h),render:h=>`<span class="name-line"><span class="name">${esc(displayName(h))}</span><span class="source-icons">${referenceIcons(h)}</span></span>${h.note?`<span class="sub" title="${esc(h.note)}">${esc(h.note)}</span>`:''}${h.allTrailsNote?`<span class="route-note" title="${esc(h.allTrailsNote)}">${esc(h.allTrailsNote)}</span>`:''}`},
   {key:'rating',label:'Rating',filter:'number',value:h=>h.rating,render:h=>h.rating!=null?`<span class="rating">★ ${h.rating.toFixed(1)}</span>`:'<span class="empty">—</span>'},
   {key:'date',label:'Estimated date',filter:'select',value:h=>h.dateSort,filterValue:h=>h.date,render:h=>`<span class="date">${esc(h.date)}</span>`},
-  {key:'period',label:'Recommended timing',filter:'select',value:h=>h.period,render:h=>`<span class="period">${esc(h.period)}</span>`},
+  {key:'period',label:'Recommended timing',filter:'select',value:h=>h.period,render:h=>stack(h.period)},
   {key:'km',label:'Length',filter:'number',value:h=>h.km,render:h=>`<span class="num">${fmt(h.km)} km</span>`},
+  {key:'duration',label:'Duration',filter:'number',value:h=>h.duration?(h.duration.min+h.duration.max)/2:null,render:h=>`<span class="stack"><span class="num">${fmtHours(h.duration)}</span><span class="cell-sub">${h.duration?esc(h.duration.kind+' estimate'):'Not estimated'}</span></span>`},
   {key:'gain',label:'Gain',filter:'number',value:h=>h.gain,render:h=>`<span class="num">${h.gain==null?'—':h.gain.toLocaleString()+' m'}</span>`},
   {key:'grade',label:'Grade',filter:'select',value:h=>h.grade,render:h=>esc(h.grade)},
   {key:'region',label:'Region',filter:'select',value:h=>h.region,render:h=>esc(h.region)},
-  {key:'base',label:'Base',filter:'select',value:h=>h.base,render:h=>esc(h.base)},
-  {key:'fromBase',label:'From base',filter:'text',value:h=>h.fromBase,render:h=>esc(h.fromBase)},
+  {key:'base',label:'Base',filter:'select',value:h=>h.base,render:h=>stack(h.base)},
+  {key:'fromBase',label:'From base',filter:'text',value:h=>h.fromBase,render:h=>stack(h.fromBase)},
   {key:'status',label:'Status',filter:'select',value:h=>h.status,render:h=>`<span class="status ${esc(h.status)}">${esc(h.status)}</span>`}
 ];
-const defaults={hiddenColumns:[],sortKey:'date',sortDirection:'asc'};
+const defaults={hiddenColumns:[],sortKey:'date',sortDirection:'asc',nameMode:'alltrails',selectedHikes:[]};
 let saved={};try{saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')||{}}catch(_){saved={}}
+nameMode=saved.nameMode==='itinerary'?'itinerary':defaults.nameMode;
 let hiddenColumns=new Set((saved.hiddenColumns||defaults.hiddenColumns).filter(key=>columns.some(c=>c.key===key)));
 let sortKey=columns.some(c=>c.key===saved.sortKey)?saved.sortKey:defaults.sortKey;
 let sortDirection=saved.sortDirection==='desc'?'desc':defaults.sortDirection;
+let selectedHikes=new Set((saved.selectedHikes||defaults.selectedHikes).filter(name=>hikes.some(h=>h.name===name)));
+let visibleHikes=[];
 const filters=Object.fromEntries(columns.map(c=>[c.key,'']));
 const collator=new Intl.Collator('en',{numeric:true,sensitivity:'base'});
-const sum=status=>hikes.filter(h=>h.status===status).reduce((n,h)=>n+h.km,0);
 
-document.getElementById('summary').innerHTML=[
-  [hikes.length,'routes catalogued'],[sum('confirmed'),'km confirmed'],[sum('planned'),'km planned'],[sum('alternative'),'km alternatives']
-].map(([n,label])=>`<div class="metric"><b>${typeof n==='number'?fmt(n):n}</b><span>${label}</span></div>`).join('');
+function renderSummary(visible){
+  const selected=hikes.filter(h=>selectedHikes.has(h.name));
+  const usingSelection=selected.length>0;
+  const scoped=usingSelection?selected:visible;
+  const filtersActive=document.getElementById('search').value.trim()||Object.values(filters).some(Boolean);
+  const scopeLabel=usingSelection?`${scoped.length} selected route${scoped.length===1?'':'s'}`:filtersActive?`${scoped.length} visible route${scoped.length===1?'':'s'} after filters`:`all ${scoped.length} routes`;
+  const totalKm=scoped.reduce((total,h)=>total+(Number(h.km)||0),0);
+  const totalGain=scoped.reduce((total,h)=>total+(Number(h.gain)||0),0);
+  const durations=scoped.map(h=>h.duration).filter(Boolean);
+  const totalDuration=durations.length?{min:durations.reduce((total,d)=>total+d.min,0),max:durations.reduce((total,d)=>total+d.max,0)}:null;
+  const missingDuration=scoped.length-durations.length;
+  document.getElementById('summaryScope').innerHTML=`<b>Live totals</b><span>${esc(scopeLabel)}${usingSelection?' · selection overrides filters':''}</span>`;
+  document.getElementById('summary').innerHTML=[
+    [scoped.length,'route count'],
+    [`${fmt(totalKm)} km`,'total hike distance'],
+    [`${Math.round(totalGain).toLocaleString()} m`,'total elevation gain'],
+    [fmtHours(totalDuration),`total duration${missingDuration?` · ${missingDuration} unestimated`:''}`]
+  ].map(([value,label])=>`<div class="metric"><b>${value}</b><span>${esc(label)}</span></div>`).join('');
+}
 
 function savePreferences(){
-  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({hiddenColumns:[...hiddenColumns],sortKey,sortDirection}))}catch(_){}
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({hiddenColumns:[...hiddenColumns],sortKey,sortDirection,nameMode,selectedHikes:[...selectedHikes]}))}catch(_){}
 }
 function uniqueValues(column){
   return [...new Set(hikes.map(h=>String(column.filterValue?column.filterValue(h):column.value(h)??'')).filter(Boolean))]
@@ -162,14 +247,127 @@ function render(){
   const q=document.getElementById('search').value.trim().toLowerCase();
   const list=hikes.filter(h=>{
     const referenceText=trailRefs(h).map(ref=>[ref.provider,ref.label,ref.confidence].join(' ')).join(' ');
-    const haystack=[h.name,h.date,h.period,h.grade,h.region,h.base,h.fromBase,h.status,h.note,h.allTrailsNote,referenceText].join(' ').toLowerCase();
+    const haystack=[h.name,sourceName(h),h.date,h.period,h.grade,h.region,h.base,h.fromBase,h.status,h.note,h.allTrailsNote,referenceText].join(' ').toLowerCase();
     return (!q||haystack.includes(q))&&columns.every(column=>matchesColumn(h,column,filters[column.key]));
   }).sort(compareRows);
+  visibleHikes=list;
+  renderSummary(list);
   const visibleCount=columns.length-hiddenColumns.size;
-  document.getElementById('rows').innerHTML=list.map(h=>`<tr>${columns.map(column=>`<td data-column="${column.key}" class="${hiddenColumns.has(column.key)?'is-hidden':''}">${column.render(h)}</td>`).join('')}</tr>`).join('')||`<tr><td colspan="${visibleCount}" class="empty">No hikes match these filters.</td></tr>`;
+  document.getElementById('rows').innerHTML=list.map(h=>{
+    const selected=selectedHikes.has(h.name);
+    return `<tr data-hike-name="${esc(h.name)}" class="${selected?'row-selected':''}" aria-selected="${selected}">${columns.map(column=>{
+      const content=column.key==='name'?`<div class="route-select"><input class="route-check" type="checkbox" value="${esc(h.name)}" aria-label="Select ${esc(displayName(h))} on map" ${selected?'checked':''}><div>${column.render(h)}</div></div>`:column.render(h);
+      return `<td data-column="${column.key}" class="${hiddenColumns.has(column.key)?'is-hidden':''}">${content}</td>`;
+    }).join('')}</tr>`;
+  }).join('')||`<tr><td colspan="${visibleCount}" class="empty">No hikes match these filters.</td></tr>`;
   document.getElementById('resultCount').textContent=`${list.length} of ${hikes.length} routes`;
   document.getElementById('columnCount').textContent=`(${visibleCount}/${columns.length})`;
-  document.getElementById('hikesTable').style.minWidth=`${Math.max(760,visibleCount*128)}px`;
+  document.getElementById('hikesTable').style.minWidth=`${Math.max(760,visibleCount*110)}px`;
+  document.querySelectorAll('.route-check').forEach(input=>input.addEventListener('change',event=>{
+    event.stopPropagation();toggleHikeSelection(input.value,input.checked);
+  }));
+  document.querySelectorAll('#rows tr[data-hike-name]').forEach(row=>row.addEventListener('click',event=>{
+    if(event.target.closest('a,button,input,select,label'))return;
+    const name=row.dataset.hikeName;toggleHikeSelection(name,!selectedHikes.has(name));
+  }));
+  updateTrailMap();
+}
+
+function toggleHikeSelection(name,selected){
+  selected?selectedHikes.add(name):selectedHikes.delete(name);
+  savePreferences();render();
+}
+
+let trailMap=null,lastMapSelectionKey=null;
+const trailMarkerGroups=[];
+const baseMarkers=[];
+function initTrailMap(){
+  const mapElement=document.getElementById('trailheadMap');
+  if(!window.L){
+    document.getElementById('mapSelection').textContent='Map library failed to load';
+    mapElement.classList.add('map-error');
+    return;
+  }
+  try{
+    /* Set a usable view before adding asynchronous layers. This is important when the page is
+       opened directly from file://: even if a later request is delayed or blocked, Leaflet is
+       already fully initialised instead of leaving an empty, view-less canvas. */
+    trailMap=L.map(mapElement,{scrollWheelZoom:false,zoomControl:true}).setView([64.92,-18.65],6);
+    const tileLayer=L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+      subdomains:'abcd',maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(trailMap);
+    let tileErrors=0,fallbackLoaded=false;
+    tileLayer.on('tileerror',()=>{
+      tileErrors+=1;
+      if(tileErrors===4&&!fallbackLoaded){
+        fallbackLoaded=true;
+        trailMap.removeLayer(tileLayer);
+        const fallback=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+          maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(trailMap);
+        fallback.on('tileerror',()=>{document.getElementById('mapSelection').textContent='Map tiles are blocked; trail markers remain interactive'});
+      }
+    });
+
+    const grouped=new Map();
+    hikes.forEach(h=>h._starts.forEach(start=>{
+      const key=`${start.lat.toFixed(5)},${start.lng.toFixed(5)}`;
+      if(!grouped.has(key))grouped.set(key,{lat:start.lat,lng:start.lng,labels:new Set(),hikeNames:new Set(),precision:'mapped',notes:new Set()});
+      const group=grouped.get(key);group.labels.add(start.label);group.hikeNames.add(h.name);
+      if(start.precision==='approximate')group.precision='approximate';
+      if(start.note)group.notes.add(start.note);
+    }));
+    grouped.forEach(group=>{
+      const marker=L.circleMarker([group.lat,group.lng],{radius:6,weight:2,color:group.precision==='mapped'?'#63ddcf':'#f5c563',fillColor:group.precision==='mapped'?'#63ddcf':'#f5c563',fillOpacity:.55,dashArray:group.precision==='approximate'?'3 3':null}).addTo(trailMap);
+      trailMarkerGroups.push({...group,marker});
+    });
+    HIKE_BASES.forEach(base=>{
+      const marker=L.circleMarker([base.lat,base.lng],{radius:6,weight:2,color:'#7ab7ff',fillColor:'#7ab7ff',fillOpacity:.75}).addTo(trailMap).bindPopup(`<div class="map-popup-title">${esc(base.label)}</div><div class="map-popup-meta">Overnight base</div>`);
+      baseMarkers.push({...base,marker});
+    });
+    const initialPoints=trailMarkerGroups.map(group=>[group.lat,group.lng]);
+    if(initialPoints.length)trailMap.fitBounds(L.latLngBounds(initialPoints),{padding:[44,44],maxZoom:7});
+    window.setTimeout(()=>{
+      if(!trailMap)return;
+      trailMap.invalidateSize();
+      if(!selectedHikes.size&&initialPoints.length)trailMap.fitBounds(L.latLngBounds(initialPoints),{padding:[44,44],maxZoom:7});
+    },250);
+  }catch(error){
+    console.error('Trailhead map failed to initialise',error);
+    document.getElementById('mapSelection').textContent='Map failed to initialise · reload after checking network access';
+    mapElement.classList.add('map-error');
+  }
+}
+function mapBaseNumbers(hikesForMap){
+  const numbers=new Set();
+  hikesForMap.forEach(h=>(h.base.match(/[1-6]/g)||[]).forEach(number=>numbers.add(number)));
+  return numbers;
+}
+function updateTrailMap(){
+  const selectionKey=[...selectedHikes].sort().join('|');
+  const chosen=hikes.filter(h=>selectedHikes.has(h.name));
+  const hasSelection=chosen.length>0;
+  const selectedStarts=[];
+  trailMarkerGroups.forEach(group=>{
+    const active=[...group.hikeNames].some(name=>selectedHikes.has(name));
+    const color=group.precision==='mapped'?'#63ddcf':'#f5c563';
+    group.marker.setStyle({radius:active?9:hasSelection?5:6,weight:active?4:2,color,fillColor:color,fillOpacity:active ? .95 : hasSelection ? .08 : .55,opacity:active ? 1 : hasSelection ? .16 : 1,dashArray:group.precision==='approximate'?'3 3':null});
+    if(active)selectedStarts.push([group.lat,group.lng]);
+    const listed=[...group.hikeNames].map(name=>hikes.find(h=>h.name===name)).filter(Boolean);
+    const note=[...group.notes][0];
+    group.marker.bindPopup(`<div class="map-popup-title">${[...group.labels].map(esc).join(' / ')}</div><div class="map-popup-meta">${group.precision==='mapped'?'Mapped parking or trailhead':'Approximate / access-dependent start'} · ${group.lat.toFixed(5)}, ${group.lng.toFixed(5)}</div><ul class="map-popup-hikes">${listed.map(h=>`<li>${esc(displayName(h))}</li>`).join('')}</ul>${note?`<div class="map-popup-meta">${esc(note)}</div>`:''}`);
+  });
+  const activeBases=mapBaseNumbers(chosen);
+  baseMarkers.forEach((base,index)=>{
+    const number=String(index+1),active=hasSelection&&activeBases.has(number);
+    base.marker.setStyle({radius:active?8:6,weight:active?3:2,fillOpacity:active ? .95 : hasSelection ? .28 : .75,opacity:active ? 1 : hasSelection ? .45 : 1});
+  });
+  document.getElementById('mapSelection').textContent=hasSelection?`${chosen.length} route${chosen.length===1?'':'s'} · ${selectedStarts.length} start${selectedStarts.length===1?'':'s'} highlighted`:`All ${trailMarkerGroups.length} start locations`;
+  document.getElementById('viewMap').textContent=`Map · ${chosen.length} selected`;
+  if(!trailMap||selectionKey===lastMapSelectionKey)return;
+  lastMapSelectionKey=selectionKey;
+  const points=hasSelection?selectedStarts:trailMarkerGroups.map(group=>[group.lat,group.lng]);
+  if(points.length)trailMap.fitBounds(L.latLngBounds(points),{padding:[44,44],maxZoom:hasSelection?10:7});
 }
 function renderColumnOptions(){
   document.getElementById('columnOptions').innerHTML=columns.map(column=>`<label><input type="checkbox" data-column-toggle="${column.key}" ${hiddenColumns.has(column.key)?'':'checked'}> ${esc(column.label)}</label>`).join('');
@@ -181,14 +379,23 @@ function renderColumnOptions(){
   }));
 }
 const menu=document.getElementById('columnMenu'),menuButton=document.getElementById('columnsButton');
+const nameModeButton=document.getElementById('nameModeButton');
+function renderNameMode(){nameModeButton.textContent=`Names: ${nameMode==='alltrails'?'AllTrails':'Itinerary'}`}
+nameModeButton.addEventListener('click',()=>{nameMode=nameMode==='alltrails'?'itinerary':'alltrails';savePreferences();renderNameMode();renderHead();render()});
 menuButton.addEventListener('click',()=>{const open=!menu.classList.contains('open');menu.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open))});
 document.addEventListener('click',event=>{if(!event.target.closest('.column-picker')){menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.focus()}});
 document.getElementById('showAllColumns').addEventListener('click',()=>{hiddenColumns.clear();savePreferences();renderColumnOptions();renderHead();render()});
-document.getElementById('resetColumns').addEventListener('click',()=>{hiddenColumns=new Set(defaults.hiddenColumns);sortKey=defaults.sortKey;sortDirection=defaults.sortDirection;savePreferences();renderColumnOptions();renderHead();render()});
+document.getElementById('resetColumns').addEventListener('click',()=>{hiddenColumns=new Set(defaults.hiddenColumns);sortKey=defaults.sortKey;sortDirection=defaults.sortDirection;nameMode=defaults.nameMode;savePreferences();renderNameMode();renderColumnOptions();renderHead();render()});
 document.getElementById('resetFilters').addEventListener('click',()=>{document.getElementById('search').value='';columns.forEach(c=>filters[c.key]='');renderHead();render()});
 document.getElementById('search').addEventListener('input',render);
-renderColumnOptions();renderHead();render();
+document.getElementById('selectVisible').addEventListener('click',()=>{visibleHikes.forEach(h=>selectedHikes.add(h.name));savePreferences();render()});
+document.getElementById('clearSelection').addEventListener('click',()=>{selectedHikes.clear();savePreferences();render()});
+document.getElementById('viewMap').addEventListener('click',()=>{
+  document.getElementById('trailMapPanel').scrollIntoView({behavior:'smooth',block:'start'});
+  window.setTimeout(()=>trailMap?.invalidateSize(),350);
+});
+renderNameMode();initTrailMap();renderColumnOptions();renderHead();render();
 </script>
 </body>
 </html>
