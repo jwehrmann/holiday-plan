@@ -48,6 +48,7 @@ No install or build step is required for normal content changes or GitHub Pages 
 Hikes are maintained in `iceland/hikes-data.js`. Each entry should include:
 
 - hike name and source URL
+- estimated trip date and recommended time block (early start, morning, afternoon, blue hour, half day, or all day)
 - distance and elevation gain
 - grade or difficulty
 - region and trip base
